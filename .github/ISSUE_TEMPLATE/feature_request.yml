@@ -1,3 +1,4 @@
+---
 name: Feature Request
 description: Suggest an improvement or new feature for existing subagents
 title: "[FEATURE] "
@@ -6,9 +7,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for suggesting a feature! Please provide detailed information to help us understand your request.
-        
-        **Note**: For new subagent proposals, please use the "New Subagent Proposal" template instead.
+        Thank you for suggesting a feature! Please provide detailed
+        information to help us understand your request.
+
+        **Note**: For new subagent proposals, please use the
+        "New Subagent Proposal" template instead.
 
   - type: checkboxes
     id: preliminary-checks
@@ -18,7 +21,8 @@ body:
       options:
         - label: I have read the [Code of Conduct](.github/CODE_OF_CONDUCT.md)
           required: true
-        - label: I have searched existing issues to ensure this is not a duplicate
+        - label: >-
+            I have searched existing issues to ensure this is not a duplicate
           required: true
         - label: This is a constructive feature request for legitimate use cases
           required: true

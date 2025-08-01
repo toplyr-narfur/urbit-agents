@@ -1,16 +1,21 @@
+---
 name: Moderation Report
-description: Report inappropriate content, behavior, or Code of Conduct violations
+description: >-
+  Report inappropriate content, behavior, or Code of Conduct violations
 title: "[MODERATION] "
 labels: ["moderation"]
 body:
   - type: markdown
     attributes:
       value: |
-        **⚠️ Use this template to report violations of our Code of Conduct, inappropriate content, or concerning behavior.**
-        
-        All reports are taken seriously and will be reviewed by maintainers. False reports may result in moderation action.
-        
-        **For urgent safety concerns or severe violations, you may also use GitHub's built-in reporting tools.**
+        **⚠️ Use this template to report violations of our Code of Conduct,
+        inappropriate content, or concerning behavior.**
+
+        All reports are taken seriously and will be reviewed by maintainers.
+        False reports may result in moderation action.
+
+        **For urgent safety concerns or severe violations, you may also use
+        GitHub's built-in reporting tools.**
 
   - type: checkboxes
     id: preliminary-checks
@@ -22,7 +27,9 @@ body:
           required: true
         - label: I understand that false reports may result in moderation action
           required: true
-        - label: I have attempted to resolve minor issues through direct communication (if applicable)
+        - label: >-
+            I have attempted to resolve minor issues through direct
+            communication (if applicable)
           required: false
 
   - type: dropdown
@@ -46,8 +53,9 @@ body:
     id: location
     attributes:
       label: Location of Violation
-      description: Where did this occur? (issue number, PR, comment link, etc.)
-      placeholder: e.g., Issue #123, PR #456, comment in issue #789
+      description: >-
+        Where did this occur? (issue number, PR, comment link, etc.)
+      placeholder: e.g., Issue #123, PR #456, comment in issue #789  # Location
     validations:
       required: true
 
@@ -55,14 +63,17 @@ body:
     id: user-involved
     attributes:
       label: User(s) Involved
-      description: GitHub username(s) of the person(s) involved (if known)
+      description: >-
+        GitHub username(s) of the person(s) involved (if known)
       placeholder: e.g., @username1, @username2
 
   - type: textarea
     id: description
     attributes:
       label: Description of Violation
-      description: Detailed description of what happened and why it violates our Code of Conduct
+      description: >-
+        Detailed description of what happened and why it violates
+        our Code of Conduct
       placeholder: Please provide specific details about the violation...
     validations:
       required: true
@@ -84,7 +95,8 @@ body:
     attributes:
       label: Impact
       description: How has this affected you or the community?
-      placeholder: This behavior has made me feel... It affects the community by...
+      placeholder: >-
+        This behavior has made me feel... It affects the community by...
 
   - type: checkboxes
     id: previous-reports
@@ -102,5 +114,5 @@ body:
         - We may follow up with questions if needed
         - We will take appropriate action based on our Code of Conduct
         - We will update you on the resolution when possible
-        
+
         Thank you for helping maintain a respectful community.

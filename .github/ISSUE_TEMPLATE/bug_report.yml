@@ -1,3 +1,4 @@
+---
 name: Bug Report
 description: Report a bug or issue with an existing subagent
 title: "[BUG] "
@@ -6,9 +7,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting a bug! Please fill out this template to help us understand and resolve the issue.
-        
-        **Important**: This template is for technical bugs only. For questions, discussions, or general feedback, please use GitHub Discussions instead.
+        Thank you for reporting a bug! Please fill out this template
+        to help us understand and resolve the issue.
+
+        **Important**: This template is for technical bugs only.
+        For questions, discussions, or general feedback, please use
+        GitHub Discussions instead.
 
   - type: checkboxes
     id: preliminary-checks
@@ -18,7 +22,8 @@ body:
       options:
         - label: I have read the [Code of Conduct](.github/CODE_OF_CONDUCT.md)
           required: true
-        - label: I have searched existing issues to ensure this is not a duplicate
+        - label: >-
+            I have searched existing issues to ensure this is not a duplicate
           required: true
         - label: This report contains only technical information about a bug
 
