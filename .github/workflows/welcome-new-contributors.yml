@@ -1,0 +1,105 @@
+name: Welcome New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    
+    steps:
+      - name: Check if first-time contributor
+        id: check-contributor
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.sender.login;
+            
+            // Check if this is their first contribution
+            const { data: issues } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} author:${author}`,
+              sort: 'created',
+              order: 'asc',
+              per_page: 2
+            });
+            
+            const isFirstTime = issues.items.length <= 1;
+            core.setOutput('is-first-time', isFirstTime);
+            core.setOutput('author', author);
+            
+            console.log(`User ${author} is ${isFirstTime ? 'a first-time' : 'a returning'} contributor`);
+
+      - name: Welcome first-time contributors
+        if: steps.check-contributor.outputs.is-first-time == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = '${{ steps.check-contributor.outputs.author }}';
+            const isIssue = context.eventName === 'issues';
+            const number = isIssue ? context.payload.issue.number : context.payload.pull_request.number;
+            
+            const welcomeMessage = `👋 **Welcome to the Claude Code Agents project, @${author}!**
+
+Thank you for your ${isIssue ? 'issue submission' : 'pull request'}! We appreciate your interest in contributing to our collection of specialized subagents.
+
+## 📋 Community Guidelines
+
+Before we proceed, please take a moment to review our community standards:
+
+- 📖 **[Code of Conduct](.github/CODE_OF_CONDUCT.md)** - Our community standards and behavioral expectations
+- 🤝 **[Contributing Guidelines](.github/CONTRIBUTING.md)** - How to contribute effectively
+- 💬 **[GitHub Discussions](https://github.com/${context.repo.owner}/${context.repo.repo}/discussions)** - For questions and general discussion
+
+## 🛡️ Community Values
+
+We maintain a **respectful, inclusive, and professional environment**. Our community does not tolerate:
+- Hate speech, discrimination, or harassment
+- Personal attacks or inflammatory language  
+- Spam, trolling, or off-topic content
+- Any content that violates our Code of Conduct
+
+## ✅ What Makes a Great Contribution
+
+${isIssue ? `**For Issues:**
+- Clear, specific problem descriptions
+- Steps to reproduce (for bugs)
+- Constructive feature requests with use cases
+- Professional, respectful language` : `**For Pull Requests:**
+- Well-documented changes
+- Following existing code style
+- Clear commit messages
+- Addressing a specific issue or improvement`}
+
+## 🚀 Next Steps
+
+A maintainer will review your ${isIssue ? 'issue' : 'pull request'} soon. Please feel free to:
+- Add any additional context if needed
+- Respond to questions from maintainers
+- Join our [Discussions](https://github.com/${context.repo.owner}/${context.repo.repo}/discussions) for general questions
+
+Thank you for helping make this project better! 🎉`;
+
+            if (isIssue) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: number,
+                body: welcomeMessage
+              });
+            } else {
+              await github.rest.pulls.createReview({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: number,
+                body: welcomeMessage,
+                event: 'COMMENT'
+              });
+            }
+            
+            console.log(`Welcomed first-time contributor @${author}`);
