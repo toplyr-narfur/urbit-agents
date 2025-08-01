@@ -40,7 +40,7 @@ This repository contains 49 specialized subagents that extend Claude Code's capa
 - **[dx-optimizer](dx-optimizer.md)** - Developer Experience specialist that improves tooling, setup, and workflows
 
 ### Quality & Security
-- **[code-reviewer](code-reviewer.md)** - Expert code review for quality, security, and maintainability
+- **[code-reviewer](code-reviewer.md)** - Expert code review with deep configuration security focus and production reliability
 - **[security-auditor](security-auditor.md)** - Review code for vulnerabilities and ensure OWASP compliance
 - **[test-automator](test-automator.md)** - Create comprehensive test suites with unit, integration, and e2e tests
 - **[performance-engineer](performance-engineer.md)** - Profile applications, optimize bottlenecks, and implement caching strategies
@@ -167,6 +167,7 @@ Mention the subagent by name in your request:
 ```bash
 # Code quality and review
 "Use code-reviewer to analyze this component for best practices"
+"Have code-reviewer scrutinize these configuration changes"
 "Have security-auditor check for OWASP compliance issues"
 
 # Development tasks  
@@ -342,7 +343,7 @@ payment-integration → security-auditor → Validated implementation
 - **mlops-engineer**: ML infrastructure, experiment tracking, model registries, pipeline automation
 
 ### 🧪 Quality Assurance
-- **code-reviewer**: Code quality, maintainability review
+- **code-reviewer**: Code quality, configuration security, production reliability
 - **test-automator**: Test strategy, test suite creation
 - **debugger**: Bug investigation, error resolution
 - **error-detective**: Log analysis, error pattern recognition, root cause analysis
