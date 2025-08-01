@@ -1,4 +1,8 @@
-name: Welcome New Contributors
+# Alternative Welcome Workflow using third-party action
+# This is an example implementation using garg3133/welcome-new-contributors
+# Rename to .yml and adjust the main workflow if you prefer this approach
+
+name: Welcome New Contributors (Alternative)
 
 on:
   issues:
@@ -15,11 +19,11 @@ jobs:
     
     steps:
       - name: Welcome first-time contributors
-        uses: actions/first-interaction@v1
+        uses: garg3133/welcome-new-contributors@v1.2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
-            👋 **Welcome to the Claude Code Agents project, @${{ github.actor }}!**
+            👋 **Welcome to the Claude Code Agents project, @contributor_name!**
 
             Thank you for opening your first issue! We appreciate your interest in contributing to our collection of specialized subagents.
 
@@ -41,9 +45,8 @@ jobs:
 
             ## ✅ What Makes a Great Issue
 
-            **For Issues:**
             - Clear, specific problem descriptions
-            - Steps to reproduce (for bugs)
+            - Steps to reproduce (for bugs) 
             - Constructive feature requests with use cases
             - Professional, respectful language
 
@@ -52,12 +55,12 @@ jobs:
             A maintainer will review your issue soon. Please feel free to:
             - Add any additional context if needed
             - Respond to questions from maintainers
-            - Join our [Discussions](https://github.com/wshobson/agents/discussions) for general questions
+            - Join our [Discussions](https://github.com/wshobson/agents/discussions)
 
             Thank you for helping make this project better! 🎉
 
           pr-message: |
-            👋 **Welcome to the Claude Code Agents project, @${{ github.actor }}!**
+            👋 **Welcome to the Claude Code Agents project, @contributor_name!**
 
             Thank you for opening your first pull request! We appreciate your interest in contributing to our collection of specialized subagents.
 
@@ -79,7 +82,6 @@ jobs:
 
             ## ✅ What Makes a Great Pull Request
 
-            **For Pull Requests:**
             - Well-documented changes with clear descriptions
             - Following existing code style and conventions
             - Clear, descriptive commit messages
@@ -91,6 +93,10 @@ jobs:
             A maintainer will review your pull request soon. Please feel free to:
             - Add any additional context about your changes
             - Respond to feedback and questions from maintainers
-            - Join our [Discussions](https://github.com/wshobson/agents/discussions) for general questions
+            - Join our [Discussions](https://github.com/wshobson/agents/discussions)
 
             Thank you for helping make this project better! 🎉
+
+          # Optional: Add labels to first-time contributor issues/PRs
+          issue-labels: 'first-time-contributor, needs-review'
+          pr-labels: 'first-time-contributor, needs-review'
