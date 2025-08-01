@@ -4,7 +4,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 48 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 49 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -23,6 +23,7 @@ This repository contains 48 specialized subagents that extend Claude Code's capa
 - **[c-pro](c-pro.md)** - Write efficient C code with proper memory management and system calls
 - **[cpp-pro](cpp-pro.md)** - Write idiomatic C++ code with modern features, RAII, smart pointers, and STL algorithms
 - **[javascript-pro](javascript-pro.md)** - Master modern JavaScript with ES6+, async patterns, and Node.js APIs
+- **[typescript-pro](typescript-pro.md)** - Master TypeScript with advanced types, generics, and strict type safety
 - **[php-pro](php-pro.md)** - Write idiomatic PHP code with modern features and performance optimizations
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
 - **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
@@ -72,7 +73,7 @@ This repository contains 48 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 48 subagents are configured with specific Claude models based on task complexity:
+All 49 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 8 agents
 **Model:** `haiku`
@@ -85,12 +86,13 @@ All 48 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 29 agents
+### ⚡ Sonnet (Balanced Performance) - 30 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
 - `python-pro` - Python development with advanced features
 - `javascript-pro` - Modern JavaScript and Node.js
+- `typescript-pro` - Advanced TypeScript with type systems
 - `golang-pro` - Go concurrency and idiomatic patterns
 - `rust-pro` - Rust memory safety and systems programming
 - `c-pro` - C programming and embedded systems
@@ -320,6 +322,7 @@ payment-integration → security-auditor → Validated implementation
 - **rust-pro**: Rust-specific development, memory safety, systems programming
 - **c-pro**: C programming, embedded systems, performance-critical code
 - **javascript-pro**: Modern JavaScript, async patterns, Node.js/browser code
+- **typescript-pro**: Advanced TypeScript, generics, type inference, enterprise patterns
 - **ios-developer**: Native iOS development with Swift/SwiftUI
 - **sql-pro**: Database queries, schema design, query optimization
 - **mobile-developer**: React Native/Flutter development
