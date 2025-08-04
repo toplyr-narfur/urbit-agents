@@ -26,6 +26,8 @@ This repository contains 55 specialized subagents that extend Claude Code's capa
 - **[typescript-pro](typescript-pro.md)** - Master TypeScript with advanced types, generics, and strict type safety
 - **[php-pro](php-pro.md)** - Write idiomatic PHP code with modern features and performance optimizations
 - **[java-pro](java-pro.md)** - Master modern Java with streams, concurrency, and JVM optimization
+- **[csharp-pro](csharp-pro.md)** - Write modern C# code with advanced features and .NET optimization
+- **[unity-developer](unity-developer.md)** - Build Unity games with optimized scripts and performance tuning
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
 - **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
 
@@ -93,7 +95,7 @@ All 55 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 31 agents
+### ⚡ Sonnet (Balanced Performance) - 33 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -106,6 +108,8 @@ All 55 subagents are configured with specific Claude models based on task comple
 - `cpp-pro` - Modern C++ with STL and templates
 - `php-pro` - Modern PHP with advanced features
 - `java-pro` - Modern Java with streams and concurrency
+- `csharp-pro` - Modern C# with .NET frameworks and patterns
+- `unity-developer` - Unity game development and optimization
 - `ios-developer` - Native iOS development with Swift/SwiftUI
 - `frontend-developer` - React components and UI
 - `ui-ux-designer` - Interface design and wireframes
@@ -335,6 +339,8 @@ payment-integration → security-auditor → Validated implementation
 - **javascript-pro**: Modern JavaScript, async patterns, Node.js/browser code
 - **typescript-pro**: Advanced TypeScript, generics, type inference, enterprise patterns
 - **java-pro**: Modern Java development, streams, concurrency, Spring Boot
+- **csharp-pro**: Modern C# development, .NET frameworks, enterprise patterns
+- **unity-developer**: Unity game development, C# scripting, performance optimization
 - **ios-developer**: Native iOS development with Swift/SwiftUI
 - **sql-pro**: Database queries, schema design, query optimization
 - **mobile-developer**: React Native/Flutter development
