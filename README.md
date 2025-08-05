@@ -4,7 +4,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 55 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 56 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -26,6 +26,7 @@ This repository contains 55 specialized subagents that extend Claude Code's capa
 - **[typescript-pro](typescript-pro.md)** - Master TypeScript with advanced types, generics, and strict type safety
 - **[php-pro](php-pro.md)** - Write idiomatic PHP code with modern features and performance optimizations
 - **[java-pro](java-pro.md)** - Master modern Java with streams, concurrency, and JVM optimization
+- **[elixir-pro](elixir-pro.md)** - Write idiomatic Elixir code with OTP patterns, functional programming, and Phoenix frameworks
 - **[csharp-pro](csharp-pro.md)** - Write modern C# code with advanced features and .NET optimization
 - **[unity-developer](unity-developer.md)** - Build Unity games with optimized scripts and performance tuning
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
@@ -81,7 +82,7 @@ This repository contains 55 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 55 subagents are configured with specific Claude models based on task complexity:
+All 56 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 9 agents
 **Model:** `haiku`
@@ -95,7 +96,7 @@ All 55 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 33 agents
+### ⚡ Sonnet (Balanced Performance) - 34 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -108,6 +109,7 @@ All 55 subagents are configured with specific Claude models based on task comple
 - `cpp-pro` - Modern C++ with STL and templates
 - `php-pro` - Modern PHP with advanced features
 - `java-pro` - Modern Java with streams and concurrency
+- `elixir-pro` - Elixir with OTP patterns and Phoenix
 - `csharp-pro` - Modern C# with .NET frameworks and patterns
 - `unity-developer` - Unity game development and optimization
 - `ios-developer` - Native iOS development with Swift/SwiftUI
@@ -339,6 +341,7 @@ payment-integration → security-auditor → Validated implementation
 - **javascript-pro**: Modern JavaScript, async patterns, Node.js/browser code
 - **typescript-pro**: Advanced TypeScript, generics, type inference, enterprise patterns
 - **java-pro**: Modern Java development, streams, concurrency, Spring Boot
+- **elixir-pro**: Elixir development, OTP patterns, Phoenix frameworks, functional programming
 - **csharp-pro**: Modern C# development, .NET frameworks, enterprise patterns
 - **unity-developer**: Unity game development, C# scripting, performance optimization
 - **ios-developer**: Native iOS development with Swift/SwiftUI
