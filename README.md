@@ -35,7 +35,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 57 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 58 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -63,6 +63,7 @@ This repository contains 57 specialized subagents that extend Claude Code's capa
 - **[minecraft-bukkit-pro](minecraft-bukkit-pro.md)** - Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
 - **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
+- **[scala-pro](scala-pro.md)** - Master enterprise-grade Scala development with distributed systems and big data processing
 
 ### Infrastructure & Operations
 - **[devops-troubleshooter](devops-troubleshooter.md)** - Debug production issues, analyze logs, and fix deployment failures
@@ -114,7 +115,7 @@ This repository contains 57 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 57 subagents are configured with specific Claude models based on task complexity:
+All 58 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 9 agents
 **Model:** `haiku`
@@ -128,7 +129,7 @@ All 57 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 35 agents
+### ⚡ Sonnet (Balanced Performance) - 36 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -143,6 +144,7 @@ All 57 subagents are configured with specific Claude models based on task comple
 - `java-pro` - Modern Java with streams and concurrency
 - `elixir-pro` - Elixir with OTP patterns and Phoenix
 - `csharp-pro` - Modern C# with .NET frameworks and patterns
+- `scala-pro` - Enterprise Scala with Akka and Spark
 - `unity-developer` - Unity game development and optimization
 - `minecraft-bukkit-pro` - Minecraft plugin development with Bukkit/Spigot/Paper
 - `ios-developer` - Native iOS development with Swift/SwiftUI
@@ -376,6 +378,7 @@ payment-integration → security-auditor → Validated implementation
 - **java-pro**: Modern Java development, streams, concurrency, Spring Boot
 - **elixir-pro**: Elixir development, OTP patterns, Phoenix frameworks, functional programming
 - **csharp-pro**: Modern C# development, .NET frameworks, enterprise patterns
+- **scala-pro**: Enterprise Scala, Akka actors, Apache Spark, Play Framework, reactive systems
 - **unity-developer**: Unity game development, C# scripting, performance optimization
 - **minecraft-bukkit-pro**: Minecraft plugin development, event systems, server-side features
 - **ios-developer**: Native iOS development with Swift/SwiftUI
