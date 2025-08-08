@@ -102,6 +102,7 @@ This repository contains 57 specialized subagents that extend Claude Code's capa
 
 ### Documentation
 - **[docs-architect](docs-architect.md)** - Creates comprehensive technical documentation from existing codebases
+- **[mermaid-expert](mermaid-expert.md)** - Create Mermaid diagrams for flowcharts, sequences, ERDs, and architectures
 - **[reference-builder](reference-builder.md)** - Creates exhaustive technical references and API documentation
 - **[tutorial-engineer](tutorial-engineer.md)** - Creates step-by-step tutorials and educational content from code
 
@@ -171,6 +172,7 @@ All 57 subagents are configured with specific Claude models based on task comple
 - `ml-engineer` - ML model deployment
 - `legacy-modernizer` - Framework migrations
 - `payment-integration` - Payment processing
+- `mermaid-expert` - Mermaid diagrams and visual documentation
 
 ### 🧠 Opus (Maximum Capability) - 13 agents
 **Model:** `opus`
