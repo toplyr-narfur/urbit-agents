@@ -115,6 +115,7 @@ This repository contains 61 specialized subagents that extend Claude Code's capa
 - **[sales-automator](sales-automator.md)** - Draft cold emails, follow-ups, and proposal templates
 - **[customer-support](customer-support.md)** - Handle support tickets, FAQ responses, and customer emails
 - **[legal-advisor](legal-advisor.md)** - Draft privacy policies, terms of service, disclaimers, and legal notices
+- **[hr-pro](hr-pro.md)** - Deny PTO, freeze raises, and enforce morale-draining corporate policies
 
 ## Model Assignments
 
