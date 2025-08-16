@@ -35,7 +35,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 61 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 71 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -116,11 +116,23 @@ This repository contains 61 specialized subagents that extend Claude Code's capa
 - **[customer-support](customer-support.md)** - Handle support tickets, FAQ responses, and customer emails
 - **[legal-advisor](legal-advisor.md)** - Draft privacy policies, terms of service, disclaimers, and legal notices
 
+### SEO & Content Optimization
+- **[seo-content-auditor](seo-content-auditor.md)** - Analyzes provided content for quality, E-E-A-T signals, and SEO best practices
+- **[seo-meta-optimizer](seo-meta-optimizer.md)** - Creates optimized meta titles, descriptions, and URL suggestions
+- **[seo-keyword-strategist](seo-keyword-strategist.md)** - Analyzes keyword usage, calculates density, suggests semantic variations
+- **[seo-structure-architect](seo-structure-architect.md)** - Optimizes content structure, header hierarchy, and schema markup
+- **[seo-snippet-hunter](seo-snippet-hunter.md)** - Formats content for featured snippets and SERP features
+- **[seo-content-refresher](seo-content-refresher.md)** - Identifies outdated elements and suggests content updates
+- **[seo-cannibalization-detector](seo-cannibalization-detector.md)** - Analyzes multiple pages for keyword overlap and conflicts
+- **[seo-authority-builder](seo-authority-builder.md)** - Analyzes content for E-E-A-T signals and trust indicators
+- **[seo-content-writer](seo-content-writer.md)** - Writes SEO-optimized content based on keywords and briefs
+- **[seo-content-planner](seo-content-planner.md)** - Creates content outlines, topic clusters, and calendars
+
 ## Model Assignments
 
-All 59 subagents are configured with specific Claude models based on task complexity:
+All 71 subagents are configured with specific Claude models based on task complexity:
 
-### 🚀 Haiku (Fast & Cost-Effective) - 9 agents
+### 🚀 Haiku (Fast & Cost-Effective) - 16 agents
 **Model:** `haiku`
 - `data-scientist` - SQL queries and data analysis
 - `api-documenter` - OpenAPI/Swagger documentation
@@ -131,8 +143,15 @@ All 59 subagents are configured with specific Claude models based on task comple
 - `sales-automator` - Cold emails and proposals
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
+- `seo-meta-optimizer` - Meta title and description optimization
+- `seo-keyword-strategist` - Keyword density and semantic analysis
+- `seo-structure-architect` - Content structure and schema markup
+- `seo-snippet-hunter` - Featured snippet formatting
+- `seo-content-refresher` - Content freshness updates
+- `seo-cannibalization-detector` - Keyword overlap detection
+- `seo-content-planner` - Content calendars and outlines
 
-### ⚡ Sonnet (Balanced Performance) - 37 agents
+### ⚡ Sonnet (Balanced Performance) - 40 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -180,8 +199,11 @@ All 59 subagents are configured with specific Claude models based on task comple
 - `payment-integration` - Payment processing
 - `mermaid-expert` - Mermaid diagrams and visual documentation
 - `flutter-expert` - Flutter development
+- `seo-content-auditor` - Content quality and E-E-A-T analysis
+- `seo-authority-builder` - Authority signal optimization
+- `seo-content-writer` - SEO-optimized content creation
 
-### 🧠 Opus (Maximum Capability) - 13 agents
+### 🧠 Opus (Maximum Capability) - 15 agents
 **Model:** `opus`
 - `ai-engineer` - LLM applications and RAG systems
 - `security-auditor` - Vulnerability analysis
