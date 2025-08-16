@@ -35,7 +35,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 71 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 75 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -131,9 +131,9 @@ This repository contains 71 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 71 subagents are configured with specific Claude models based on task complexity:
+All 75 subagents are configured with specific Claude models based on task complexity:
 
-### 🚀 Haiku (Fast & Cost-Effective) - 16 agents
+### 🚀 Haiku (Fast & Cost-Effective) - 15 agents
 **Model:** `haiku`
 - `data-scientist` - SQL queries and data analysis
 - `api-documenter` - OpenAPI/Swagger documentation
@@ -152,7 +152,7 @@ All 71 subagents are configured with specific Claude models based on task comple
 - `seo-cannibalization-detector` - Keyword overlap detection
 - `seo-content-planner` - Content calendars and outlines
 
-### ⚡ Sonnet (Balanced Performance) - 40 agents
+### ⚡ Sonnet (Balanced Performance) - 45 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -203,6 +203,7 @@ All 71 subagents are configured with specific Claude models based on task comple
 - `seo-content-auditor` - Content quality and E-E-A-T analysis
 - `seo-authority-builder` - Authority signal optimization
 - `seo-content-writer` - SEO-optimized content creation
+- `hr-pro` - HR operations and corporate policy enforcement
 
 ### 🧠 Opus (Maximum Capability) - 15 agents
 **Model:** `opus`
@@ -450,7 +451,8 @@ payment-integration → security-auditor → Validated implementation
 - **content-marketer**: SEO content, blog posts, social media, email campaigns
 - **sales-automator**: Cold emails, follow-ups, proposals, lead nurturing
 - **customer-support**: Support tickets, FAQs, help documentation, troubleshooting
-- **legal-advisor** - Draft privacy policies, terms of service, disclaimers, and legal notices 
+- **legal-advisor** - Draft privacy policies, terms of service, disclaimers, and legal notices
+- **hr-pro** - HR operations, policy enforcement, and corporate compliance
 
 ## Best Practices
 
