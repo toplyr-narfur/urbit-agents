@@ -35,7 +35,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 74 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 75 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -112,6 +112,7 @@ This repository contains 74 specialized subagents that extend Claude Code's capa
 ### Business & Marketing
 - **[business-analyst](business-analyst.md)** - Analyze metrics, create reports, and track KPIs
 - **[content-marketer](content-marketer.md)** - Write blog posts, social media content, and email newsletters
+- **[hp-pro](hp-pro.md)** - Partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations.
 - **[sales-automator](sales-automator.md)** - Draft cold emails, follow-ups, and proposal templates
 - **[customer-support](customer-support.md)** - Handle support tickets, FAQ responses, and customer emails
 - **[legal-advisor](legal-advisor.md)** - Draft privacy policies, terms of service, disclaimers, and legal notices
@@ -130,7 +131,7 @@ This repository contains 74 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 74 subagents are configured with specific Claude models based on task complexity:
+All 75 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 15 agents
 **Model:** `haiku`
