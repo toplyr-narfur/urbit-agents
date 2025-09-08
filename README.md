@@ -142,28 +142,21 @@ This repository contains **77 expert-level subagents** that extend Claude Code's
 
 All 76 subagents are configured with specific Claude models based on task complexity:
 
-### 🚀 Haiku (Fast & Cost-Effective) - 20 agents
+### 🚀 Haiku (Fast & Cost-Effective) - 11 agents
 **Model:** `haiku`
-- `debugger` - Advanced debugging techniques and error resolution
 - `context-manager` - AI context engineering with vector databases
-- `error-detective` - Log analysis and error pattern recognition
-- `mermaid-expert` - Advanced Mermaid diagramming and visualization
-- `minecraft-bukkit-pro` - Minecraft plugin development with Bukkit/Spigot/Paper
 - `reference-builder` - Exhaustive technical references and API documentation
+- `sales-automator` - Modern sales automation with CRM integration
 - `search-specialist` - Expert web research and information synthesis
-- `tutorial-engineer` - Educational content creation and learning paths
 - `seo-meta-optimizer` - Meta title and description optimization
 - `seo-keyword-strategist` - Keyword density and semantic analysis
 - `seo-structure-architect` - Content structure and schema markup
 - `seo-snippet-hunter` - Featured snippet formatting
 - `seo-content-refresher` - Content freshness updates
 - `seo-cannibalization-detector` - Keyword overlap detection
-- `seo-authority-builder` - E-E-A-T signal optimization
-- `seo-content-auditor` - Content quality and SEO analysis
-- `seo-content-writer` - SEO-optimized content creation
 - `seo-content-planner` - Content calendars and topic clusters
 
-### ⚡ Sonnet (Balanced Performance) - 57 agents
+### ⚡ Sonnet (Balanced Performance) - 45 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -217,12 +210,41 @@ All 76 subagents are configured with specific Claude models based on task comple
 - `data-scientist` - Advanced analytics with cloud platforms
 - `prompt-engineer` - Cutting-edge LLM optimization techniques
 
-All agents now use **Sonnet** or **Haiku** models optimized for their specific complexity levels. The enhanced agents provide:
+### 🧠 Opus (Maximum Capability) - 21 agents
+**Model:** `opus`
 
-- **Comprehensive Expertise** - Deep knowledge in specialized domains
-- **Modern Tool Integration** - Latest frameworks and platforms
-- **Production Focus** - Enterprise-ready solutions and best practices
-- **Current Standards** - 2024/2025 industry practices and compliance
+**Critical Analysis & Architecture:**
+- `ai-engineer` - LLM applications and RAG systems
+- `architect-reviewer` - Architectural consistency and patterns
+- `backend-architect` - System architecture and scalability design
+- `cloud-architect` - Multi-cloud infrastructure architecture
+- `code-reviewer` - Critical code quality and security analysis
+- `data-scientist` - Complex analytics and statistical modeling
+- `database-optimizer` - Performance-critical query optimization
+
+**Complex Engineering & Operations:**
+- `hybrid-cloud-architect` - Complex multi-cloud strategies
+- `incident-responder` - Critical production incident handling
+- `kubernetes-architect` - Cloud-native infrastructure design
+- `ml-engineer` - Complex ML model development and deployment
+- `mlops-engineer` - ML infrastructure and automation
+- `performance-engineer` - Advanced application optimization
+- `prompt-engineer` - Advanced LLM optimization techniques
+- `security-auditor` - Comprehensive vulnerability analysis
+- `terraform-specialist` - Infrastructure architecture with IaC
+
+**Business Critical & Compliance:**
+- `context-manager` - Multi-agent coordination for complex tasks
+- `docs-architect` - Comprehensive technical documentation
+- `hr-pro` - Complex HR scenarios and legal compliance
+- `legal-advisor` - Legal analysis and contract review
+- `quant-analyst` - Advanced financial modeling and algorithmic trading
+
+**Model Optimization:**
+Agents are strategically assigned models based on task complexity:
+- **Opus (21)**: Complex reasoning, critical analysis, architecture
+- **Sonnet (45)**: Balanced development and specialized tasks
+- **Haiku (11)**: Fast, focused utility tasks
 
 ## Installation
 
