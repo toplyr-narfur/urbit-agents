@@ -35,7 +35,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains **77 expert-level subagents** that extend Claude Code's capabilities with deep, specialized knowledge across all areas of software development and business operations. Each subagent has been comprehensively enhanced with:
+This repository contains **78 expert-level subagents** that extend Claude Code's capabilities with deep, specialized knowledge across all areas of software development and business operations. Each subagent has been comprehensively enhanced with:
 
 - **2024/2025 Best Practices** - Latest tools, frameworks, and industry standards
 - **Production-Ready Knowledge** - Real-world scenarios and enterprise patterns
@@ -91,6 +91,7 @@ This repository contains **77 expert-level subagents** that extend Claude Code's
 - **[code-reviewer](code-reviewer.md)** - Expert code review with deep configuration security focus and production reliability
 - **[security-auditor](security-auditor.md)** - Review code for vulnerabilities and ensure OWASP compliance
 - **[test-automator](test-automator.md)** - Create comprehensive test suites with unit, integration, and e2e tests
+- **[tdd-orchestrator](tdd-orchestrator.md)** - Guide Test-Driven Development cycles with red-green-refactor methodology
 - **[performance-engineer](performance-engineer.md)** - Profile applications, optimize bottlenecks, and implement caching strategies
 - **[debugger](debugger.md)** - Debugging specialist for errors, test failures, and unexpected behavior
 - **[error-detective](error-detective.md)** - Search logs and codebases for error patterns, stack traces, and anomalies
@@ -140,7 +141,7 @@ This repository contains **77 expert-level subagents** that extend Claude Code's
 
 ## Model Assignments
 
-All 76 subagents are configured with specific Claude models based on task complexity:
+All 77 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 11 agents
 **Model:** `haiku`
@@ -156,7 +157,7 @@ All 76 subagents are configured with specific Claude models based on task comple
 - `seo-cannibalization-detector` - Keyword overlap detection
 - `seo-content-planner` - Content calendars and topic clusters
 
-### ⚡ Sonnet (Balanced Performance) - 45 agents
+### ⚡ Sonnet (Balanced Performance) - 46 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -203,6 +204,7 @@ All 76 subagents are configured with specific Claude models based on task comple
 
 **Quality & AI/ML:**
 - `test-automator` - AI-powered testing with self-healing frameworks
+- `tdd-orchestrator` - Test-Driven Development cycle orchestration
 - `code-reviewer` - Expert code analysis with modern security scanning
 - `ai-engineer` - Advanced LLM integration with RAG and agent systems
 - `ml-engineer` - Production ML with modern frameworks and monitoring
@@ -243,7 +245,7 @@ All 76 subagents are configured with specific Claude models based on task comple
 **Model Optimization:**
 Agents are strategically assigned models based on task complexity:
 - **Opus (21)**: Complex reasoning, critical analysis, architecture
-- **Sonnet (45)**: Balanced development and specialized tasks
+- **Sonnet (46)**: Balanced development and specialized tasks
 - **Haiku (11)**: Fast, focused utility tasks
 
 ## Installation
@@ -276,6 +278,7 @@ Mention the subagent by name in your request:
 "Use code-reviewer to analyze this component for best practices"
 "Have code-reviewer scrutinize these configuration changes"
 "Have security-auditor check for OWASP compliance issues"
+"Use tdd-orchestrator to implement new feature with test-first approach"
 
 # Development tasks  
 "Get backend-architect to design a user authentication API"
@@ -460,6 +463,7 @@ payment-integration → security-auditor → Validated implementation
 ### 🧪 Quality Assurance
 - **code-reviewer**: Code quality, configuration security, production reliability
 - **test-automator**: Test strategy, test suite creation
+- **tdd-orchestrator**: Test-Driven Development cycles, red-green-refactor methodology
 - **debugger**: Bug investigation, error resolution
 - **error-detective**: Log analysis, error pattern recognition, root cause analysis
 - **search-specialist**: Deep web research, competitive analysis, fact-checking
