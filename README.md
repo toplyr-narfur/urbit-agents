@@ -17,158 +17,230 @@ This repository provides production-ready subagents that extend Claude Code's ca
 ### Architecture & System Design
 
 #### Core Architecture
-- **[backend-architect](backend-architect.md)** - RESTful API design, microservice boundaries, database schemas
-- **[frontend-developer](frontend-developer.md)** - React components, responsive layouts, client-side state management
-- **[graphql-architect](graphql-architect.md)** - GraphQL schemas, resolvers, federation architecture
-- **[architect-reviewer](architect-review.md)** - Architectural consistency analysis and pattern validation
-- **[cloud-architect](cloud-architect.md)** - AWS/Azure/GCP infrastructure design and cost optimization
-- **[hybrid-cloud-architect](hybrid-cloud-architect.md)** - Multi-cloud strategies across cloud and on-premises environments
-- **[kubernetes-architect](kubernetes-architect.md)** - Cloud-native infrastructure with Kubernetes and GitOps
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [backend-architect](backend-architect.md) | opus | RESTful API design, microservice boundaries, database schemas |
+| [frontend-developer](frontend-developer.md) | sonnet | React components, responsive layouts, client-side state management |
+| [graphql-architect](graphql-architect.md) | opus | GraphQL schemas, resolvers, federation architecture |
+| [architect-reviewer](architect-review.md) | opus | Architectural consistency analysis and pattern validation |
+| [cloud-architect](cloud-architect.md) | opus | AWS/Azure/GCP infrastructure design and cost optimization |
+| [hybrid-cloud-architect](hybrid-cloud-architect.md) | opus | Multi-cloud strategies across cloud and on-premises environments |
+| [kubernetes-architect](kubernetes-architect.md) | opus | Cloud-native infrastructure with Kubernetes and GitOps |
 
 #### UI/UX & Mobile
-- **[ui-ux-designer](ui-ux-designer.md)** - Interface design, wireframes, design systems
-- **[ui-visual-validator](ui-visual-validator.md)** - Visual regression testing and UI verification
-- **[mobile-developer](mobile-developer.md)** - React Native and Flutter application development
-- **[ios-developer](ios-developer.md)** - Native iOS development with Swift/SwiftUI
-- **[flutter-expert](flutter-expert.md)** - Advanced Flutter development with state management
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [ui-ux-designer](ui-ux-designer.md) | sonnet | Interface design, wireframes, design systems |
+| [ui-visual-validator](ui-visual-validator.md) | sonnet | Visual regression testing and UI verification |
+| [mobile-developer](mobile-developer.md) | sonnet | React Native and Flutter application development |
+| [ios-developer](ios-developer.md) | sonnet | Native iOS development with Swift/SwiftUI |
+| [flutter-expert](flutter-expert.md) | sonnet | Advanced Flutter development with state management |
 
 ### Programming Languages
 
 #### Systems & Low-Level
-- **[c-pro](c-pro.md)** - System programming with memory management and OS interfaces
-- **[cpp-pro](cpp-pro.md)** - Modern C++ with RAII, smart pointers, STL algorithms
-- **[rust-pro](rust-pro.md)** - Memory-safe systems programming with ownership patterns
-- **[golang-pro](golang-pro.md)** - Concurrent programming with goroutines and channels
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [c-pro](c-pro.md) | sonnet | System programming with memory management and OS interfaces |
+| [cpp-pro](cpp-pro.md) | sonnet | Modern C++ with RAII, smart pointers, STL algorithms |
+| [rust-pro](rust-pro.md) | sonnet | Memory-safe systems programming with ownership patterns |
+| [golang-pro](golang-pro.md) | sonnet | Concurrent programming with goroutines and channels |
 
 #### Web & Application
-- **[javascript-pro](javascript-pro.md)** - Modern JavaScript with ES6+, async patterns, Node.js
-- **[typescript-pro](typescript-pro.md)** - Advanced TypeScript with type systems and generics
-- **[python-pro](python-pro.md)** - Python development with advanced features and optimization
-- **[ruby-pro](ruby-pro.md)** - Ruby with metaprogramming, Rails patterns, gem development
-- **[php-pro](php-pro.md)** - Modern PHP with frameworks and performance optimization
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [javascript-pro](javascript-pro.md) | sonnet | Modern JavaScript with ES6+, async patterns, Node.js |
+| [typescript-pro](typescript-pro.md) | sonnet | Advanced TypeScript with type systems and generics |
+| [python-pro](python-pro.md) | sonnet | Python development with advanced features and optimization |
+| [ruby-pro](ruby-pro.md) | sonnet | Ruby with metaprogramming, Rails patterns, gem development |
+| [php-pro](php-pro.md) | sonnet | Modern PHP with frameworks and performance optimization |
 
 #### Enterprise & JVM
-- **[java-pro](java-pro.md)** - Modern Java with streams, concurrency, JVM optimization
-- **[scala-pro](scala-pro.md)** - Enterprise Scala with functional programming and distributed systems
-- **[csharp-pro](csharp-pro.md)** - C# development with .NET frameworks and patterns
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [java-pro](java-pro.md) | sonnet | Modern Java with streams, concurrency, JVM optimization |
+| [scala-pro](scala-pro.md) | sonnet | Enterprise Scala with functional programming and distributed systems |
+| [csharp-pro](csharp-pro.md) | sonnet | C# development with .NET frameworks and patterns |
 
 #### Specialized Platforms
-- **[elixir-pro](elixir-pro.md)** - Elixir with OTP patterns and Phoenix frameworks
-- **[unity-developer](unity-developer.md)** - Unity game development and optimization
-- **[minecraft-bukkit-pro](minecraft-bukkit-pro.md)** - Minecraft server plugin development
-- **[sql-pro](sql-pro.md)** - Complex SQL queries and database optimization
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [elixir-pro](elixir-pro.md) | sonnet | Elixir with OTP patterns and Phoenix frameworks |
+| [unity-developer](unity-developer.md) | sonnet | Unity game development and optimization |
+| [minecraft-bukkit-pro](minecraft-bukkit-pro.md) | sonnet | Minecraft server plugin development |
+| [sql-pro](sql-pro.md) | sonnet | Complex SQL queries and database optimization |
 
 ### Infrastructure & Operations
 
 #### DevOps & Deployment
-- **[devops-troubleshooter](devops-troubleshooter.md)** - Production debugging, log analysis, deployment troubleshooting
-- **[deployment-engineer](deployment-engineer.md)** - CI/CD pipelines, containerization, cloud deployments
-- **[terraform-specialist](terraform-specialist.md)** - Infrastructure as Code with Terraform modules and state management
-- **[dx-optimizer](dx-optimizer.md)** - Developer experience optimization and tooling improvements
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [devops-troubleshooter](devops-troubleshooter.md) | sonnet | Production debugging, log analysis, deployment troubleshooting |
+| [deployment-engineer](deployment-engineer.md) | sonnet | CI/CD pipelines, containerization, cloud deployments |
+| [terraform-specialist](terraform-specialist.md) | opus | Infrastructure as Code with Terraform modules and state management |
+| [dx-optimizer](dx-optimizer.md) | sonnet | Developer experience optimization and tooling improvements |
 
 #### Database Management
-- **[database-optimizer](database-optimizer.md)** - Query optimization, index design, migration strategies
-- **[database-admin](database-admin.md)** - Database operations, backup, replication, monitoring
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [database-optimizer](database-optimizer.md) | opus | Query optimization, index design, migration strategies |
+| [database-admin](database-admin.md) | sonnet | Database operations, backup, replication, monitoring |
 
 #### Incident Response & Network
-- **[incident-responder](incident-responder.md)** - Production incident management and resolution
-- **[network-engineer](network-engineer.md)** - Network debugging, load balancing, traffic analysis
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [incident-responder](incident-responder.md) | opus | Production incident management and resolution |
+| [network-engineer](network-engineer.md) | sonnet | Network debugging, load balancing, traffic analysis |
 
 ### Quality Assurance & Security
 
 #### Code Quality & Review
-- **[code-reviewer](code-reviewer.md)** - Code review with security focus and production reliability
-- **[security-auditor](security-auditor.md)** - Vulnerability assessment and OWASP compliance
-- **[architect-reviewer](architect-review.md)** - Architectural consistency and pattern validation
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [code-reviewer](code-reviewer.md) | opus | Code review with security focus and production reliability |
+| [security-auditor](security-auditor.md) | opus | Vulnerability assessment and OWASP compliance |
+| [architect-reviewer](architect-review.md) | opus | Architectural consistency and pattern validation |
 
 #### Testing & Debugging
-- **[test-automator](test-automator.md)** - Comprehensive test suite creation (unit, integration, e2e)
-- **[tdd-orchestrator](tdd-orchestrator.md)** - Test-Driven Development methodology guidance
-- **[debugger](debugger.md)** - Error resolution and test failure analysis
-- **[error-detective](error-detective.md)** - Log analysis and error pattern recognition
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [test-automator](test-automator.md) | sonnet | Comprehensive test suite creation (unit, integration, e2e) |
+| [tdd-orchestrator](tdd-orchestrator.md) | sonnet | Test-Driven Development methodology guidance |
+| [debugger](debugger.md) | sonnet | Error resolution and test failure analysis |
+| [error-detective](error-detective.md) | sonnet | Log analysis and error pattern recognition |
 
 #### Performance & Research
-- **[performance-engineer](performance-engineer.md)** - Application profiling and optimization
-- **[search-specialist](search-specialist.md)** - Advanced web research and information synthesis
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [performance-engineer](performance-engineer.md) | opus | Application profiling and optimization |
+| [search-specialist](search-specialist.md) | haiku | Advanced web research and information synthesis |
 
 ### Data & AI
 
 #### Data Engineering & Analytics
-- **[data-scientist](data-scientist.md)** - Data analysis, SQL queries, BigQuery operations
-- **[data-engineer](data-engineer.md)** - ETL pipelines, data warehouses, streaming architectures
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [data-scientist](data-scientist.md) | opus | Data analysis, SQL queries, BigQuery operations |
+| [data-engineer](data-engineer.md) | sonnet | ETL pipelines, data warehouses, streaming architectures |
 
 #### Machine Learning & AI
-- **[ai-engineer](ai-engineer.md)** - LLM applications, RAG systems, prompt pipelines
-- **[ml-engineer](ml-engineer.md)** - ML pipelines, model serving, feature engineering
-- **[mlops-engineer](mlops-engineer.md)** - ML infrastructure, experiment tracking, model registries
-- **[prompt-engineer](prompt-engineer.md)** - LLM prompt optimization and engineering
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [ai-engineer](ai-engineer.md) | opus | LLM applications, RAG systems, prompt pipelines |
+| [ml-engineer](ml-engineer.md) | opus | ML pipelines, model serving, feature engineering |
+| [mlops-engineer](mlops-engineer.md) | opus | ML infrastructure, experiment tracking, model registries |
+| [prompt-engineer](prompt-engineer.md) | opus | LLM prompt optimization and engineering |
 
 ### Documentation & Technical Writing
 
-- **[docs-architect](docs-architect.md)** - Comprehensive technical documentation generation
-- **[api-documenter](api-documenter.md)** - OpenAPI/Swagger specifications and developer docs
-- **[reference-builder](reference-builder.md)** - Technical references and API documentation
-- **[tutorial-engineer](tutorial-engineer.md)** - Step-by-step tutorials and educational content
-- **[mermaid-expert](mermaid-expert.md)** - Diagram creation (flowcharts, sequences, ERDs)
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [docs-architect](docs-architect.md) | opus | Comprehensive technical documentation generation |
+| [api-documenter](api-documenter.md) | sonnet | OpenAPI/Swagger specifications and developer docs |
+| [reference-builder](reference-builder.md) | haiku | Technical references and API documentation |
+| [tutorial-engineer](tutorial-engineer.md) | sonnet | Step-by-step tutorials and educational content |
+| [mermaid-expert](mermaid-expert.md) | sonnet | Diagram creation (flowcharts, sequences, ERDs) |
 
 ### Business & Operations
 
 #### Business Analysis & Finance
-- **[business-analyst](business-analyst.md)** - Metrics analysis, reporting, KPI tracking
-- **[quant-analyst](quant-analyst.md)** - Financial modeling, trading strategies, market analysis
-- **[risk-manager](risk-manager.md)** - Portfolio risk monitoring and management
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [business-analyst](business-analyst.md) | sonnet | Metrics analysis, reporting, KPI tracking |
+| [quant-analyst](quant-analyst.md) | opus | Financial modeling, trading strategies, market analysis |
+| [risk-manager](risk-manager.md) | sonnet | Portfolio risk monitoring and management |
 
 #### Marketing & Sales
-- **[content-marketer](content-marketer.md)** - Blog posts, social media, email campaigns
-- **[sales-automator](sales-automator.md)** - Cold emails, follow-ups, proposal generation
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [content-marketer](content-marketer.md) | sonnet | Blog posts, social media, email campaigns |
+| [sales-automator](sales-automator.md) | haiku | Cold emails, follow-ups, proposal generation |
 
 #### Support & Legal
-- **[customer-support](customer-support.md)** - Support tickets, FAQ responses, customer communication
-- **[hr-pro](hr-pro.md)** - HR operations, policies, employee relations
-- **[legal-advisor](legal-advisor.md)** - Privacy policies, terms of service, legal documentation
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [customer-support](customer-support.md) | sonnet | Support tickets, FAQ responses, customer communication |
+| [hr-pro](hr-pro.md) | opus | HR operations, policies, employee relations |
+| [legal-advisor](legal-advisor.md) | opus | Privacy policies, terms of service, legal documentation |
 
 ### Specialized Domains
 
-- **[payment-integration](payment-integration.md)** - Payment processor integration (Stripe, PayPal)
-- **[legacy-modernizer](legacy-modernizer.md)** - Legacy code refactoring and modernization
-- **[context-manager](context-manager.md)** - Multi-agent context management
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [payment-integration](payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
+| [legacy-modernizer](legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization |
+| [context-manager](context-manager.md) | haiku | Multi-agent context management |
 
 ### SEO & Content Optimization
 
-- **[seo-content-auditor](seo-content-auditor.md)** - Content quality analysis, E-E-A-T signals assessment
-- **[seo-meta-optimizer](seo-meta-optimizer.md)** - Meta title and description optimization
-- **[seo-keyword-strategist](seo-keyword-strategist.md)** - Keyword analysis and semantic variations
-- **[seo-structure-architect](seo-structure-architect.md)** - Content structure and schema markup
-- **[seo-snippet-hunter](seo-snippet-hunter.md)** - Featured snippet formatting
-- **[seo-content-refresher](seo-content-refresher.md)** - Content freshness analysis
-- **[seo-cannibalization-detector](seo-cannibalization-detector.md)** - Keyword overlap detection
-- **[seo-authority-builder](seo-authority-builder.md)** - E-E-A-T signal analysis
-- **[seo-content-writer](seo-content-writer.md)** - SEO-optimized content creation
-- **[seo-content-planner](seo-content-planner.md)** - Content planning and topic clusters
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [seo-content-auditor](seo-content-auditor.md) | sonnet | Content quality analysis, E-E-A-T signals assessment |
+| [seo-meta-optimizer](seo-meta-optimizer.md) | haiku | Meta title and description optimization |
+| [seo-keyword-strategist](seo-keyword-strategist.md) | haiku | Keyword analysis and semantic variations |
+| [seo-structure-architect](seo-structure-architect.md) | haiku | Content structure and schema markup |
+| [seo-snippet-hunter](seo-snippet-hunter.md) | haiku | Featured snippet formatting |
+| [seo-content-refresher](seo-content-refresher.md) | haiku | Content freshness analysis |
+| [seo-cannibalization-detector](seo-cannibalization-detector.md) | haiku | Keyword overlap detection |
+| [seo-authority-builder](seo-authority-builder.md) | sonnet | E-E-A-T signal analysis |
+| [seo-content-writer](seo-content-writer.md) | sonnet | SEO-optimized content creation |
+| [seo-content-planner](seo-content-planner.md) | haiku | Content planning and topic clusters |
 
 ## Model Configuration
 
 Agents are assigned to specific Claude models based on task complexity and computational requirements. The system uses three model tiers:
 
-### Haiku Model (Fast Response) - 11 agents
-Optimized for quick, focused tasks with minimal computational overhead:
-- `context-manager`, `reference-builder`, `sales-automator`, `search-specialist`
-- SEO agents: `seo-meta-optimizer`, `seo-keyword-strategist`, `seo-structure-architect`, `seo-snippet-hunter`, `seo-content-refresher`, `seo-cannibalization-detector`, `seo-content-planner`
+### Model Distribution Summary
 
-### Sonnet Model (Balanced Performance) - 46 agents
-Standard model for development and specialized tasks:
-- Language specialists (18): All programming language agents
-- Frontend/UI agents (5): `frontend-developer`, `ui-ux-designer`, `ui-visual-validator`, `mobile-developer`, `ios-developer`
-- Infrastructure agents (14): DevOps, database, network, and deployment specialists
-- Quality/Testing agents (4): `test-automator`, `tdd-orchestrator`, `debugger`, `error-detective`
-- Data/ML agents (5): Basic ML and data engineering tasks
+| Model | Agent Count | Use Case |
+|-------|-------------|----------|
+| Haiku | 11 | Quick, focused tasks with minimal computational overhead |
+| Sonnet | 46 | Standard development and specialized engineering tasks |
+| Opus | 21 | Complex reasoning, architecture, and critical analysis |
 
-### Opus Model (Maximum Capability) - 21 agents
-Reserved for complex reasoning and critical analysis:
-- Architecture & Design (7): `architect-reviewer`, `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `graphql-architect`, `terraform-specialist`
-- Critical Analysis (5): `code-reviewer`, `security-auditor`, `performance-engineer`, `incident-responder`, `database-optimizer`
-- AI/ML Complex (5): `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer`
-- Business Critical (4): `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst`
+### Haiku Model Agents
+
+| Category | Agents |
+|----------|--------|
+| Context & Reference | `context-manager`, `reference-builder`, `sales-automator`, `search-specialist` |
+| SEO Optimization | `seo-meta-optimizer`, `seo-keyword-strategist`, `seo-structure-architect`, `seo-snippet-hunter`, `seo-content-refresher`, `seo-cannibalization-detector`, `seo-content-planner` |
+
+### Sonnet Model Agents
+
+| Category | Count | Agents |
+|----------|-------|--------|
+| Programming Languages | 18 | All language-specific agents (JavaScript, Python, Java, C++, etc.) |
+| Frontend & UI | 5 | `frontend-developer`, `ui-ux-designer`, `ui-visual-validator`, `mobile-developer`, `ios-developer` |
+| Infrastructure | 8 | `devops-troubleshooter`, `deployment-engineer`, `dx-optimizer`, `database-admin`, `network-engineer`, `flutter-expert`, `api-documenter`, `tutorial-engineer` |
+| Quality & Testing | 4 | `test-automator`, `tdd-orchestrator`, `debugger`, `error-detective` |
+| Business & Support | 6 | `business-analyst`, `risk-manager`, `content-marketer`, `customer-support`, `mermaid-expert`, `legacy-modernizer` |
+| Data & Content | 5 | `data-engineer`, `payment-integration`, `seo-content-auditor`, `seo-authority-builder`, `seo-content-writer` |
+
+### Opus Model Agents
+
+| Category | Count | Agents |
+|----------|-------|--------|
+| Architecture & Design | 7 | `architect-reviewer`, `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `graphql-architect`, `terraform-specialist` |
+| Critical Analysis | 5 | `code-reviewer`, `security-auditor`, `performance-engineer`, `incident-responder`, `database-optimizer` |
+| AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
+| Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
 
 ## Installation
 
@@ -335,43 +407,62 @@ payment-integration → security-auditor → Validated implementation
 ## Agent Selection Guide
 
 ### Architecture & Planning
-- `backend-architect`: API design, microservices, database schemas
-- `cloud-architect`: Infrastructure design, scalability planning
-- `ui-ux-designer`: Interface design, wireframes, design systems
+
+| Task | Recommended Agent | Key Capabilities |
+|------|------------------|------------------|
+| API Design | `backend-architect` | RESTful APIs, microservices, database schemas |
+| Cloud Infrastructure | `cloud-architect` | AWS/Azure/GCP design, scalability planning |
+| UI/UX Design | `ui-ux-designer` | Interface design, wireframes, design systems |
+| System Architecture | `architect-reviewer` | Pattern validation, consistency analysis |
 
 ### Development by Language
-- Systems: `c-pro`, `cpp-pro`, `rust-pro`, `golang-pro`
-- Web: `javascript-pro`, `typescript-pro`, `python-pro`, `ruby-pro`, `php-pro`
-- Enterprise: `java-pro`, `csharp-pro`, `scala-pro`
-- Mobile: `ios-developer`, `flutter-expert`, `mobile-developer`
-- Specialized: `elixir-pro`, `unity-developer`, `minecraft-bukkit-pro`
+
+| Language Category | Agents | Primary Use Cases |
+|-------------------|--------|-------------------|
+| Systems Programming | `c-pro`, `cpp-pro`, `rust-pro`, `golang-pro` | OS interfaces, embedded systems, high performance |
+| Web Development | `javascript-pro`, `typescript-pro`, `python-pro`, `ruby-pro`, `php-pro` | Full-stack web applications, APIs, scripting |
+| Enterprise | `java-pro`, `csharp-pro`, `scala-pro` | Large-scale applications, enterprise systems |
+| Mobile | `ios-developer`, `flutter-expert`, `mobile-developer` | Native and cross-platform mobile apps |
+| Specialized | `elixir-pro`, `unity-developer`, `minecraft-bukkit-pro` | Domain-specific development |
 
 ### Operations & Infrastructure
-- `devops-troubleshooter`: Production issues, deployment problems
-- `incident-responder`: Critical outages and immediate response
-- `database-optimizer`: Query performance, indexing strategies
-- `database-admin`: Backup, replication, disaster recovery
-- `terraform-specialist`: Infrastructure as Code
-- `network-engineer`: Network debugging, load balancing
+
+| Task | Recommended Agent | Key Capabilities |
+|------|------------------|------------------|
+| Production Issues | `devops-troubleshooter` | Log analysis, deployment debugging |
+| Critical Incidents | `incident-responder` | Outage response, immediate mitigation |
+| Database Performance | `database-optimizer` | Query optimization, indexing strategies |
+| Database Operations | `database-admin` | Backup, replication, disaster recovery |
+| Infrastructure as Code | `terraform-specialist` | Terraform modules, state management |
+| Network Issues | `network-engineer` | Network debugging, load balancing |
 
 ### Quality & Security
-- `code-reviewer`: Code quality and security analysis
-- `security-auditor`: Vulnerability scanning, compliance
-- `test-automator`: Test suite creation and strategy
-- `performance-engineer`: Application optimization
-- `debugger`: Bug investigation and resolution
+
+| Task | Recommended Agent | Key Capabilities |
+|------|------------------|------------------|
+| Code Review | `code-reviewer` | Security focus, best practices |
+| Security Audit | `security-auditor` | Vulnerability scanning, OWASP compliance |
+| Test Creation | `test-automator` | Unit, integration, E2E test suites |
+| Performance Issues | `performance-engineer` | Profiling, optimization |
+| Bug Investigation | `debugger` | Error resolution, root cause analysis |
 
 ### Data & Machine Learning
-- `data-scientist`: Data analysis and insights
-- `ai-engineer`: LLM applications and RAG systems
-- `ml-engineer`: Model development and deployment
-- `mlops-engineer`: ML infrastructure and pipelines
+
+| Task | Recommended Agent | Key Capabilities |
+|------|------------------|------------------|
+| Data Analysis | `data-scientist` | SQL queries, statistical analysis |
+| LLM Applications | `ai-engineer` | RAG systems, prompt pipelines |
+| ML Development | `ml-engineer` | Model training, feature engineering |
+| ML Operations | `mlops-engineer` | ML infrastructure, experiment tracking |
 
 ### Documentation & Business
-- `docs-architect`: Technical documentation generation
-- `api-documenter`: OpenAPI specifications
-- `business-analyst`: Metrics and reporting
-- `legal-advisor`: Legal documentation and compliance
+
+| Task | Recommended Agent | Key Capabilities |
+|------|------------------|------------------|
+| Technical Docs | `docs-architect` | Comprehensive documentation generation |
+| API Documentation | `api-documenter` | OpenAPI/Swagger specifications |
+| Business Metrics | `business-analyst` | KPI tracking, reporting |
+| Legal Compliance | `legal-advisor` | Privacy policies, terms of service |
 
 ## Best Practices
 
