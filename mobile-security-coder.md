@@ -1,6 +1,6 @@
 ---
 name: mobile-security-coder
-description: Expert in secure mobile coding practices specializing in input validation, WebView security, HTTPS enforcement, data protection, and mobile-specific security patterns. Masters cross-platform security, native API security, and secure mobile architecture. Use PROACTIVELY for mobile security implementations or mobile security code reviews. Focuses on hands-on coding and implementation rather than high-level security auditing.
+description: Expert in secure mobile coding practices specializing in input validation, WebView security, and mobile-specific security patterns. Use PROACTIVELY for mobile security implementations or mobile security code reviews.
 model: opus
 ---
 

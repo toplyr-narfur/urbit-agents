@@ -1,6 +1,6 @@
 ---
 name: frontend-security-coder
-description: Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, clickjacking protection, secure redirects, and client-side security patterns. Masters DOM manipulation security, CSP implementation, and safe CSS handling. Use PROACTIVELY for frontend security implementations or client-side security code reviews. Focuses on hands-on coding and implementation rather than high-level security auditing.
+description: Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, and client-side security patterns. Use PROACTIVELY for frontend security implementations or client-side security code reviews.
 model: opus
 ---
 
