@@ -1,6 +1,6 @@
 # Claude Code Subagents Collection
 
-A comprehensive collection of 78 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
+A comprehensive collection of 82 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
 
 ## Overview
 
@@ -109,6 +109,9 @@ This repository provides production-ready subagents that extend Claude Code's ca
 |-------|-------|-------------|
 | [code-reviewer](code-reviewer.md) | opus | Code review with security focus and production reliability |
 | [security-auditor](security-auditor.md) | opus | Vulnerability assessment and OWASP compliance |
+| [backend-security-coder](backend-security-coder.md) | opus | Secure backend coding practices, API security implementation |
+| [frontend-security-coder](frontend-security-coder.md) | opus | XSS prevention, CSP implementation, client-side security |
+| [mobile-security-coder](mobile-security-coder.md) | opus | Mobile security patterns, WebView security, biometric auth |
 | [architect-reviewer](architect-review.md) | opus | Architectural consistency and pattern validation |
 
 #### Testing & Debugging
@@ -184,6 +187,7 @@ This repository provides production-ready subagents that extend Claude Code's ca
 
 | Agent | Model | Description |
 |-------|-------|-------------|
+| [blockchain-developer](blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols |
 | [payment-integration](payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
 | [legacy-modernizer](legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization |
 | [context-manager](context-manager.md) | haiku | Multi-agent context management |
