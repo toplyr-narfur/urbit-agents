@@ -1,6 +1,6 @@
 # Claude Code Subagents Collection
 
-A comprehensive collection of 82 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
+A comprehensive collection of 83 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
 
 ## Overview
 
@@ -123,11 +123,12 @@ This repository provides production-ready subagents that extend Claude Code's ca
 | [debugger](debugger.md) | sonnet | Error resolution and test failure analysis |
 | [error-detective](error-detective.md) | sonnet | Log analysis and error pattern recognition |
 
-#### Performance & Research
+#### Performance & Observability
 
 | Agent | Model | Description |
 |-------|-------|-------------|
 | [performance-engineer](performance-engineer.md) | opus | Application profiling and optimization |
+| [observability-engineer](observability-engineer.md) | opus | Production monitoring, distributed tracing, SLI/SLO management |
 | [search-specialist](search-specialist.md) | haiku | Advanced web research and information synthesis |
 
 ### Data & AI
@@ -217,7 +218,7 @@ Agents are assigned to specific Claude models based on task complexity and compu
 |-------|-------------|----------|
 | Haiku | 11 | Quick, focused tasks with minimal computational overhead |
 | Sonnet | 46 | Standard development and specialized engineering tasks |
-| Opus | 21 | Complex reasoning, architecture, and critical analysis |
+| Opus | 22 | Complex reasoning, architecture, and critical analysis |
 
 ### Haiku Model Agents
 
@@ -242,7 +243,7 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | Category | Count | Agents |
 |----------|-------|--------|
 | Architecture & Design | 7 | `architect-reviewer`, `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `graphql-architect`, `terraform-specialist` |
-| Critical Analysis | 5 | `code-reviewer`, `security-auditor`, `performance-engineer`, `incident-responder`, `database-optimizer` |
+| Critical Analysis | 6 | `code-reviewer`, `security-auditor`, `performance-engineer`, `observability-engineer`, `incident-responder`, `database-optimizer` |
 | AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
 | Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
 
