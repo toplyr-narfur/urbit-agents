@@ -140,38 +140,7 @@ Focused, single-purpose utilities for specific development operations:
 
 ## Usage
 
-### Workflow Invocation
-
-```bash
-# Full-stack feature development
-/workflows:feature-development implement OAuth2 authentication
-
-# Security hardening
-/workflows:security-hardening perform security audit and remediation
-
-# ML pipeline
-/workflows:ml-pipeline build recommendation system with monitoring
-
-# Incident response
-/workflows:incident-response debug production memory leak
-```
-
-### Tool Invocation
-
-```bash
-# API scaffolding
-/tools:api-scaffold create user management endpoints
-
-# Security scanning
-/tools:security-scan perform vulnerability assessment
-
-# Documentation generation
-/tools:doc-generate create API documentation
-```
-
-### Direct Agent Access
-
-Agents are automatically available and can be explicitly invoked:
+All 83 specialized agents are automatically available to Claude Code and can be explicitly invoked:
 
 ```bash
 "Use backend-architect to design the authentication API"
@@ -216,28 +185,22 @@ search-specialist, dx-optimizer, sql-pro
 
 ## Multi-Agent Orchestration Examples
 
+Agents automatically coordinate for complex tasks:
+
 ### Full-Stack Development
-```bash
-/workflows:full-stack-feature implement user dashboard with analytics
-```
+**Example**: "Implement user dashboard with analytics"
 **Orchestrates**: backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
 
 ### Security Hardening
-```bash
-/workflows:security-hardening implement security best practices
-```
+**Example**: "Implement security best practices"
 **Orchestrates**: security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
 
 ### Data/ML Pipeline
-```bash
-/workflows:ml-pipeline build customer churn prediction model
-```
+**Example**: "Build customer churn prediction model"
 **Orchestrates**: data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
 
 ### Incident Response
-```bash
-/workflows:incident-response debug high CPU usage in production
-```
+**Example**: "Debug high CPU usage in production"
 **Orchestrates**: incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
 
 ## Model Configuration
@@ -324,36 +287,17 @@ If you previously used the separate `commands` repository (`wshobson/commands`):
    # Should show: agents/ workflows/ tools/ README.md
    ```
 
-4. **Update your workflow**:
-   - Old: `/feature-development` or `/commands:feature-development`
-   - New: `/workflows:feature-development`
-
-   - Old: `/api-scaffold` or `/commands:api-scaffold`
-   - New: `/tools:api-scaffold`
-
 ### What Stays the Same?
 
 - All 83 agents work exactly as before (no command syntax changes)
 - Agent definitions and capabilities unchanged
 - Direct agent invocation still works: "Use backend-architect to..."
 
-### Breaking Changes
+### What's New?
 
-⚠️ **Command Invocation Syntax**:
-- Workflows now use `/workflows:` prefix instead of just `/`
-- Tools now use `/tools:` prefix instead of just `/`
-
-**Old syntax** (deprecated):
-```bash
-/feature-development implement auth
-/api-scaffold create endpoints
-```
-
-**New syntax** (current):
-```bash
-/workflows:feature-development implement auth
-/tools:api-scaffold create endpoints
-```
+✅ **Workflows & Tools Added**: 15 workflow orchestrators and 42 development tools now included
+✅ **Unified Repository**: Everything accessible from a single installation
+✅ **Comprehensive Documentation**: Migration guide and detailed usage instructions
 
 ### Need Help?
 
