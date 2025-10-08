@@ -6,11 +6,65 @@ A comprehensive production-ready system combining **83 specialized AI agents**, 
 
 This unified repository provides everything needed for intelligent automation and multi-agent orchestration across modern software development:
 
-- **83 Specialized Agents** - Domain experts with deep knowledge (architecture, languages, infrastructure, quality, data/AI, business)
-- **15 Workflow Orchestrators** - Multi-agent coordination systems for complex operations
-- **42 Development Tools** - Focused utilities for specific tasks
+- **83 Specialized Agents** - Domain experts with deep knowledge across architecture, languages, infrastructure, quality, data/AI, documentation, business operations, and SEO
+- **15 Workflow Orchestrators** - Multi-agent coordination systems for complex operations like full-stack development, security hardening, ML pipelines, and incident response
+- **42 Development Tools** - Focused utilities for specific tasks including API scaffolding, security scanning, test automation, and infrastructure setup
 
-## System Requirements
+## Installation
+
+### Plugin Marketplace (Recommended - Available October 9, 2025)
+
+Install workflow-based plugin collections directly from the Claude Code plugin marketplace:
+
+```bash
+# Add the marketplace
+/plugin marketplace add wshobson/agents
+
+# Browse available plugins
+/plugin list
+
+# Install workflow-based plugins
+/plugin install full-stack-development
+/plugin install security-hardening
+/plugin install data-ml-pipeline
+/plugin install incident-response
+
+# Install infrastructure/specialist plugins
+/plugin install cloud-infrastructure
+/plugin install language-specialists
+/plugin install seo-content-suite
+```
+
+### Manual Installation
+
+```bash
+cd ~/.claude
+git clone https://github.com/wshobson/agents.git
+```
+
+All agents, workflows, and tools will be automatically available to Claude Code.
+
+## Repository Structure
+
+```
+agents/
+├── agents/                        # 83 specialized AI agents
+│   ├── backend-architect.md
+│   ├── frontend-developer.md
+│   └── ... (all agent definitions)
+├── workflows/                     # 15 multi-agent orchestrators
+│   ├── feature-development.md
+│   ├── full-stack-feature.md
+│   ├── security-hardening.md
+│   └── ... (workflow commands)
+├── tools/                         # 42 development utilities
+│   ├── api-scaffold.md
+│   ├── security-scan.md
+│   └── ... (tool commands)
+└── README.md
+```
+
+## Agent Categories
 
 ### Architecture & System Design
 
@@ -184,15 +238,6 @@ This unified repository provides everything needed for intelligent automation an
 | [hr-pro](agents/hr-pro.md) | opus | HR operations, policies, employee relations |
 | [legal-advisor](agents/legal-advisor.md) | opus | Privacy policies, terms of service, legal documentation |
 
-### Specialized Domains
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [blockchain-developer](agents/blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols |
-| [payment-integration](agents/payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
-| [legacy-modernizer](agents/legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization |
-| [context-manager](agents/context-manager.md) | haiku | Multi-agent context management |
-
 ### SEO & Content Optimization
 
 | Agent | Model | Description |
@@ -207,6 +252,15 @@ This unified repository provides everything needed for intelligent automation an
 | [seo-authority-builder](agents/seo-authority-builder.md) | sonnet | E-E-A-T signal analysis |
 | [seo-content-writer](agents/seo-content-writer.md) | sonnet | SEO-optimized content creation |
 | [seo-content-planner](agents/seo-content-planner.md) | haiku | Content planning and topic clusters |
+
+### Specialized Domains
+
+| Agent | Model | Description |
+|-------|-------|-------------|
+| [blockchain-developer](agents/blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols |
+| [payment-integration](agents/payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
+| [legacy-modernizer](agents/legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization |
+| [context-manager](agents/context-manager.md) | haiku | Multi-agent context management |
 
 ## Model Configuration
 
@@ -247,58 +301,103 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
 | Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
 
-## Installation
+## Usage
 
-### Plugin Marketplace (Recommended - Available October 9, 2025)
-
-Install workflow-based plugin collections directly from the Claude Code plugin marketplace:
+### Workflow Invocation
 
 ```bash
-# Add the marketplace
-/plugin marketplace add wshobson/agents
+# Full-stack feature development
+/workflows:feature-development implement OAuth2 authentication
 
-# Browse available plugins
-/plugin list
+# Security hardening
+/workflows:security-hardening perform security audit and remediation
 
-# Install workflow-based plugins
-/plugin install full-stack-development
-/plugin install security-hardening
-/plugin install data-ml-pipeline
-/plugin install incident-response
+# ML pipeline
+/workflows:ml-pipeline build recommendation system with monitoring
 
-# Install infrastructure/specialist plugins
-/plugin install cloud-infrastructure
-/plugin install language-specialists
-/plugin install seo-content-suite
+# Incident response
+/workflows:incident-response debug production memory leak
 ```
 
-### Manual Installation
+### Tool Invocation
 
 ```bash
-cd ~/.claude
-git clone https://github.com/wshobson/agents.git
+# API scaffolding
+/tools:api-scaffold create user management endpoints
+
+# Security scanning
+/tools:security-scan perform vulnerability assessment
+
+# Documentation generation
+/tools:doc-generate create API documentation
 ```
 
-All agents, workflows, and tools will be automatically available to Claude Code.
+### Direct Agent Access
 
-## Repository Structure
+Agents are automatically available and can be explicitly invoked:
 
+```bash
+"Use backend-architect to design the authentication API"
+"Have security-auditor scan for OWASP vulnerabilities"
+"Get performance-engineer to optimize this bottleneck"
 ```
-agents/
-├── agents/                        # 83 specialized AI agents
-│   ├── backend-architect.md
-│   ├── frontend-developer.md
-│   └── ... (all agent definitions)
-├── workflows/                     # 15 multi-agent orchestrators
-│   ├── feature-development.md
-│   ├── full-stack-feature.md
-│   ├── security-hardening.md
-│   └── ... (workflow commands)
-├── tools/                         # 42 development utilities
-│   ├── api-scaffold.md
-│   ├── security-scan.md
-│   └── ... (tool commands)
-└── README.md
+
+## Multi-Agent Orchestration Examples
+
+### Full-Stack Development
+```bash
+/workflows:full-stack-feature implement user dashboard with analytics
+```
+**Orchestrates**: backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
+
+### Security Hardening
+```bash
+/workflows:security-hardening implement security best practices
+```
+**Orchestrates**: security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
+
+### Data/ML Pipeline
+```bash
+/workflows:ml-pipeline build customer churn prediction model
+```
+**Orchestrates**: data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
+
+### Incident Response
+```bash
+/workflows:incident-response debug high CPU usage in production
+```
+**Orchestrates**: incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
+
+### Common Workflow Patterns
+
+**Feature Development**
+```
+"Implement user authentication"
+→ backend-architect → frontend-developer → test-automator → security-auditor
+```
+
+**Performance Optimization**
+```
+"Optimize checkout process"
+→ performance-engineer → database-optimizer → frontend-developer
+```
+
+**Production Incidents**
+```
+"Debug high memory usage"
+→ incident-responder → devops-troubleshooter → error-detective → performance-engineer
+```
+
+**Infrastructure Setup**
+```
+"Set up disaster recovery"
+→ database-admin → database-optimizer → terraform-specialist
+```
+
+**ML Pipeline Development**
+```
+"Build ML pipeline with monitoring"
+→ mlops-engineer → ml-engineer → data-engineer → performance-engineer
 ```
 
 ## Workflow Commands
@@ -372,151 +471,16 @@ Focused, single-purpose utilities for specific development operations:
 
 ### And 20+ more tools for debugging, documentation, data validation, cost optimization, and developer workflows
 
-## Usage
+## Contributing
 
-### Workflow Invocation
+To add new agents, workflows, or tools:
 
-```bash
-# Full-stack feature development
-/workflows:feature-development implement OAuth2 authentication
+1. Create a new `.md` file in the appropriate directory with frontmatter
+2. Use lowercase, hyphen-separated naming convention
+3. Write clear activation criteria in the description
+4. Define comprehensive system prompt with expertise areas
 
-# Security hardening
-/workflows:security-hardening perform security audit and remediation
-
-# ML pipeline
-/workflows:ml-pipeline build recommendation system with monitoring
-
-# Incident response
-/workflows:incident-response debug production memory leak
-```
-
-### Tool Invocation
-
-```bash
-# API scaffolding
-/tools:api-scaffold create user management endpoints
-
-# Security scanning
-/tools:security-scan perform vulnerability assessment
-
-# Documentation generation
-/tools:doc-generate create API documentation
-```
-
-### Direct Agent Access
-
-Agents are automatically available and can be explicitly invoked:
-
-```bash
-"Use backend-architect to design the authentication API"
-"Have security-auditor scan for OWASP vulnerabilities"
-"Get performance-engineer to optimize this bottleneck"
-```
-
-## Agent Categories
-
-### Architecture & System Design (7 agents)
-backend-architect, cloud-architect, kubernetes-architect, hybrid-cloud-architect, graphql-architect, terraform-specialist, architect-review
-
-### Programming Languages (15 agents)
-javascript-pro, typescript-pro, python-pro, golang-pro, rust-pro, java-pro, csharp-pro, c-pro, cpp-pro, ruby-pro, php-pro, scala-pro, elixir-pro, django-pro, fastapi-pro
-
-### Infrastructure & Operations (9 agents)
-devops-troubleshooter, deployment-engineer, database-admin, database-optimizer, database-architect, network-engineer, incident-responder, performance-engineer, observability-engineer
-
-### Security & Quality (9 agents)
-code-reviewer, security-auditor, backend-security-coder, frontend-security-coder, mobile-security-coder, test-automator, tdd-orchestrator, debugger, error-detective
-
-### Frontend & Mobile (7 agents)
-frontend-developer, ui-ux-designer, ui-visual-validator, mobile-developer, ios-developer, flutter-expert, unity-developer
-
-### Data & AI (6 agents)
-data-scientist, data-engineer, ml-engineer, mlops-engineer, ai-engineer, prompt-engineer
-
-### Documentation (5 agents)
-docs-architect, api-documenter, reference-builder, tutorial-engineer, mermaid-expert
-
-### Business & Operations (6 agents)
-business-analyst, hr-pro, legal-advisor, customer-support, sales-automator, content-marketer
-
-### SEO & Content (10 agents)
-seo-content-writer, seo-content-auditor, seo-keyword-strategist, seo-meta-optimizer, seo-structure-architect, seo-snippet-hunter, seo-content-refresher, seo-cannibalization-detector, seo-authority-builder, seo-content-planner
-
-### Specialized Domains (7 agents)
-blockchain-developer, quant-analyst, risk-manager, payment-integration, minecraft-bukkit-pro, legacy-modernizer, context-manager
-
-### Utilities (3 agents)
-search-specialist, dx-optimizer, sql-pro
-
-## Multi-Agent Orchestration Examples
-
-### Full-Stack Development
-```bash
-/workflows:full-stack-feature implement user dashboard with analytics
-```
-**Orchestrates**: backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
-
-### Security Hardening
-```bash
-/workflows:security-hardening implement security best practices
-```
-**Orchestrates**: security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
-
-### Data/ML Pipeline
-```bash
-/workflows:ml-pipeline build customer churn prediction model
-```
-**Orchestrates**: data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
-
-### Incident Response
-```bash
-/workflows:incident-response debug high CPU usage in production
-```
-**Orchestrates**: incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
-
-## Model Configuration
-
-Agents are assigned to specific Claude models based on task complexity:
-
-| Model | Count | Use Cases |
-|-------|-------|-----------|
-| **Opus** | 22 | Complex architecture, critical analysis, security audits, business operations |
-| **Sonnet** | 50 | Standard development, engineering tasks, quality assurance |
-| **Haiku** | 11 | Quick focused tasks, SEO optimization, reference building |
-
-### Common Workflow Patterns
-
-**Feature Development**
-```
-"Implement user authentication"
-→ backend-architect → frontend-developer → test-automator → security-auditor
-```
-
-**Performance Optimization**
-```
-"Optimize checkout process"
-→ performance-engineer → database-optimizer → frontend-developer
-```
-
-**Production Incidents**
-```
-"Debug high memory usage"
-→ incident-responder → devops-troubleshooter → error-detective → performance-engineer
-```
-
-**Infrastructure Setup**
-```
-"Set up disaster recovery"
-→ database-admin → database-optimizer → terraform-specialist
-```
-
-**ML Pipeline Development**
-```
-"Build ML pipeline with monitoring"
-→ mlops-engineer → ml-engineer → data-engineer → performance-engineer
-```
-
-## Subagent Format
+### Subagent Format
 
 Each subagent is defined as a Markdown file with frontmatter:
 
@@ -536,141 +500,6 @@ System prompt defining the subagent's expertise and behavior
 - **haiku**: Simple, deterministic tasks with minimal reasoning
 - **sonnet**: Standard development and engineering tasks
 - **opus**: Complex analysis, architecture, and critical operations
-
-## Agent Orchestration Patterns
-
-### Sequential Processing
-```
-backend-architect → frontend-developer → test-automator → security-auditor
-```
-
-### Parallel Execution
-```
-performance-engineer + database-optimizer → Merged optimization
-```
-
-### Conditional Routing
-```
-debugger → [backend-architect | frontend-developer | devops-troubleshooter]
-```
-
-### Validation Pipeline
-```
-feature-development → security-auditor → performance-engineer → Validated release
-```
-
-## Migration from Commands Repository
-
-### Architecture & Planning
-
-| Task | Recommended Agent | Key Capabilities |
-|------|------------------|------------------|
-| API Design | `backend-architect` | RESTful APIs, microservices, database schemas |
-| Cloud Infrastructure | `cloud-architect` | AWS/Azure/GCP design, scalability planning |
-| UI/UX Design | `ui-ux-designer` | Interface design, wireframes, design systems |
-| System Architecture | `architect-reviewer` | Pattern validation, consistency analysis |
-
-### Development by Language
-
-| Language Category | Agents | Primary Use Cases |
-|-------------------|--------|-------------------|
-| Systems Programming | `c-pro`, `cpp-pro`, `rust-pro`, `golang-pro` | OS interfaces, embedded systems, high performance |
-| Web Development | `javascript-pro`, `typescript-pro`, `python-pro`, `ruby-pro`, `php-pro` | Full-stack web applications, APIs, scripting |
-| Enterprise | `java-pro`, `csharp-pro`, `scala-pro` | Large-scale applications, enterprise systems |
-| Mobile | `ios-developer`, `flutter-expert`, `mobile-developer` | Native and cross-platform mobile apps |
-| Specialized | `elixir-pro`, `django-pro`, `fastapi-pro`, `unity-developer`, `minecraft-bukkit-pro` | Domain-specific development |
-
-### Operations & Infrastructure
-
-| Task | Recommended Agent | Key Capabilities |
-|------|------------------|------------------|
-| Production Issues | `devops-troubleshooter` | Log analysis, deployment debugging |
-| Critical Incidents | `incident-responder` | Outage response, immediate mitigation |
-| Database Performance | `database-optimizer` | Query optimization, indexing strategies |
-| Database Operations | `database-admin` | Backup, replication, disaster recovery |
-| Infrastructure as Code | `terraform-specialist` | Terraform modules, state management |
-| Network Issues | `network-engineer` | Network debugging, load balancing |
-
-### Quality & Security
-
-| Task | Recommended Agent | Key Capabilities |
-|------|------------------|------------------|
-| Code Review | `code-reviewer` | Security focus, best practices |
-| Security Audit | `security-auditor` | Vulnerability scanning, OWASP compliance |
-| Test Creation | `test-automator` | Unit, integration, E2E test suites |
-| Performance Issues | `performance-engineer` | Profiling, optimization |
-| Bug Investigation | `debugger` | Error resolution, root cause analysis |
-
-### Data & Machine Learning
-
-| Task | Recommended Agent | Key Capabilities |
-|------|------------------|------------------|
-| Data Analysis | `data-scientist` | SQL queries, statistical analysis |
-| LLM Applications | `ai-engineer` | RAG systems, prompt pipelines |
-| ML Development | `ml-engineer` | Model training, feature engineering |
-| ML Operations | `mlops-engineer` | ML infrastructure, experiment tracking |
-
-### Documentation & Business
-
-| Task | Recommended Agent | Key Capabilities |
-|------|------------------|------------------|
-| Technical Docs | `docs-architect` | Comprehensive documentation generation |
-| API Documentation | `api-documenter` | OpenAPI/Swagger specifications |
-| Business Metrics | `business-analyst` | KPI tracking, reporting |
-| Legal Compliance | `legal-advisor` | Privacy policies, terms of service |
-
-## Best Practices
-
-### Task Delegation
-1. **Automatic selection** - Let Claude Code analyze context and select optimal agents
-2. **Clear requirements** - Specify constraints, tech stack, and quality standards
-3. **Trust specialization** - Each agent is optimized for their specific domain
-
-### Multi-Agent Workflows
-1. **High-level requests** - Allow agents to coordinate complex multi-step tasks
-2. **Context preservation** - Ensure agents have necessary background information
-3. **Integration review** - Verify how different agents' outputs work together
-
-### Explicit Control
-1. **Direct invocation** - Specify agents when you need particular expertise
-2. **Strategic combination** - Use multiple specialists for validation
-3. **Review patterns** - Request specific review workflows (e.g., "security-auditor reviews API design")
-
-### Performance Optimization
-1. **Monitor effectiveness** - Track which agents work best for your use cases
-2. **Iterative refinement** - Use agent feedback to improve requirements
-3. **Complexity matching** - Align task complexity with agent capabilities
-
-## Contributing
-
-To add new agents, workflows, or tools:
-
-1. Create a new `.md` file in the `agents/` directory with appropriate frontmatter
-2. Use lowercase, hyphen-separated naming convention
-3. Write clear activation criteria in the description
-4. Define comprehensive system prompt with expertise areas
-
-## Troubleshooting
-
-### Agent Not Activating
-- Ensure request clearly indicates the domain
-- Be specific about task type and requirements
-- Use explicit invocation if automatic selection fails
-
-### Unexpected Agent Selection
-- Provide more context about tech stack
-- Include specific requirements in request
-- Use direct agent naming for precise control
-
-### Conflicting Recommendations
-- Normal behavior - specialists have different priorities
-- Request reconciliation between specific agents
-- Consider trade-offs based on project requirements
-
-### Missing Context
-- Include background information in requests
-- Reference previous work or patterns
-- Provide project-specific constraints
 
 ## License
 
