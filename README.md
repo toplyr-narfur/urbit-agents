@@ -2,6 +2,16 @@
 
 A comprehensive production-ready system combining **83 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **42 development tools** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
+> **⚠️ Major Update**: This repository has been restructured. If you're upgrading from a previous version, see the [Migration Guide](#migration-guide) below.
+
+## Quick Links
+
+- [Installation](#installation) - New users start here
+- [Migration Guide](#migration-guide) - **Upgrading from previous version? Read this first**
+- [Workflow Commands](#workflow-commands) - Multi-agent orchestration
+- [Development Tools](#development-tools) - Single-purpose utilities
+- [Agent Categories](#agent-categories) - All 83 agents organized by domain
+
 ## Overview
 
 This unified repository provides everything needed for intelligent automation and multi-agent orchestration across modern software development:
@@ -17,12 +27,25 @@ This unified repository provides everything needed for intelligent automation an
 
 ## Installation
 
+### New Installation
+
 ```bash
 cd ~/.claude
 git clone https://github.com/wshobson/agents.git
 ```
 
 All agents, workflows, and tools will be automatically available to Claude Code.
+
+### Updating from Previous Version
+
+If you previously had the `agents` repository installed:
+
+```bash
+cd ~/.claude/agents
+git pull origin main
+```
+
+**Important**: The repository structure has changed. All agent files have been moved to the `agents/` subdirectory. Claude Code will automatically detect the new structure.
 
 ## Repository Structure
 
@@ -249,9 +272,98 @@ debugger → [backend-architect | frontend-developer | devops-troubleshooter]
 feature-development → security-auditor → performance-engineer → Validated release
 ```
 
-## Migration from Commands Repository
+## Migration Guide
 
-This repository now includes all functionality from the separate `commands` repository. The commands repo is being deprecated in favor of this unified structure. All workflows and tools are now available in a single installation.
+### What Changed?
+
+**Major Update**: This repository has been restructured to consolidate all Claude Code extensions in one place:
+
+1. **Repository Structure**: All agents moved from root to `agents/` subdirectory
+2. **Workflows Added**: 15 multi-agent workflow orchestrators (previously in separate `commands` repo)
+3. **Tools Added**: 42 development utilities (previously in separate `commands` repo)
+4. **Unified Experience**: Everything now accessible from a single repository
+
+### Migrating from Commands Repository
+
+If you previously used the separate `commands` repository (`wshobson/commands`):
+
+**Before** (old structure):
+```
+~/.claude/
+├── agents/              # Agents repository
+│   └── *.md files
+└── commands/            # Commands repository (DEPRECATED)
+    └── *.md files
+```
+
+**After** (new unified structure):
+```
+~/.claude/
+└── agents/              # Unified repository
+    ├── agents/
+    ├── workflows/
+    └── tools/
+```
+
+#### Migration Steps
+
+1. **Update the agents repository**:
+   ```bash
+   cd ~/.claude/agents
+   git pull origin main
+   ```
+
+2. **Remove the old commands repository** (if installed):
+   ```bash
+   rm -rf ~/.claude/commands
+   ```
+
+3. **Verify installation**:
+   ```bash
+   ls ~/.claude/agents
+   # Should show: agents/ workflows/ tools/ README.md
+   ```
+
+4. **Update your workflow**:
+   - Old: `/feature-development` or `/commands:feature-development`
+   - New: `/workflows:feature-development`
+
+   - Old: `/api-scaffold` or `/commands:api-scaffold`
+   - New: `/tools:api-scaffold`
+
+### What Stays the Same?
+
+- All 83 agents work exactly as before (no command syntax changes)
+- Agent definitions and capabilities unchanged
+- Direct agent invocation still works: "Use backend-architect to..."
+
+### Breaking Changes
+
+⚠️ **Command Invocation Syntax**:
+- Workflows now use `/workflows:` prefix instead of just `/`
+- Tools now use `/tools:` prefix instead of just `/`
+
+**Old syntax** (deprecated):
+```bash
+/feature-development implement auth
+/api-scaffold create endpoints
+```
+
+**New syntax** (current):
+```bash
+/workflows:feature-development implement auth
+/tools:api-scaffold create endpoints
+```
+
+### Need Help?
+
+For detailed migration instructions and troubleshooting, see [MIGRATION.md](MIGRATION.md).
+
+If you encounter issues after migrating:
+1. Verify directory structure: `ls -la ~/.claude/agents`
+2. Check git status: `cd ~/.claude/agents && git status`
+3. Review common issues in [MIGRATION.md](MIGRATION.md)
+4. Report issues at: https://github.com/wshobson/agents/issues
 
 ## Contributing
 
