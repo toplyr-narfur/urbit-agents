@@ -17,6 +17,31 @@ This unified repository provides everything needed for intelligent automation an
 
 ## Installation
 
+### Plugin Marketplace (Recommended - Available October 9, 2025)
+
+Install workflow-based plugin collections directly from the Claude Code plugin marketplace:
+
+```bash
+# Add the marketplace
+/plugin marketplace add wshobson/agents
+
+# Browse available plugins
+/plugin list
+
+# Install workflow-based plugins
+/plugin install full-stack-development
+/plugin install security-hardening
+/plugin install data-ml-pipeline
+/plugin install incident-response
+
+# Install infrastructure/specialist plugins
+/plugin install cloud-infrastructure
+/plugin install language-specialists
+/plugin install seo-content-suite
+```
+
+### Manual Installation
+
 ```bash
 cd ~/.claude
 git clone https://github.com/wshobson/agents.git
