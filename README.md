@@ -2,8 +2,6 @@
 
 A comprehensive collection of 83 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
 
-> **📦 Repository Update**: This repository now includes workflows and tools in addition to agents. See [MIGRATION.md](MIGRATION.md) for details.
-
 ## Overview
 
 This repository provides production-ready subagents that extend Claude Code's capabilities with specialized knowledge. Each subagent incorporates:
