@@ -12,28 +12,194 @@ This unified repository provides everything needed for intelligent automation an
 
 ## Installation
 
-### Plugin Marketplace (Recommended - Available October 9, 2025)
-
-Install workflow-based plugin collections directly from the Claude Code plugin marketplace:
+### Quick Start
 
 ```bash
-# Add the marketplace
+# Add the plugin marketplace
 /plugin marketplace add wshobson/agents
 
 # Browse available plugins
 /plugin list
 
-# Install workflow-based plugins
-/plugin install full-stack-development
-/plugin install security-hardening
-/plugin install data-ml-pipeline
-/plugin install incident-response
+# Install your first plugin
+/plugin install claude-code-essentials
+```
 
-# Install infrastructure/specialist plugins
+### Available Plugins
+
+#### Getting Started
+
+**claude-code-essentials** - Essential tools for daily development
+```bash
+/plugin install claude-code-essentials
+```
+Includes: Code explanation, debugging, documentation, PR enhancement, git workflows
+
+#### Complete Workflow Systems
+
+**full-stack-development** - End-to-end feature implementation
+```bash
+/plugin install full-stack-development
+```
+Multi-agent coordination: Backend API → Frontend UI → Mobile → Testing → Security → Deployment
+
+**security-hardening** - Security auditing and compliance
+```bash
+/plugin install security-hardening
+```
+OWASP scanning, penetration testing, code review, SOC2/HIPAA/GDPR compliance
+
+**data-ml-pipeline** - ML/AI development and MLOps
+```bash
+/plugin install data-ml-pipeline
+```
+Data engineering → Model training → MLOps → LangChain/RAG → Deployment
+
+**incident-response** - Production debugging and SRE
+```bash
+/plugin install incident-response
+```
+Diagnostics → Root cause analysis → Rollback → Post-mortem documentation
+
+**performance-optimization** - System profiling and optimization
+```bash
+/plugin install performance-optimization
+```
+Profiling → Query optimization → Caching → Scalability assessment
+
+**code-quality-review** - Multi-perspective code analysis
+```bash
+/plugin install code-quality-review
+```
+Architecture → Security → Performance → Test coverage analysis
+
+**legacy-modernization** - Codebase modernization workflows
+```bash
+/plugin install legacy-modernization
+```
+Framework migration → Dependency updates → Refactoring → Compatibility testing
+
+**multi-platform-apps** - Cross-platform development
+```bash
+/plugin install multi-platform-apps
+```
+Web (React/Next.js) → iOS (Swift) → Android (Kotlin) → Desktop coordination
+
+**cicd-automation** - CI/CD pipeline configuration
+```bash
+/plugin install cicd-automation
+```
+GitHub Actions/GitLab CI → Progressive deployment → Canary releases → Monitoring
+
+**agent-optimization** - AI agent performance tuning
+```bash
+/plugin install agent-optimization
+```
+Prompt engineering → Multi-agent coordination → Context management
+
+**documentation-generation** - Technical documentation automation
+```bash
+/plugin install documentation-generation
+```
+OpenAPI specs → Mermaid diagrams → Tutorials → API references
+
+#### Focused Development Kits
+
+**api-development-kit** - REST/GraphQL API development
+```bash
+/plugin install api-development-kit
+```
+API scaffolding → OpenAPI docs → Security scanning → Mocking → Validation
+
+**testing-quality-suite** - Comprehensive testing workflows
+```bash
+/plugin install testing-quality-suite
+```
+TDD workflows → Test generation → Unit/integration/e2e → Quality gates
+
+**infrastructure-devops** - Container orchestration deployment
+```bash
+/plugin install infrastructure-devops
+```
+Kubernetes manifests → Docker optimization → Terraform IaC → Cost analysis
+
+**development-utilities** - Daily productivity tools
+```bash
+/plugin install development-utilities
+```
+Refactoring → Dependency auditing → Error analysis → Standup automation
+
+#### Infrastructure & Operations
+
+**cloud-infrastructure** - AWS/Azure/GCP architecture
+```bash
 /plugin install cloud-infrastructure
-/plugin install language-specialists
+```
+Cloud design → Kubernetes → Terraform IaC → Hybrid cloud → Cost optimization
+
+**database-operations** - Database optimization and administration
+```bash
+/plugin install database-operations
+```
+Schema design → Query optimization → Migrations → PostgreSQL/MySQL/MongoDB
+
+#### Marketing & Business
+
+**seo-content-suite** - SEO optimization toolkit
+```bash
 /plugin install seo-content-suite
 ```
+Content analysis → Keyword research → Meta optimization → E-E-A-T signals
+
+**business-analytics** - Business intelligence and metrics
+```bash
+/plugin install business-analytics
+```
+KPI tracking → Financial reporting → Data-driven decision making
+
+**hr-legal-compliance** - HR and legal documentation
+```bash
+/plugin install hr-legal-compliance
+```
+HR policies → Legal templates → GDPR/SOC2/HIPAA compliance → Employment contracts
+
+**customer-sales-automation** - Customer relationship workflows
+```bash
+/plugin install customer-sales-automation
+```
+Support automation → Sales pipeline → Email campaigns → CRM integration
+
+#### Specialized Domains
+
+**blockchain-web3** - Blockchain and smart contract development
+```bash
+/plugin install blockchain-web3
+```
+Solidity → Smart contracts → DeFi protocols → NFT platforms → Web3 apps
+
+**quantitative-trading** - Financial modeling and algorithmic trading
+```bash
+/plugin install quantitative-trading
+```
+Quant analysis → Trading strategies → Portfolio risk → Backtesting
+
+**payment-processing** - Payment gateway integration
+```bash
+/plugin install payment-processing
+```
+Stripe/PayPal integration → Checkout flows → Subscription billing → PCI compliance
+
+**game-development** - Unity and Minecraft development
+```bash
+/plugin install game-development
+```
+Unity C# scripting → Minecraft Bukkit/Spigot plugins → Game mechanics
+
+**accessibility-compliance** - WCAG accessibility auditing
+```bash
+/plugin install accessibility-compliance
+```
+WCAG validation → Screen reader testing → Keyboard navigation → Inclusive design
 
 ### Manual Installation
 
@@ -63,6 +229,48 @@ agents/
 │   └── ... (tool commands)
 └── README.md
 ```
+
+## Usage
+
+### Agent Invocation
+
+After installing plugins, agents are automatically available. Invoke them explicitly in natural language:
+
+```
+"Use backend-architect to design the authentication API"
+"Have security-auditor scan for OWASP vulnerabilities"
+"Get performance-engineer to optimize this database query"
+```
+
+Claude Code automatically selects and coordinates the appropriate agents based on your request.
+
+### Multi-Agent Orchestration Examples
+
+Plugins provide pre-configured multi-agent workflows that coordinate complex operations:
+
+**Full-Stack Development Plugin**
+```
+"Implement user dashboard with real-time analytics"
+```
+→ backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
+
+**Security Hardening Plugin**
+```
+"Perform security audit and implement OWASP best practices"
+```
+→ security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
+
+**Data/ML Pipeline Plugin**
+```
+"Build customer churn prediction model with deployment"
+```
+→ data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
+
+**Incident Response Plugin**
+```
+"Debug production memory leak and create runbook"
+```
+→ incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
 
 ## Agent Categories
 
@@ -300,176 +508,6 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | Critical Analysis | 6 | `code-reviewer`, `security-auditor`, `performance-engineer`, `observability-engineer`, `incident-responder`, `database-optimizer` |
 | AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
 | Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
-
-## Usage
-
-### Workflow Invocation
-
-```bash
-# Full-stack feature development
-/workflows:feature-development implement OAuth2 authentication
-
-# Security hardening
-/workflows:security-hardening perform security audit and remediation
-
-# ML pipeline
-/workflows:ml-pipeline build recommendation system with monitoring
-
-# Incident response
-/workflows:incident-response debug production memory leak
-```
-
-### Tool Invocation
-
-```bash
-# API scaffolding
-/tools:api-scaffold create user management endpoints
-
-# Security scanning
-/tools:security-scan perform vulnerability assessment
-
-# Documentation generation
-/tools:doc-generate create API documentation
-```
-
-### Direct Agent Access
-
-Agents are automatically available and can be explicitly invoked:
-
-```bash
-"Use backend-architect to design the authentication API"
-"Have security-auditor scan for OWASP vulnerabilities"
-"Get performance-engineer to optimize this bottleneck"
-```
-
-## Multi-Agent Orchestration Examples
-
-### Full-Stack Development
-```bash
-/workflows:full-stack-feature implement user dashboard with analytics
-```
-**Orchestrates**: backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
-
-### Security Hardening
-```bash
-/workflows:security-hardening implement security best practices
-```
-**Orchestrates**: security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
-
-### Data/ML Pipeline
-```bash
-/workflows:ml-pipeline build customer churn prediction model
-```
-**Orchestrates**: data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
-
-### Incident Response
-```bash
-/workflows:incident-response debug high CPU usage in production
-```
-**Orchestrates**: incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
-
-### Common Workflow Patterns
-
-**Feature Development**
-```
-"Implement user authentication"
-→ backend-architect → frontend-developer → test-automator → security-auditor
-```
-
-**Performance Optimization**
-```
-"Optimize checkout process"
-→ performance-engineer → database-optimizer → frontend-developer
-```
-
-**Production Incidents**
-```
-"Debug high memory usage"
-→ incident-responder → devops-troubleshooter → error-detective → performance-engineer
-```
-
-**Infrastructure Setup**
-```
-"Set up disaster recovery"
-→ database-admin → database-optimizer → terraform-specialist
-```
-
-**ML Pipeline Development**
-```
-"Build ML pipeline with monitoring"
-→ mlops-engineer → ml-engineer → data-engineer → performance-engineer
-```
-
-## Workflow Commands
-
-Multi-agent orchestration systems that coordinate complex, cross-domain tasks:
-
-### Core Development Workflows
-
-| Command | Purpose | Agent Coordination |
-|---------|---------|-------------------|
-| `feature-development` | End-to-end feature implementation | Backend, frontend, testing, deployment |
-| `full-stack-feature` | Complete multi-tier implementation | Backend API, frontend UI, mobile, database |
-| `full-review` | Multi-perspective code analysis | Architecture, security, performance, quality |
-| `smart-fix` | Intelligent problem resolution | Dynamic agent selection based on issue type |
-| `tdd-cycle` | Test-driven development orchestration | Test writer, implementer, refactoring specialist |
-
-### Process Automation Workflows
-
-| Command | Purpose | Scope |
-|---------|---------|-------|
-| `git-workflow` | Version control process automation | Branching strategies, commit standards, PR templates |
-| `improve-agent` | Agent optimization | Prompt engineering, performance tuning |
-| `legacy-modernize` | Codebase modernization | Architecture migration, dependency updates |
-| `multi-platform` | Cross-platform development | Web, mobile, desktop coordination |
-| `workflow-automate` | CI/CD pipeline automation | Build, test, deploy, monitor |
-
-### Advanced Orchestration Workflows
-
-| Command | Primary Focus | Specialized Agents |
-|---------|---------------|-------------------|
-| `security-hardening` | Security-first development | Threat modeling, vulnerability assessment |
-| `data-driven-feature` | ML-powered functionality | Data science, feature engineering, model deployment |
-| `ml-pipeline` | End-to-end ML infrastructure | MLOps, data engineering, model serving |
-| `performance-optimization` | System-wide optimization | Profiling, caching, query optimization |
-| `incident-response` | Production issue resolution | Diagnostics, root cause analysis, hotfix deployment |
-
-## Development Tools
-
-Focused, single-purpose utilities for specific development operations:
-
-### AI and Machine Learning
-- `langchain-agent` - LangChain agent development
-- `ai-assistant` - AI-powered development assistance
-- `ai-review` - AI-based code review
-
-### API Development
-- `api-scaffold` - API endpoint scaffolding
-- `api-mock` - API mocking and testing
-
-### Testing & Quality
-- `tdd-red` - Red phase (failing tests)
-- `tdd-green` - Green phase (passing implementation)
-- `tdd-refactor` - Refactor phase
-- `test-harness` - Test infrastructure setup
-
-### Security & Compliance
-- `security-scan` - Vulnerability scanning
-- `compliance-check` - Compliance validation
-
-### Infrastructure & Operations
-- `k8s-manifest` - Kubernetes manifest generation
-- `docker-optimize` - Docker optimization
-- `monitor-setup` - Monitoring infrastructure
-- `deploy-checklist` - Deployment validation
-
-### Code Quality
-- `code-explain` - Code explanation
-- `code-migrate` - Code migration
-- `refactor-clean` - Code refactoring
-- `pr-enhance` - Pull request enhancement
-
-### And 20+ more tools for debugging, documentation, data validation, cost optimization, and developer workflows
 
 ## Contributing
 

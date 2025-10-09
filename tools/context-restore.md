@@ -1,5 +1,5 @@
 ---
-model: claude-sonnet-4-0
+model: sonnet
 ---
 
 Restore saved project context for agent coordination:

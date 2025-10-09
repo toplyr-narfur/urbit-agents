@@ -1,5 +1,5 @@
 ---
-model: claude-opus-4-1
+model: sonnet
 ---
 
 Build the same feature across multiple platforms:

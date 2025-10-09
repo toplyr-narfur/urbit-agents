@@ -1,5 +1,5 @@
 ---
-model: claude-sonnet-4-0
+model: sonnet
 ---
 
 # Error Analysis and Resolution
