@@ -12,18 +12,13 @@ This unified repository provides everything needed for intelligent automation an
 
 ## Installation
 
-### Quick Start
+To install plugins, run the `/plugin` command in Claude Code and follow the interactive prompts:
 
-```bash
-# Add the plugin marketplace
-/plugin marketplace add wshobson/agents
+1. Browse & install plugins from available marketplaces
+2. Add custom marketplace sources
+3. Manage installed plugins
 
-# Browse available plugins
-/plugin list
-
-# Install your first plugin
-/plugin install claude-code-essentials
-```
+**Note:** When adding a marketplace, enter `wshobson/agents` to access all plugins from this repository.
 
 ### Available Plugins
 
