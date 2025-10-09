@@ -1,5 +1,5 @@
 ---
-model: claude-opus-4-1
+model: sonnet
 ---
 
 Modernize legacy code using expert agents:

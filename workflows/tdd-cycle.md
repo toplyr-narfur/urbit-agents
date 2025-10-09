@@ -1,5 +1,5 @@
 ---
-model: claude-opus-4-1
+model: sonnet
 ---
 
 Execute a comprehensive Test-Driven Development (TDD) workflow with strict red-green-refactor discipline:

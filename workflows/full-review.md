@@ -1,5 +1,5 @@
 ---
-model: claude-opus-4-1
+model: sonnet
 ---
 
 Perform a comprehensive review using multiple specialized agents with explicit Task tool invocations:

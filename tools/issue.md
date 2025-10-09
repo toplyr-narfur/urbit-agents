@@ -1,5 +1,5 @@
 ---
-model: claude-sonnet-4-0
+model: sonnet
 ---
 
 Please analyze and fix the GitHub issue: $ARGUMENTS.

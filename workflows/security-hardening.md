@@ -1,5 +1,5 @@
 ---
-model: claude-opus-4-1
+model: sonnet
 ---
 
 Implement security-first architecture and hardening measures with coordinated agent orchestration:
