@@ -12,13 +12,17 @@ This unified repository provides everything needed for intelligent automation an
 
 ## Installation
 
-To install plugins, run the `/plugin` command in Claude Code and follow the interactive prompts:
+Add this marketplace to Claude Code:
 
-1. Browse & install plugins from available marketplaces
-2. Add custom marketplace sources
-3. Manage installed plugins
+```bash
+/plugin marketplace add https://github.com/wshobson/agents
+```
 
-**Note:** When adding a marketplace, enter `wshobson/agents` to access all plugins from this repository.
+Then browse and install plugins using:
+
+```bash
+/plugin
+```
 
 ### Available Plugins
 
@@ -195,15 +199,6 @@ Unity C# scripting → Minecraft Bukkit/Spigot plugins → Game mechanics
 /plugin install accessibility-compliance
 ```
 WCAG validation → Screen reader testing → Keyboard navigation → Inclusive design
-
-### Manual Installation
-
-```bash
-cd ~/.claude
-git clone https://github.com/wshobson/agents.git
-```
-
-All agents, workflows, and tools will be automatically available to Claude Code.
 
 ## Repository Structure
 
