@@ -1,12 +1,12 @@
 # Claude Code Workflows & Agents
 
-A comprehensive production-ready system combining **83 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **42 development tools** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+A comprehensive production-ready system combining **84 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **42 development tools** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Overview
 
 This unified repository provides everything needed for intelligent automation and multi-agent orchestration across modern software development:
 
-- **83 Specialized Agents** - Domain experts with deep knowledge across architecture, languages, infrastructure, quality, data/AI, documentation, business operations, and SEO
+- **84 Specialized Agents** - Domain experts with deep knowledge across architecture, languages, infrastructure, quality, data/AI, documentation, business operations, and SEO
 - **15 Workflow Orchestrators** - Multi-agent coordination systems for complex operations like full-stack development, security hardening, ML pipelines, and incident response
 - **42 Development Tools** - Focused utilities for specific tasks including API scaffolding, security scanning, test automation, and infrastructure setup
 
@@ -204,7 +204,7 @@ WCAG validation → Screen reader testing → Keyboard navigation → Inclusive 
 
 ```
 agents/
-├── agents/                        # 83 specialized AI agents
+├── agents/                        # 84 specialized AI agents
 │   ├── backend-architect.md
 │   ├── frontend-developer.md
 │   └── ... (all agent definitions)
@@ -469,8 +469,8 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | Model | Agent Count | Use Case |
 |-------|-------------|----------|
 | Haiku | 11 | Quick, focused tasks with minimal computational overhead |
-| Sonnet | 52 | Standard development and specialized engineering tasks |
-| Opus | 20 | Complex reasoning, architecture, and critical analysis |
+| Sonnet | 50 | Standard development and specialized engineering tasks |
+| Opus | 23 | Complex reasoning, architecture, and critical analysis |
 
 ### Haiku Model Agents
 
@@ -494,10 +494,11 @@ Agents are assigned to specific Claude models based on task complexity and compu
 
 | Category | Count | Agents |
 |----------|-------|--------|
-| Architecture & Design | 6 | `architect-reviewer`, `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `graphql-architect` |
-| Critical Analysis | 4 | `code-reviewer`, `security-auditor`, `performance-engineer`, `observability-engineer`, `incident-responder` |
+| Architecture & Design | 5 | `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `database-architect` |
+| Security & Code Review | 4 | `code-reviewer`, `security-auditor`, `backend-security-coder`, `frontend-security-coder`, `mobile-security-coder` |
+| Performance & Observability | 3 | `performance-engineer`, `observability-engineer`, `incident-responder` |
 | AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
-| Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
+| Business Critical | 5 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst`, `risk-manager` |
 
 ## Contributing
 
