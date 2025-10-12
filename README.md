@@ -711,5 +711,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
 - [Claude Code Plugins Guide](https://docs.claude.com/en/docs/claude-code/plugins)
-- [Subagents Documentation](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+- [Subagents Documentation](https://docs.claude.com/en/docs/claude-code/sub-agents)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
