@@ -6,8 +6,8 @@
     "url": "https://github.com/wshobson"
   },
   "metadata": {
-    "description": "Production-ready workflow orchestration system with 83 specialized agents, 15 multi-agent workflows, and 42 development tools",
-    "version": "1.0.0"
+    "description": "Production-ready workflow orchestration system with 83 specialized agents, 15 multi-agent workflows, and 42 development tools - refactored into 36 focused, single-purpose plugins",
+    "version": "1.0.5"
   },
   "plugins": [
     {
@@ -94,9 +94,377 @@
       ]
     },
     {
-      "name": "api-development-kit",
+      "name": "data-validation-suite",
       "source": "./",
-      "description": "REST and GraphQL API scaffolding, OpenAPI documentation generation, request mocking, security scanning, and input validation for backend API development",
+      "description": "Schema validation, data quality monitoring, streaming validation pipelines, and input validation for backend APIs and data processing",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "validation",
+        "schema",
+        "data-quality",
+        "input-validation",
+        "streaming",
+        "pydantic",
+        "jsonschema",
+        "data-integrity"
+      ],
+      "category": "development",
+      "strict": false,
+      "commands": [
+        "./tools/schema-validation.md",
+        "./tools/data-quality-monitoring.md",
+        "./tools/streaming-validation.md",
+        "./tools/validation-pipeline.md"
+      ],
+      "agents": [
+        "./agents/backend-security-coder.md"
+      ]
+    },
+    {
+      "name": "deployment-orchestration",
+      "source": "./",
+      "description": "Deployment pre-flight checks, progressive rollout strategies, automated rollback procedures, configuration validation, and deployment templates for production releases",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "deployment",
+        "rollout",
+        "rollback",
+        "canary",
+        "blue-green",
+        "configuration",
+        "pre-flight",
+        "production"
+      ],
+      "category": "infrastructure",
+      "strict": false,
+      "commands": [
+        "./tools/deploy-precheck.md",
+        "./tools/deploy-strategies.md",
+        "./tools/deploy-rollback.md",
+        "./tools/deploy-templates.md",
+        "./tools/deploy-examples.md",
+        "./tools/config-validate.md"
+      ],
+      "agents": [
+        "./agents/deployment-engineer.md",
+        "./agents/terraform-specialist.md",
+        "./agents/cloud-architect.md"
+      ]
+    },
+    {
+      "name": "kubernetes-operations",
+      "source": "./",
+      "description": "Kubernetes manifest generation, networking configuration, security policies, observability setup, GitOps workflows, and auto-scaling for container orchestration",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "kubernetes",
+        "k8s",
+        "containers",
+        "helm",
+        "argocd",
+        "gitops",
+        "networking",
+        "security",
+        "observability"
+      ],
+      "category": "infrastructure",
+      "strict": false,
+      "commands": [
+        "./tools/k8s-deployment.md",
+        "./tools/k8s-networking.md",
+        "./tools/k8s-security.md",
+        "./tools/k8s-observability.md",
+        "./tools/k8s-gitops.md",
+        "./tools/k8s-scaling.md"
+      ],
+      "agents": [
+        "./agents/kubernetes-architect.md"
+      ]
+    },
+    {
+      "name": "docker-containerization",
+      "source": "./",
+      "description": "Multi-stage Docker builds, image size optimization, container security scanning, framework-specific Dockerfiles, and CI/CD integration for containerization",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "docker",
+        "containers",
+        "dockerfile",
+        "optimization",
+        "security",
+        "multi-stage",
+        "image-size"
+      ],
+      "category": "infrastructure",
+      "strict": false,
+      "commands": [
+        "./tools/docker-multistage.md",
+        "./tools/docker-size.md",
+        "./tools/docker-security.md",
+        "./tools/docker-frameworks.md",
+        "./tools/docker-ci.md"
+      ],
+      "agents": []
+    },
+    {
+      "name": "security-scanning",
+      "source": "./",
+      "description": "SAST analysis, dependency vulnerability scanning, OWASP Top 10 compliance, container security scanning, and automated security hardening workflows",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "security",
+        "sast",
+        "vulnerability-scanning",
+        "owasp",
+        "dependencies",
+        "containers",
+        "devsecops"
+      ],
+      "category": "security",
+      "strict": false,
+      "commands": [
+        "./workflows/security-hardening.md",
+        "./tools/security-sast.md",
+        "./tools/security-dependencies.md",
+        "./tools/security-owasp.md",
+        "./tools/security-containers.md"
+      ],
+      "agents": [
+        "./agents/security-auditor.md"
+      ]
+    },
+    {
+      "name": "security-compliance",
+      "source": "./",
+      "description": "SOC2, HIPAA, and GDPR compliance validation, secrets scanning, compliance checklists, and regulatory documentation for security audits",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "compliance",
+        "soc2",
+        "hipaa",
+        "gdpr",
+        "security",
+        "secrets",
+        "regulatory"
+      ],
+      "category": "security",
+      "strict": false,
+      "commands": [
+        "./tools/security-secrets.md",
+        "./tools/security-compliance.md",
+        "./tools/compliance-check.md"
+      ],
+      "agents": [
+        "./agents/security-auditor.md"
+      ]
+    },
+    {
+      "name": "backend-api-security",
+      "source": "./",
+      "description": "API security hardening, authentication implementation, authorization patterns, rate limiting, and input validation for backend services",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "api-security",
+        "authentication",
+        "authorization",
+        "jwt",
+        "oauth",
+        "rate-limiting",
+        "backend"
+      ],
+      "category": "security",
+      "strict": false,
+      "commands": [
+        "./tools/security-api.md"
+      ],
+      "agents": [
+        "./agents/backend-security-coder.md",
+        "./agents/backend-architect.md"
+      ]
+    },
+    {
+      "name": "frontend-mobile-security",
+      "source": "./",
+      "description": "XSS prevention, CSRF protection, content security policies, mobile app security, and secure storage patterns for frontend and mobile applications",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "frontend-security",
+        "mobile-security",
+        "xss",
+        "csrf",
+        "csp",
+        "secure-storage"
+      ],
+      "category": "security",
+      "strict": false,
+      "commands": [],
+      "agents": [
+        "./agents/frontend-security-coder.md",
+        "./agents/mobile-security-coder.md",
+        "./agents/frontend-developer.md"
+      ]
+    },
+    {
+      "name": "data-engineering",
+      "source": "./",
+      "description": "ETL pipeline construction, data warehouse design, batch processing workflows, and data-driven feature development for data engineering projects",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "data-engineering",
+        "etl",
+        "data-pipeline",
+        "data-warehouse",
+        "batch-processing"
+      ],
+      "category": "data",
+      "strict": false,
+      "commands": [
+        "./workflows/data-driven-feature.md",
+        "./tools/data-pipeline.md"
+      ],
+      "agents": [
+        "./agents/data-engineer.md",
+        "./agents/backend-architect.md"
+      ]
+    },
+    {
+      "name": "machine-learning-ops",
+      "source": "./",
+      "description": "ML model training pipelines, hyperparameter tuning, model deployment automation, experiment tracking, and MLOps workflows for machine learning projects",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "machine-learning",
+        "mlops",
+        "model-training",
+        "tensorflow",
+        "pytorch",
+        "mlflow",
+        "experiment-tracking"
+      ],
+      "category": "workflows",
+      "strict": false,
+      "commands": [
+        "./workflows/ml-pipeline.md"
+      ],
+      "agents": [
+        "./agents/data-scientist.md",
+        "./agents/ml-engineer.md",
+        "./agents/mlops-engineer.md"
+      ]
+    },
+    {
+      "name": "ai-agent-development",
+      "source": "./",
+      "description": "LLM agent development, RAG system implementation, LangChain workflows, prompt engineering, context management, and AI assistant optimization",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "ai-agents",
+        "llm",
+        "langchain",
+        "rag",
+        "prompt-engineering",
+        "context-management",
+        "claude",
+        "gpt"
+      ],
+      "category": "workflows",
+      "strict": false,
+      "commands": [
+        "./workflows/improve-agent.md",
+        "./tools/langchain-agent.md",
+        "./tools/ai-assistant.md",
+        "./tools/prompt-optimize.md",
+        "./tools/multi-agent-optimize.md",
+        "./tools/context-save.md",
+        "./tools/context-restore.md"
+      ],
+      "agents": [
+        "./agents/ai-engineer.md",
+        "./agents/prompt-engineer.md",
+        "./agents/context-manager.md"
+      ]
+    },
+    {
+      "name": "api-scaffolding",
+      "source": "./",
+      "description": "REST and GraphQL API scaffolding, framework selection, backend architecture, and API generation for Python, Node.js, FastAPI, Django, and Spring Boot",
       "version": "1.0.0",
       "author": {
         "name": "Seth Hobson",
@@ -109,31 +477,127 @@
         "api",
         "rest",
         "graphql",
-        "openapi",
-        "swagger",
         "fastapi",
+        "django",
         "express",
         "spring-boot",
-        "django",
-        "microservices",
-        "authentication",
-        "jwt"
+        "backend"
       ],
       "category": "development",
       "strict": false,
       "commands": [
-        "./tools/api-scaffold.md",
-        "./tools/api-mock.md",
-        "./tools/security-scan.md",
-        "./tools/data-validation.md"
+        "./tools/api-python.md",
+        "./tools/api-nodejs.md",
+        "./tools/api-framework-selector.md"
       ],
       "agents": [
         "./agents/backend-architect.md",
         "./agents/graphql-architect.md",
-        "./agents/api-documenter.md",
-        "./agents/backend-security-coder.md",
         "./agents/fastapi-pro.md",
         "./agents/django-pro.md"
+      ]
+    },
+    {
+      "name": "api-testing-observability",
+      "source": "./",
+      "description": "API testing automation, request mocking, OpenAPI documentation generation, observability setup, and monitoring for backend APIs",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "api-testing",
+        "mocking",
+        "openapi",
+        "swagger",
+        "observability",
+        "monitoring"
+      ],
+      "category": "development",
+      "strict": false,
+      "commands": [
+        "./tools/api-testing-deploy.md",
+        "./tools/api-observability.md",
+        "./tools/api-mock.md"
+      ],
+      "agents": [
+        "./agents/api-documenter.md"
+      ]
+    },
+    {
+      "name": "incident-diagnostics",
+      "source": "./",
+      "description": "Production incident triage, root cause analysis, distributed tracing, error pattern detection, and automated diagnostic workflows for incident response",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "incident-response",
+        "debugging",
+        "troubleshooting",
+        "root-cause",
+        "diagnostics",
+        "production"
+      ],
+      "category": "workflows",
+      "strict": false,
+      "commands": [
+        "./workflows/incident-response.md",
+        "./workflows/smart-fix.md",
+        "./tools/smart-debug.md",
+        "./tools/debug-trace.md",
+        "./tools/error-trace.md",
+        "./tools/error-analysis.md"
+      ],
+      "agents": [
+        "./agents/incident-responder.md",
+        "./agents/devops-troubleshooter.md",
+        "./agents/debugger.md",
+        "./agents/error-detective.md"
+      ]
+    },
+    {
+      "name": "observability-monitoring",
+      "source": "./",
+      "description": "Metrics collection, logging infrastructure, distributed tracing, SLO implementation, and monitoring dashboards for production observability",
+      "version": "1.0.0",
+      "author": {
+        "name": "Seth Hobson",
+        "url": "https://github.com/wshobson"
+      },
+      "homepage": "https://github.com/wshobson/agents",
+      "repository": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "keywords": [
+        "observability",
+        "monitoring",
+        "metrics",
+        "logging",
+        "tracing",
+        "slo",
+        "prometheus",
+        "grafana"
+      ],
+      "category": "workflows",
+      "strict": false,
+      "commands": [
+        "./tools/monitor-setup.md",
+        "./tools/slo-implement.md"
+      ],
+      "agents": [
+        "./agents/observability-engineer.md",
+        "./agents/performance-engineer.md",
+        "./agents/database-optimizer.md",
+        "./agents/network-engineer.md"
       ]
     },
     {
@@ -169,7 +633,11 @@
         "./tools/tdd-red.md",
         "./tools/tdd-green.md",
         "./tools/tdd-refactor.md",
-        "./tools/test-harness.md",
+        "./tools/test-python.md",
+        "./tools/test-javascript.md",
+        "./tools/test-performance.md",
+        "./tools/test-integration.md",
+        "./tools/test-security.md",
         "./tools/ai-review.md"
       ],
       "agents": [
@@ -178,46 +646,6 @@
         "./agents/debugger.md",
         "./agents/code-reviewer.md",
         "./agents/architect-review.md"
-      ]
-    },
-    {
-      "name": "infrastructure-devops",
-      "source": "./",
-      "description": "Kubernetes manifest generation, Docker image optimization, Terraform infrastructure-as-code, configuration validation, cost analysis, and deployment checklists for container orchestration",
-      "version": "1.0.0",
-      "author": {
-        "name": "Seth Hobson",
-        "url": "https://github.com/wshobson"
-      },
-      "homepage": "https://github.com/wshobson/agents",
-      "repository": "https://github.com/wshobson/agents",
-      "license": "MIT",
-      "keywords": [
-        "kubernetes",
-        "docker",
-        "terraform",
-        "infrastructure",
-        "devops",
-        "k8s",
-        "containers",
-        "helm",
-        "argocd",
-        "gitops"
-      ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [
-        "./tools/k8s-manifest.md",
-        "./tools/docker-optimize.md",
-        "./tools/config-validate.md",
-        "./tools/cost-optimize.md",
-        "./tools/deploy-checklist.md"
-      ],
-      "agents": [
-        "./agents/kubernetes-architect.md",
-        "./agents/terraform-specialist.md",
-        "./agents/deployment-engineer.md",
-        "./agents/cloud-architect.md"
       ]
     },
     {
@@ -261,147 +689,6 @@
         "./agents/debugger.md",
         "./agents/error-detective.md",
         "./agents/dx-optimizer.md"
-      ]
-    },
-    {
-      "name": "security-hardening",
-      "source": "./",
-      "description": "OWASP vulnerability scanning, penetration testing workflows, security-focused code review, compliance validation for SOC2/HIPAA/GDPR, and automated security remediation",
-      "version": "1.0.0",
-      "author": {
-        "name": "Seth Hobson",
-        "url": "https://github.com/wshobson"
-      },
-      "homepage": "https://github.com/wshobson/agents",
-      "repository": "https://github.com/wshobson/agents",
-      "license": "MIT",
-      "keywords": [
-        "security",
-        "vulnerability-assessment",
-        "owasp",
-        "penetration-testing",
-        "compliance",
-        "soc2",
-        "hipaa",
-        "gdpr",
-        "xss",
-        "sql-injection",
-        "csrf",
-        "devsecops"
-      ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./workflows/security-hardening.md",
-        "./tools/security-scan.md",
-        "./tools/compliance-check.md"
-      ],
-      "agents": [
-        "./agents/security-auditor.md",
-        "./agents/backend-security-coder.md",
-        "./agents/frontend-security-coder.md",
-        "./agents/mobile-security-coder.md",
-        "./agents/backend-architect.md",
-        "./agents/frontend-developer.md",
-        "./agents/test-automator.md",
-        "./agents/deployment-engineer.md",
-        "./agents/devops-troubleshooter.md"
-      ]
-    },
-    {
-      "name": "data-ml-pipeline",
-      "source": "./",
-      "description": "Data pipeline construction, ML model training workflows, MLOps automation, LangChain agent development, RAG system implementation, and model deployment for machine learning projects",
-      "version": "1.0.0",
-      "author": {
-        "name": "Seth Hobson",
-        "url": "https://github.com/wshobson"
-      },
-      "homepage": "https://github.com/wshobson/agents",
-      "repository": "https://github.com/wshobson/agents",
-      "license": "MIT",
-      "keywords": [
-        "machine-learning",
-        "data-science",
-        "mlops",
-        "ai",
-        "feature-engineering",
-        "llm",
-        "langchain",
-        "rag",
-        "vector-database",
-        "tensorflow",
-        "pytorch",
-        "mlflow"
-      ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./workflows/data-driven-feature.md",
-        "./workflows/ml-pipeline.md",
-        "./tools/langchain-agent.md",
-        "./tools/data-validation.md",
-        "./tools/data-pipeline.md",
-        "./tools/ai-assistant.md"
-      ],
-      "agents": [
-        "./agents/data-scientist.md",
-        "./agents/data-engineer.md",
-        "./agents/ml-engineer.md",
-        "./agents/mlops-engineer.md",
-        "./agents/ai-engineer.md",
-        "./agents/prompt-engineer.md",
-        "./agents/backend-architect.md",
-        "./agents/performance-engineer.md"
-      ]
-    },
-    {
-      "name": "incident-response",
-      "source": "./",
-      "description": "Production incident diagnostics, distributed tracing analysis, root cause identification, automated rollback procedures, post-mortem documentation, and on-call playbook execution",
-      "version": "1.0.0",
-      "author": {
-        "name": "Seth Hobson",
-        "url": "https://github.com/wshobson"
-      },
-      "homepage": "https://github.com/wshobson/agents",
-      "repository": "https://github.com/wshobson/agents",
-      "license": "MIT",
-      "keywords": [
-        "incident-response",
-        "debugging",
-        "production",
-        "monitoring",
-        "sre",
-        "troubleshooting",
-        "outage",
-        "logs",
-        "kubernetes",
-        "on-call",
-        "prometheus",
-        "grafana"
-      ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./workflows/incident-response.md",
-        "./workflows/smart-fix.md",
-        "./tools/smart-debug.md",
-        "./tools/debug-trace.md",
-        "./tools/monitor-setup.md",
-        "./tools/slo-implement.md",
-        "./tools/error-trace.md",
-        "./tools/error-analysis.md"
-      ],
-      "agents": [
-        "./agents/incident-responder.md",
-        "./agents/devops-troubleshooter.md",
-        "./agents/debugger.md",
-        "./agents/error-detective.md",
-        "./agents/observability-engineer.md",
-        "./agents/performance-engineer.md",
-        "./agents/database-optimizer.md",
-        "./agents/network-engineer.md"
       ]
     },
     {
@@ -564,7 +851,7 @@
     {
       "name": "cicd-automation",
       "source": "./",
-      "description": "CI/CD pipeline configuration, GitHub Actions/GitLab CI workflow setup, progressive deployment strategies, automated rollback, canary releases, and deployment monitoring",
+      "description": "CI/CD pipeline configuration, GitHub Actions/GitLab CI workflow setup, and automated deployment pipeline orchestration",
       "version": "1.0.0",
       "author": {
         "name": "Seth Hobson",
@@ -576,23 +863,16 @@
       "keywords": [
         "ci-cd",
         "automation",
-        "deployment",
-        "devops",
         "pipeline",
         "github-actions",
         "gitlab-ci",
         "jenkins",
-        "argocd",
-        "gitops",
-        "canary",
-        "blue-green"
+        "gitops"
       ],
       "category": "workflows",
       "strict": false,
       "commands": [
-        "./workflows/workflow-automate.md",
-        "./tools/deploy-checklist.md",
-        "./tools/config-validate.md"
+        "./workflows/workflow-automate.md"
       ],
       "agents": [
         "./agents/deployment-engineer.md",
@@ -600,44 +880,6 @@
         "./agents/kubernetes-architect.md",
         "./agents/cloud-architect.md",
         "./agents/terraform-specialist.md"
-      ]
-    },
-    {
-      "name": "agent-optimization",
-      "source": "./",
-      "description": "AI agent prompt engineering, multi-agent workflow coordination, context window management, and performance tuning for LLM-based automation systems",
-      "version": "1.0.0",
-      "author": {
-        "name": "Seth Hobson",
-        "url": "https://github.com/wshobson"
-      },
-      "homepage": "https://github.com/wshobson/agents",
-      "repository": "https://github.com/wshobson/agents",
-      "license": "MIT",
-      "keywords": [
-        "ai-agents",
-        "prompt-engineering",
-        "optimization",
-        "llm",
-        "claude",
-        "gpt",
-        "multi-agent",
-        "context-management"
-      ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./workflows/improve-agent.md",
-        "./tools/prompt-optimize.md",
-        "./tools/multi-agent-optimize.md",
-        "./tools/context-save.md",
-        "./tools/context-restore.md",
-        "./tools/ai-assistant.md"
-      ],
-      "agents": [
-        "./agents/prompt-engineer.md",
-        "./agents/ai-engineer.md",
-        "./agents/context-manager.md"
       ]
     },
     {
@@ -738,7 +980,13 @@
       ],
       "category": "database",
       "strict": false,
-      "commands": ["./tools/db-migrate.md"],
+      "commands": [
+        "./tools/sql-migrations.md",
+        "./tools/nosql-migrations.md",
+        "./tools/migration-observability.md",
+        "./tools/event-cloud-migrations.md",
+        "./tools/migration-integration.md"
+      ],
       "agents": [
         "./agents/database-architect.md",
         "./agents/database-optimizer.md",
