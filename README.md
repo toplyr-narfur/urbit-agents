@@ -11,15 +11,28 @@ This unified repository provides everything needed for intelligent automation an
 - **15 Workflow Orchestrators** - Multi-agent coordination systems for complex operations like full-stack development, security hardening, ML pipelines, and incident response
 - **44 Development Tools** - Optimized utilities including project scaffolding, security scanning, test automation, and infrastructure setup
 
-### Version 1.1.0 Highlights
+### Key Features
 
-- **Marketplace Refactored**: 36 plugins → 62 focused plugins (+72% granularity)
-- **Tools Expanded**: 6 additional tools (test generation, component scaffolding, XSS scanning, project scaffolding for Python/TypeScript/Rust)
-- **100% Agent Coverage**: All plugins have at least one agent
-- **Better Discoverability**: 23 clear categories with 1-6 plugins each
-- **Optimized Architecture**: Average 3.4 components per plugin (follows Anthropic's 2-8 pattern)
+- **Granular Plugin Architecture**: 62 focused plugins optimized for minimal token usage
+- **Comprehensive Tooling**: 44 development tools including test generation, scaffolding, and security scanning
+- **100% Agent Coverage**: All plugins include specialized agents
+- **Clear Organization**: 23 categories with 1-6 plugins each for easy discovery
+- **Efficient Design**: Average 3.4 components per plugin (follows Anthropic's 2-8 pattern)
+
+### How It Works
+
+Each plugin is completely isolated with its own agents and commands:
+
+- **Install only what you need** - Each plugin loads only its specific agents and tools
+- **Minimal token usage** - No unnecessary resources loaded into context
+- **Mix and match** - Compose multiple plugins for complex workflows
+- **Clear boundaries** - Each plugin has a single, focused purpose
+
+**Example**: Installing `python-development` loads only 3 Python agents and 1 scaffolding tool (~300 tokens), not the entire marketplace.
 
 ## Installation
+
+### Step 1: Add the Marketplace
 
 Add this marketplace to Claude Code:
 
@@ -27,11 +40,24 @@ Add this marketplace to Claude Code:
 /plugin marketplace add wshobson/agents
 ```
 
-Then browse and install plugins using:
+This makes all 62 plugins available for installation, but **does not load any agents or tools** into your context.
+
+### Step 2: Install Specific Plugins
+
+Browse available plugins:
 
 ```bash
 /plugin
 ```
+
+Install only the plugins you need:
+
+```bash
+/plugin install python-development
+/plugin install backend-development
+```
+
+Each installed plugin loads **only its specific agents and commands** into Claude's context.
 
 ## Quick Start - Essential Plugins
 
@@ -307,27 +333,36 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 ```
 claude-agents/
 ├── .claude-plugin/
-│   └── marketplace.json          # 62 focused plugins (v1.1.0)
-├── agents/                        # 84 specialized AI agents
-│   ├── backend-architect.md
-│   ├── frontend-developer.md
-│   ├── python-pro.md
-│   └── ... (all agent definitions)
-├── workflows/                     # 15 multi-agent orchestrators
-│   ├── feature-development.md
-│   ├── full-stack-feature.md
-│   ├── security-hardening.md
-│   └── ... (workflow commands)
-├── tools/                         # 44 development tools
-│   ├── test-generate.md          # Automated test generation
-│   ├── component-scaffold.md     # React/RN scaffolding
-│   ├── xss-scan.md               # XSS vulnerability scanner
-│   ├── python-scaffold.md        # Python project init
-│   ├── typescript-scaffold.md    # TypeScript project init
-│   ├── rust-project.md           # Rust project init
-│   └── ... (other tools)
+│   └── marketplace.json          # Marketplace catalog (62 plugins)
+├── plugins/                       # Isolated plugin directories
+│   ├── python-development/
+│   │   ├── agents/               # Python language agents
+│   │   │   ├── python-pro.md
+│   │   │   ├── django-pro.md
+│   │   │   └── fastapi-pro.md
+│   │   └── commands/             # Python tooling
+│   │       └── python-scaffold.md
+│   ├── backend-development/
+│   │   ├── agents/
+│   │   │   ├── backend-architect.md
+│   │   │   ├── graphql-architect.md
+│   │   │   └── tdd-orchestrator.md
+│   │   └── commands/
+│   │       └── feature-development.md
+│   ├── security-scanning/
+│   │   ├── agents/
+│   │   │   └── security-auditor.md
+│   │   └── commands/
+│   │       ├── security-hardening.md
+│   │       ├── security-sast.md
+│   │       └── security-dependencies.md
+│   └── ... (59 more isolated plugins)
 └── README.md                      # This file
 ```
+
+Each plugin contains:
+- **agents/** - Specialized agents for that domain
+- **commands/** - Tools and workflows specific to that plugin
 
 ## Usage
 
@@ -611,20 +646,18 @@ Agents are assigned to specific Claude models based on task complexity and compu
 
 ## Architecture & Design Principles
 
-### Version 1.1.0 Refactoring
-
 This marketplace follows industry best practices with a focus on granularity, composability, and minimal token usage:
 
-#### Single Responsibility Principle
+### Single Responsibility Principle
 - Each plugin does **one thing well** (Unix philosophy)
 - Clear, focused purposes (describable in 5-10 words)
 - Average plugin size: **3.4 components** (follows Anthropic's 2-8 pattern)
 - **Zero bloated plugins** - all plugins focused and purposeful
 
-#### Granular Plugin Architecture
-- **36 plugins → 62 plugins** (+72% more granular)
+### Granular Plugin Architecture
+- **62 focused plugins** optimized for specific use cases
 - **23 clear categories** with 1-6 plugins each for easy discovery
-- Split into focused domains:
+- Organized by domain:
   - **Development**: 4 plugins (debugging, backend, frontend, multi-platform)
   - **Security**: 4 plugins (scanning, compliance, backend-api, frontend-mobile)
   - **Operations**: 4 plugins (incident, diagnostics, distributed, observability)
@@ -632,7 +665,7 @@ This marketplace follows industry best practices with a focus on granularity, co
   - **Infrastructure**: 5 plugins (deployment, validation, K8s, cloud, CI/CD)
   - And 18 more specialized categories
 
-#### Tools & Capabilities (v1.1.0)
+### Tools & Capabilities
 - **44 development tools** including:
   - `test-generate.md` - Automated unit test generation (pytest/Jest)
   - `component-scaffold.md` - React/React Native scaffolding
@@ -640,15 +673,15 @@ This marketplace follows industry best practices with a focus on granularity, co
   - `python-scaffold.md` - Python project scaffolding (FastAPI/Django)
   - `typescript-scaffold.md` - TypeScript project scaffolding (Next.js/Vite)
   - `rust-project.md` - Rust project scaffolding (cargo/Axum)
-- **100% agent coverage** - all plugins have at least one agent
+- **100% agent coverage** - all plugins include at least one agent
 - **Language-specific plugins** - 6 dedicated plugins for language experts
 
-#### Performance & Quality
-- **Optimized token usage** - smaller plugins load faster
+### Performance & Quality
+- **Optimized token usage** - isolated plugins load only what you need
 - **Better context efficiency** - granular plugins reduce unnecessary context
-- **Improved discoverability** - clear categories and focused purposes
-- **Component reuse** - shared agents/tools across related plugins
-- **100% component coverage** - all 84 agents utilized
+- **Clear discoverability** - well-organized categories and focused purposes
+- **Isolated dependencies** - each plugin contains only its required resources
+- **100% component coverage** - all 84 agents available across plugins
 
 ### Design Philosophy
 
@@ -675,12 +708,25 @@ This marketplace follows industry best practices with a focus on granularity, co
 
 ## Contributing
 
-To add new agents, workflows, or tools:
+To add new agents or commands:
 
-1. Create a new `.md` file in the appropriate directory with frontmatter
-2. Use lowercase, hyphen-separated naming convention
-3. Write clear activation criteria in the description
-4. Define comprehensive system prompt with expertise areas
+1. Identify or create the appropriate plugin directory in `plugins/`
+2. Create a new `.md` file in `plugins/{plugin-name}/agents/` or `plugins/{plugin-name}/commands/`
+3. Use lowercase, hyphen-separated naming convention
+4. Write clear activation criteria in the description
+5. Define comprehensive system prompt with expertise areas
+6. Update the plugin definition in `.claude-plugin/marketplace.json`
+
+### Plugin Structure
+
+Each plugin must follow this structure:
+```
+plugins/{plugin-name}/
+├── agents/          # Agent definitions (optional)
+│   └── agent-name.md
+└── commands/        # Commands/tools (optional)
+    └── command-name.md
+```
 
 ### Subagent Format
 

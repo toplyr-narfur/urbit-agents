@@ -7,12 +7,12 @@
   },
   "metadata": {
     "description": "Production-ready workflow orchestration with 62 focused plugins, 84 specialized agents, and 42 tools - optimized for granular installation and minimal token usage",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "code-documentation",
-      "source": "./",
+      "source": "./plugins/code-documentation",
       "description": "Documentation generation, code explanation, and technical writing with automated doc generation and tutorial creation",
       "version": "1.1.0",
       "author": {
@@ -31,8 +31,8 @@
       "category": "documentation",
       "strict": false,
       "commands": [
-        "./tools/doc-generate.md",
-        "./tools/code-explain.md"
+        "./commands/doc-generate.md",
+        "./commands/code-explain.md"
       ],
       "agents": [
         "./agents/docs-architect.md",
@@ -42,7 +42,7 @@
     },
     {
       "name": "debugging-toolkit",
-      "source": "./",
+      "source": "./plugins/debugging-toolkit",
       "description": "Interactive debugging, developer experience optimization, and smart debugging workflows",
       "version": "1.1.0",
       "author": {
@@ -61,7 +61,7 @@
       "category": "development",
       "strict": false,
       "commands": [
-        "./tools/smart-debug.md"
+        "./commands/smart-debug.md"
       ],
       "agents": [
         "./agents/debugger.md",
@@ -70,7 +70,7 @@
     },
     {
       "name": "git-pr-workflows",
-      "source": "./",
+      "source": "./plugins/git-pr-workflows",
       "description": "Git workflow automation, pull request enhancement, and team onboarding processes",
       "version": "1.1.0",
       "author": {
@@ -90,9 +90,9 @@
       "category": "workflows",
       "strict": false,
       "commands": [
-        "./tools/pr-enhance.md",
-        "./tools/onboard.md",
-        "./workflows/git-workflow.md"
+        "./commands/pr-enhance.md",
+        "./commands/onboard.md",
+        "./commands/git-workflow.md"
       ],
       "agents": [
         "./agents/code-reviewer.md"
@@ -100,7 +100,7 @@
     },
     {
       "name": "backend-development",
-      "source": "./",
+      "source": "./plugins/backend-development",
       "description": "Backend API design, GraphQL architecture, and test-driven backend development",
       "version": "1.1.0",
       "author": {
@@ -120,7 +120,7 @@
       "category": "development",
       "strict": false,
       "commands": [
-        "./workflows/feature-development.md"
+        "./commands/feature-development.md"
       ],
       "agents": [
         "./agents/backend-architect.md",
@@ -130,7 +130,7 @@
     },
     {
       "name": "frontend-mobile-development",
-      "source": "./",
+      "source": "./plugins/frontend-mobile-development",
       "description": "Frontend UI development and mobile application implementation across platforms",
       "version": "1.1.0",
       "author": {
@@ -150,7 +150,7 @@
       "category": "development",
       "strict": false,
       "commands": [
-        "./tools/component-scaffold.md"
+        "./commands/component-scaffold.md"
       ],
       "agents": [
         "./agents/frontend-developer.md",
@@ -159,7 +159,7 @@
     },
     {
       "name": "full-stack-orchestration",
-      "source": "./",
+      "source": "./plugins/full-stack-orchestration",
       "description": "End-to-end feature orchestration with testing, security, performance, and deployment",
       "version": "1.1.0",
       "author": {
@@ -179,7 +179,7 @@
       "category": "workflows",
       "strict": false,
       "commands": [
-        "./workflows/full-stack-feature.md"
+        "./commands/full-stack-feature.md"
       ],
       "agents": [
         "./agents/test-automator.md",
@@ -190,7 +190,7 @@
     },
     {
       "name": "unit-testing",
-      "source": "./",
+      "source": "./plugins/unit-testing",
       "description": "Unit and integration test automation for Python and JavaScript with debugging support",
       "version": "1.1.0",
       "author": {
@@ -210,7 +210,7 @@
       "category": "testing",
       "strict": false,
       "commands": [
-        "./tools/test-generate.md"
+        "./commands/test-generate.md"
       ],
       "agents": [
         "./agents/test-automator.md",
@@ -219,7 +219,7 @@
     },
     {
       "name": "tdd-workflows",
-      "source": "./",
+      "source": "./plugins/tdd-workflows",
       "description": "Test-driven development methodology with red-green-refactor cycles and code review",
       "version": "1.1.0",
       "author": {
@@ -238,10 +238,10 @@
       "category": "workflows",
       "strict": false,
       "commands": [
-        "./workflows/tdd-cycle.md",
-        "./tools/tdd-red.md",
-        "./tools/tdd-green.md",
-        "./tools/tdd-refactor.md"
+        "./commands/tdd-cycle.md",
+        "./commands/tdd-red.md",
+        "./commands/tdd-green.md",
+        "./commands/tdd-refactor.md"
       ],
       "agents": [
         "./agents/tdd-orchestrator.md",
@@ -250,7 +250,7 @@
     },
     {
       "name": "code-review-ai",
-      "source": "./",
+      "source": "./plugins/code-review-ai",
       "description": "AI-powered architectural review and code quality analysis",
       "version": "1.1.0",
       "author": {
@@ -269,7 +269,7 @@
       "category": "quality",
       "strict": false,
       "commands": [
-        "./tools/ai-review.md"
+        "./commands/ai-review.md"
       ],
       "agents": [
         "./agents/architect-review.md"
@@ -277,7 +277,7 @@
     },
     {
       "name": "code-refactoring",
-      "source": "./",
+      "source": "./plugins/code-refactoring",
       "description": "Code cleanup, refactoring automation, and technical debt management with context restoration",
       "version": "1.1.0",
       "author": {
@@ -296,9 +296,9 @@
       "category": "utilities",
       "strict": false,
       "commands": [
-        "./tools/refactor-clean.md",
-        "./tools/tech-debt.md",
-        "./tools/context-restore.md"
+        "./commands/refactor-clean.md",
+        "./commands/tech-debt.md",
+        "./commands/context-restore.md"
       ],
       "agents": [
         "./agents/legacy-modernizer.md",
@@ -307,7 +307,7 @@
     },
     {
       "name": "dependency-management",
-      "source": "./",
+      "source": "./plugins/dependency-management",
       "description": "Dependency auditing, version management, and security vulnerability scanning",
       "version": "1.1.0",
       "author": {
@@ -327,7 +327,7 @@
       "category": "utilities",
       "strict": false,
       "commands": [
-        "./tools/deps-audit.md"
+        "./commands/deps-audit.md"
       ],
       "agents": [
         "./agents/legacy-modernizer.md"
@@ -335,7 +335,7 @@
     },
     {
       "name": "error-debugging",
-      "source": "./",
+      "source": "./plugins/error-debugging",
       "description": "Error analysis, trace debugging, and multi-agent problem diagnosis",
       "version": "1.1.0",
       "author": {
@@ -354,9 +354,9 @@
       "category": "utilities",
       "strict": false,
       "commands": [
-        "./tools/error-analysis.md",
-        "./tools/error-trace.md",
-        "./tools/multi-agent-review.md"
+        "./commands/error-analysis.md",
+        "./commands/error-trace.md",
+        "./commands/multi-agent-review.md"
       ],
       "agents": [
         "./agents/debugger.md",
@@ -365,7 +365,7 @@
     },
     {
       "name": "team-collaboration",
-      "source": "./",
+      "source": "./plugins/team-collaboration",
       "description": "Team workflows, issue management, standup automation, and developer experience optimization",
       "version": "1.1.0",
       "author": {
@@ -384,8 +384,8 @@
       "category": "utilities",
       "strict": false,
       "commands": [
-        "./tools/issue.md",
-        "./tools/standup-notes.md"
+        "./commands/issue.md",
+        "./commands/standup-notes.md"
       ],
       "agents": [
         "./agents/dx-optimizer.md"
@@ -393,7 +393,7 @@
     },
     {
       "name": "llm-application-dev",
-      "source": "./",
+      "source": "./plugins/llm-application-dev",
       "description": "LLM application development, prompt engineering, and AI assistant optimization",
       "version": "1.1.0",
       "author": {
@@ -414,9 +414,9 @@
       "category": "ai-ml",
       "strict": false,
       "commands": [
-        "./tools/langchain-agent.md",
-        "./tools/ai-assistant.md",
-        "./tools/prompt-optimize.md"
+        "./commands/langchain-agent.md",
+        "./commands/ai-assistant.md",
+        "./commands/prompt-optimize.md"
       ],
       "agents": [
         "./agents/ai-engineer.md",
@@ -425,7 +425,7 @@
     },
     {
       "name": "agent-orchestration",
-      "source": "./",
+      "source": "./plugins/agent-orchestration",
       "description": "Multi-agent system optimization, agent improvement workflows, and context management",
       "version": "1.1.0",
       "author": {
@@ -444,8 +444,8 @@
       "category": "ai-ml",
       "strict": false,
       "commands": [
-        "./tools/multi-agent-optimize.md",
-        "./workflows/improve-agent.md"
+        "./commands/multi-agent-optimize.md",
+        "./commands/improve-agent.md"
       ],
       "agents": [
         "./agents/context-manager.md"
@@ -453,7 +453,7 @@
     },
     {
       "name": "context-management",
-      "source": "./",
+      "source": "./plugins/context-management",
       "description": "Context persistence, restoration, and long-running conversation management",
       "version": "1.1.0",
       "author": {
@@ -472,8 +472,8 @@
       "category": "ai-ml",
       "strict": false,
       "commands": [
-        "./tools/context-save.md",
-        "./tools/context-restore.md"
+        "./commands/context-save.md",
+        "./commands/context-restore.md"
       ],
       "agents": [
         "./agents/context-manager.md"
@@ -481,7 +481,7 @@
     },
     {
       "name": "machine-learning-ops",
-      "source": "./",
+      "source": "./plugins/machine-learning-ops",
       "description": "ML model training pipelines, hyperparameter tuning, model deployment automation, experiment tracking, and MLOps workflows",
       "version": "1.1.0",
       "author": {
@@ -502,7 +502,7 @@
       "category": "ai-ml",
       "strict": false,
       "commands": [
-        "./workflows/ml-pipeline.md"
+        "./commands/ml-pipeline.md"
       ],
       "agents": [
         "./agents/data-scientist.md",
@@ -512,7 +512,7 @@
     },
     {
       "name": "data-engineering",
-      "source": "./",
+      "source": "./plugins/data-engineering",
       "description": "ETL pipeline construction, data warehouse design, batch processing workflows, and data-driven feature development",
       "version": "1.1.0",
       "author": {
@@ -532,8 +532,8 @@
       "category": "data",
       "strict": false,
       "commands": [
-        "./workflows/data-driven-feature.md",
-        "./tools/data-pipeline.md"
+        "./commands/data-driven-feature.md",
+        "./commands/data-pipeline.md"
       ],
       "agents": [
         "./agents/data-engineer.md",
@@ -542,7 +542,7 @@
     },
     {
       "name": "incident-response",
-      "source": "./",
+      "source": "./plugins/incident-response",
       "description": "Production incident management, triage workflows, and automated incident resolution",
       "version": "1.1.0",
       "author": {
@@ -561,8 +561,8 @@
       "category": "operations",
       "strict": false,
       "commands": [
-        "./workflows/incident-response.md",
-        "./workflows/smart-fix.md"
+        "./commands/incident-response.md",
+        "./commands/smart-fix.md"
       ],
       "agents": [
         "./agents/incident-responder.md",
@@ -571,7 +571,7 @@
     },
     {
       "name": "error-diagnostics",
-      "source": "./",
+      "source": "./plugins/error-diagnostics",
       "description": "Error tracing, root cause analysis, and smart debugging for production systems",
       "version": "1.1.0",
       "author": {
@@ -590,9 +590,9 @@
       "category": "operations",
       "strict": false,
       "commands": [
-        "./tools/error-trace.md",
-        "./tools/error-analysis.md",
-        "./tools/smart-debug.md"
+        "./commands/error-trace.md",
+        "./commands/error-analysis.md",
+        "./commands/smart-debug.md"
       ],
       "agents": [
         "./agents/debugger.md",
@@ -601,7 +601,7 @@
     },
     {
       "name": "distributed-debugging",
-      "source": "./",
+      "source": "./plugins/distributed-debugging",
       "description": "Distributed system tracing and debugging across microservices",
       "version": "1.1.0",
       "author": {
@@ -620,7 +620,7 @@
       "category": "operations",
       "strict": false,
       "commands": [
-        "./tools/debug-trace.md"
+        "./commands/debug-trace.md"
       ],
       "agents": [
         "./agents/error-detective.md",
@@ -629,7 +629,7 @@
     },
     {
       "name": "observability-monitoring",
-      "source": "./",
+      "source": "./plugins/observability-monitoring",
       "description": "Metrics collection, logging infrastructure, distributed tracing, SLO implementation, and monitoring dashboards",
       "version": "1.1.0",
       "author": {
@@ -652,8 +652,8 @@
       "category": "operations",
       "strict": false,
       "commands": [
-        "./tools/monitor-setup.md",
-        "./tools/slo-implement.md"
+        "./commands/monitor-setup.md",
+        "./commands/slo-implement.md"
       ],
       "agents": [
         "./agents/observability-engineer.md",
@@ -664,7 +664,7 @@
     },
     {
       "name": "deployment-strategies",
-      "source": "./",
+      "source": "./plugins/deployment-strategies",
       "description": "Deployment patterns, rollback automation, and infrastructure templates",
       "version": "1.1.0",
       "author": {
@@ -691,7 +691,7 @@
     },
     {
       "name": "deployment-validation",
-      "source": "./",
+      "source": "./plugins/deployment-validation",
       "description": "Pre-deployment checks, configuration validation, and deployment readiness assessment",
       "version": "1.1.0",
       "author": {
@@ -710,7 +710,7 @@
       "category": "infrastructure",
       "strict": false,
       "commands": [
-        "./tools/config-validate.md"
+        "./commands/config-validate.md"
       ],
       "agents": [
         "./agents/cloud-architect.md"
@@ -718,7 +718,7 @@
     },
     {
       "name": "kubernetes-operations",
-      "source": "./",
+      "source": "./plugins/kubernetes-operations",
       "description": "Kubernetes manifest generation, networking configuration, security policies, observability setup, GitOps workflows, and auto-scaling",
       "version": "1.1.0",
       "author": {
@@ -745,7 +745,7 @@
     },
     {
       "name": "cloud-infrastructure",
-      "source": "./",
+      "source": "./plugins/cloud-infrastructure",
       "description": "Cloud architecture design for AWS/Azure/GCP, Kubernetes cluster configuration, Terraform infrastructure-as-code, hybrid cloud networking, and multi-cloud cost optimization",
       "version": "1.1.0",
       "author": {
@@ -778,7 +778,7 @@
     },
     {
       "name": "cicd-automation",
-      "source": "./",
+      "source": "./plugins/cicd-automation",
       "description": "CI/CD pipeline configuration, GitHub Actions/GitLab CI workflow setup, and automated deployment pipeline orchestration",
       "version": "1.1.0",
       "author": {
@@ -798,7 +798,7 @@
       "category": "infrastructure",
       "strict": false,
       "commands": [
-        "./workflows/workflow-automate.md"
+        "./commands/workflow-automate.md"
       ],
       "agents": [
         "./agents/deployment-engineer.md",
@@ -810,7 +810,7 @@
     },
     {
       "name": "application-performance",
-      "source": "./",
+      "source": "./plugins/application-performance",
       "description": "Application profiling, performance optimization, and observability for frontend and backend systems",
       "version": "1.1.0",
       "author": {
@@ -829,7 +829,7 @@
       "category": "performance",
       "strict": false,
       "commands": [
-        "./workflows/performance-optimization.md"
+        "./commands/performance-optimization.md"
       ],
       "agents": [
         "./agents/performance-engineer.md",
@@ -839,7 +839,7 @@
     },
     {
       "name": "database-cloud-optimization",
-      "source": "./",
+      "source": "./plugins/database-cloud-optimization",
       "description": "Database query optimization, cloud cost optimization, and scalability improvements",
       "version": "1.1.0",
       "author": {
@@ -858,7 +858,7 @@
       "category": "performance",
       "strict": false,
       "commands": [
-        "./tools/cost-optimize.md"
+        "./commands/cost-optimize.md"
       ],
       "agents": [
         "./agents/database-optimizer.md",
@@ -869,7 +869,7 @@
     },
     {
       "name": "comprehensive-review",
-      "source": "./",
+      "source": "./plugins/comprehensive-review",
       "description": "Multi-perspective code analysis covering architecture, security, and best practices",
       "version": "1.1.0",
       "author": {
@@ -889,8 +889,8 @@
       "category": "quality",
       "strict": false,
       "commands": [
-        "./workflows/full-review.md",
-        "./tools/pr-enhance.md"
+        "./commands/full-review.md",
+        "./commands/pr-enhance.md"
       ],
       "agents": [
         "./agents/code-reviewer.md",
@@ -900,7 +900,7 @@
     },
     {
       "name": "performance-testing-review",
-      "source": "./",
+      "source": "./plugins/performance-testing-review",
       "description": "Performance analysis, test coverage review, and AI-powered code quality assessment",
       "version": "1.1.0",
       "author": {
@@ -918,8 +918,8 @@
       "category": "quality",
       "strict": false,
       "commands": [
-        "./tools/ai-review.md",
-        "./tools/multi-agent-review.md"
+        "./commands/ai-review.md",
+        "./commands/multi-agent-review.md"
       ],
       "agents": [
         "./agents/performance-engineer.md",
@@ -928,7 +928,7 @@
     },
     {
       "name": "framework-migration",
-      "source": "./",
+      "source": "./plugins/framework-migration",
       "description": "Framework updates, migration planning, and architectural transformation workflows",
       "version": "1.1.0",
       "author": {
@@ -948,9 +948,9 @@
       "category": "modernization",
       "strict": false,
       "commands": [
-        "./workflows/legacy-modernize.md",
-        "./tools/code-migrate.md",
-        "./tools/deps-upgrade.md"
+        "./commands/legacy-modernize.md",
+        "./commands/code-migrate.md",
+        "./commands/deps-upgrade.md"
       ],
       "agents": [
         "./agents/legacy-modernizer.md",
@@ -959,7 +959,7 @@
     },
     {
       "name": "codebase-cleanup",
-      "source": "./",
+      "source": "./plugins/codebase-cleanup",
       "description": "Technical debt reduction, dependency updates, and code refactoring automation",
       "version": "1.1.0",
       "author": {
@@ -978,9 +978,9 @@
       "category": "modernization",
       "strict": false,
       "commands": [
-        "./tools/deps-audit.md",
-        "./tools/tech-debt.md",
-        "./tools/refactor-clean.md"
+        "./commands/deps-audit.md",
+        "./commands/tech-debt.md",
+        "./commands/refactor-clean.md"
       ],
       "agents": [
         "./agents/test-automator.md",
@@ -989,7 +989,7 @@
     },
     {
       "name": "database-design",
-      "source": "./",
+      "source": "./plugins/database-design",
       "description": "Database architecture, schema design, and SQL optimization for production systems",
       "version": "1.1.0",
       "author": {
@@ -1015,7 +1015,7 @@
     },
     {
       "name": "database-migrations",
-      "source": "./",
+      "source": "./plugins/database-migrations",
       "description": "Database migration automation, observability, and cross-database migration strategies",
       "version": "1.1.0",
       "author": {
@@ -1035,8 +1035,8 @@
       "category": "database",
       "strict": false,
       "commands": [
-        "./tools/sql-migrations.md",
-        "./tools/migration-observability.md"
+        "./commands/sql-migrations.md",
+        "./commands/migration-observability.md"
       ],
       "agents": [
         "./agents/database-optimizer.md",
@@ -1045,7 +1045,7 @@
     },
     {
       "name": "security-scanning",
-      "source": "./",
+      "source": "./plugins/security-scanning",
       "description": "SAST analysis, dependency vulnerability scanning, OWASP Top 10 compliance, container security scanning, and automated security hardening",
       "version": "1.1.0",
       "author": {
@@ -1065,9 +1065,9 @@
       "category": "security",
       "strict": false,
       "commands": [
-        "./workflows/security-hardening.md",
-        "./tools/security-sast.md",
-        "./tools/security-dependencies.md"
+        "./commands/security-hardening.md",
+        "./commands/security-sast.md",
+        "./commands/security-dependencies.md"
       ],
       "agents": [
         "./agents/security-auditor.md"
@@ -1075,7 +1075,7 @@
     },
     {
       "name": "security-compliance",
-      "source": "./",
+      "source": "./plugins/security-compliance",
       "description": "SOC2, HIPAA, and GDPR compliance validation, secrets scanning, compliance checklists, and regulatory documentation",
       "version": "1.1.0",
       "author": {
@@ -1096,7 +1096,7 @@
       "category": "security",
       "strict": false,
       "commands": [
-        "./tools/compliance-check.md"
+        "./commands/compliance-check.md"
       ],
       "agents": [
         "./agents/security-auditor.md"
@@ -1104,7 +1104,7 @@
     },
     {
       "name": "backend-api-security",
-      "source": "./",
+      "source": "./plugins/backend-api-security",
       "description": "API security hardening, authentication implementation, authorization patterns, rate limiting, and input validation",
       "version": "1.1.0",
       "author": {
@@ -1131,7 +1131,7 @@
     },
     {
       "name": "frontend-mobile-security",
-      "source": "./",
+      "source": "./plugins/frontend-mobile-security",
       "description": "XSS prevention, CSRF protection, content security policies, mobile app security, and secure storage patterns",
       "version": "1.1.0",
       "author": {
@@ -1151,7 +1151,7 @@
       "category": "security",
       "strict": false,
       "commands": [
-        "./tools/xss-scan.md"
+        "./commands/xss-scan.md"
       ],
       "agents": [
         "./agents/frontend-security-coder.md",
@@ -1161,7 +1161,7 @@
     },
     {
       "name": "data-validation-suite",
-      "source": "./",
+      "source": "./plugins/data-validation-suite",
       "description": "Schema validation, data quality monitoring, streaming validation pipelines, and input validation for backend APIs",
       "version": "1.1.0",
       "author": {
@@ -1187,7 +1187,7 @@
     },
     {
       "name": "api-scaffolding",
-      "source": "./",
+      "source": "./plugins/api-scaffolding",
       "description": "REST and GraphQL API scaffolding, framework selection, backend architecture, and API generation",
       "version": "1.1.0",
       "author": {
@@ -1217,7 +1217,7 @@
     },
     {
       "name": "api-testing-observability",
-      "source": "./",
+      "source": "./plugins/api-testing-observability",
       "description": "API testing automation, request mocking, OpenAPI documentation generation, observability setup, and monitoring",
       "version": "1.1.0",
       "author": {
@@ -1237,7 +1237,7 @@
       "category": "api",
       "strict": false,
       "commands": [
-        "./tools/api-mock.md"
+        "./commands/api-mock.md"
       ],
       "agents": [
         "./agents/api-documenter.md"
@@ -1245,7 +1245,7 @@
     },
     {
       "name": "seo-content-creation",
-      "source": "./",
+      "source": "./plugins/seo-content-creation",
       "description": "SEO content writing, planning, and quality auditing with E-E-A-T optimization",
       "version": "1.1.0",
       "author": {
@@ -1272,7 +1272,7 @@
     },
     {
       "name": "seo-technical-optimization",
-      "source": "./",
+      "source": "./plugins/seo-technical-optimization",
       "description": "Technical SEO optimization including meta tags, keywords, structure, and featured snippets",
       "version": "1.1.0",
       "author": {
@@ -1301,7 +1301,7 @@
     },
     {
       "name": "seo-analysis-monitoring",
-      "source": "./",
+      "source": "./plugins/seo-analysis-monitoring",
       "description": "Content freshness analysis, cannibalization detection, and authority building for SEO",
       "version": "1.1.0",
       "author": {
@@ -1329,7 +1329,7 @@
     },
     {
       "name": "documentation-generation",
-      "source": "./",
+      "source": "./plugins/documentation-generation",
       "description": "OpenAPI specification generation, Mermaid diagram creation, tutorial writing, API reference documentation",
       "version": "1.1.0",
       "author": {
@@ -1350,7 +1350,7 @@
       "category": "documentation",
       "strict": false,
       "commands": [
-        "./tools/doc-generate.md"
+        "./commands/doc-generate.md"
       ],
       "agents": [
         "./agents/docs-architect.md",
@@ -1362,7 +1362,7 @@
     },
     {
       "name": "multi-platform-apps",
-      "source": "./",
+      "source": "./plugins/multi-platform-apps",
       "description": "Cross-platform application development coordinating web, iOS, Android, and desktop implementations",
       "version": "1.1.0",
       "author": {
@@ -1383,7 +1383,7 @@
       "category": "development",
       "strict": false,
       "commands": [
-        "./workflows/multi-platform.md"
+        "./commands/multi-platform.md"
       ],
       "agents": [
         "./agents/mobile-developer.md",
@@ -1396,7 +1396,7 @@
     },
     {
       "name": "business-analytics",
-      "source": "./",
+      "source": "./plugins/business-analytics",
       "description": "Business metrics analysis, KPI tracking, financial reporting, and data-driven decision making",
       "version": "1.1.0",
       "author": {
@@ -1423,7 +1423,7 @@
     },
     {
       "name": "hr-legal-compliance",
-      "source": "./",
+      "source": "./plugins/hr-legal-compliance",
       "description": "HR policy documentation, legal compliance templates (GDPR/SOC2/HIPAA), employment contracts, and regulatory documentation",
       "version": "1.1.0",
       "author": {
@@ -1452,7 +1452,7 @@
     },
     {
       "name": "customer-sales-automation",
-      "source": "./",
+      "source": "./plugins/customer-sales-automation",
       "description": "Customer support workflow automation, sales pipeline management, email campaigns, and CRM integration",
       "version": "1.1.0",
       "author": {
@@ -1479,7 +1479,7 @@
     },
     {
       "name": "content-marketing",
-      "source": "./",
+      "source": "./plugins/content-marketing",
       "description": "Content marketing strategy, web research, and information synthesis for marketing operations",
       "version": "1.1.0",
       "author": {
@@ -1505,7 +1505,7 @@
     },
     {
       "name": "blockchain-web3",
-      "source": "./",
+      "source": "./plugins/blockchain-web3",
       "description": "Smart contract development with Solidity, DeFi protocol implementation, NFT platforms, and Web3 application architecture",
       "version": "1.1.0",
       "author": {
@@ -1533,7 +1533,7 @@
     },
     {
       "name": "quantitative-trading",
-      "source": "./",
+      "source": "./plugins/quantitative-trading",
       "description": "Quantitative analysis, algorithmic trading strategies, financial modeling, portfolio risk management, and backtesting",
       "version": "1.1.0",
       "author": {
@@ -1560,7 +1560,7 @@
     },
     {
       "name": "payment-processing",
-      "source": "./",
+      "source": "./plugins/payment-processing",
       "description": "Payment gateway integration with Stripe, PayPal, checkout flow implementation, subscription billing, and PCI compliance",
       "version": "1.1.0",
       "author": {
@@ -1588,7 +1588,7 @@
     },
     {
       "name": "game-development",
-      "source": "./",
+      "source": "./plugins/game-development",
       "description": "Unity game development with C# scripting, Minecraft server plugin development with Bukkit/Spigot APIs",
       "version": "1.1.0",
       "author": {
@@ -1616,7 +1616,7 @@
     },
     {
       "name": "accessibility-compliance",
-      "source": "./",
+      "source": "./plugins/accessibility-compliance",
       "description": "WCAG accessibility auditing, compliance validation, UI testing for screen readers, keyboard navigation, and inclusive design",
       "version": "1.1.0",
       "author": {
@@ -1636,7 +1636,7 @@
       "category": "accessibility",
       "strict": false,
       "commands": [
-        "./tools/accessibility-audit.md"
+        "./commands/accessibility-audit.md"
       ],
       "agents": [
         "./agents/ui-visual-validator.md"
@@ -1644,7 +1644,7 @@
     },
     {
       "name": "python-development",
-      "source": "./",
+      "source": "./plugins/python-development",
       "description": "Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices",
       "version": "1.1.0",
       "author": {
@@ -1664,7 +1664,7 @@
       "category": "languages",
       "strict": false,
       "commands": [
-        "./tools/python-scaffold.md"
+        "./commands/python-scaffold.md"
       ],
       "agents": [
         "./agents/python-pro.md",
@@ -1674,7 +1674,7 @@
     },
     {
       "name": "javascript-typescript",
-      "source": "./",
+      "source": "./plugins/javascript-typescript",
       "description": "JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks",
       "version": "1.1.0",
       "author": {
@@ -1694,7 +1694,7 @@
       "category": "languages",
       "strict": false,
       "commands": [
-        "./tools/typescript-scaffold.md"
+        "./commands/typescript-scaffold.md"
       ],
       "agents": [
         "./agents/javascript-pro.md",
@@ -1703,7 +1703,7 @@
     },
     {
       "name": "systems-programming",
-      "source": "./",
+      "source": "./plugins/systems-programming",
       "description": "Systems programming with Rust, Go, C, and C++ for performance-critical and low-level development",
       "version": "1.1.0",
       "author": {
@@ -1724,7 +1724,7 @@
       "category": "languages",
       "strict": false,
       "commands": [
-        "./tools/rust-project.md"
+        "./commands/rust-project.md"
       ],
       "agents": [
         "./agents/rust-pro.md",
@@ -1735,7 +1735,7 @@
     },
     {
       "name": "jvm-languages",
-      "source": "./",
+      "source": "./plugins/jvm-languages",
       "description": "JVM language development including Java, Scala, and C# with enterprise patterns and frameworks",
       "version": "1.1.0",
       "author": {
@@ -1764,7 +1764,7 @@
     },
     {
       "name": "web-scripting",
-      "source": "./",
+      "source": "./plugins/web-scripting",
       "description": "Web scripting with PHP and Ruby for web applications, CMS development, and backend services",
       "version": "1.1.0",
       "author": {
@@ -1791,7 +1791,7 @@
     },
     {
       "name": "functional-programming",
-      "source": "./",
+      "source": "./plugins/functional-programming",
       "description": "Functional programming with Elixir, OTP patterns, Phoenix framework, and distributed systems",
       "version": "1.1.0",
       "author": {
