@@ -411,6 +411,7 @@ After installing plugins, you can invoke their capabilities using **slash comman
 ```
 
 **Key benefits of slash commands:**
+
 - **Direct invocation** - No need to describe what you want in natural language
 - **Structured arguments** - Pass parameters explicitly for precise control
 - **Composability** - Chain commands together for complex workflows
@@ -445,6 +446,7 @@ Plugins provide pre-configured multi-agent workflows accessible via slash comman
 **Orchestration:** backend-architect → database-architect → frontend-developer → test-automator → security-auditor → deployment-engineer → observability-engineer
 
 **What happens:**
+
 1. Database schema design with migrations
 2. Backend API implementation (REST/GraphQL)
 3. Frontend components with state management
@@ -551,11 +553,13 @@ Use these commands to explore available functionality:
 ### Real Command Examples by Category
 
 **Development & Features:**
+
 - `/backend-development:feature-development` - End-to-end backend feature development
 - `/full-stack-orchestration:full-stack-feature` - Complete full-stack feature implementation
 - `/multi-platform-apps:multi-platform` - Cross-platform app development coordination
 
 **Testing & Quality:**
+
 - `/unit-testing:test-generate` - Generate comprehensive unit tests
 - `/tdd-workflows:tdd-cycle` - Complete TDD red-green-refactor cycle
 - `/tdd-workflows:tdd-red` - Write failing tests first
@@ -563,11 +567,13 @@ Use these commands to explore available functionality:
 - `/tdd-workflows:tdd-refactor` - Refactor with passing tests
 
 **Code Quality & Review:**
+
 - `/code-review-ai:ai-review` - AI-powered code review
 - `/comprehensive-review:full-review` - Multi-perspective analysis
 - `/comprehensive-review:pr-enhance` - Enhance pull requests
 
 **Debugging & Troubleshooting:**
+
 - `/debugging-toolkit:smart-debug` - Interactive smart debugging
 - `/incident-response:incident-response` - Production incident management
 - `/incident-response:smart-fix` - Automated incident resolution
@@ -577,6 +583,7 @@ Use these commands to explore available functionality:
 - `/distributed-debugging:debug-trace` - Distributed system tracing
 
 **Security:**
+
 - `/security-scanning:security-hardening` - Comprehensive security hardening
 - `/security-scanning:security-sast` - Static application security testing
 - `/security-scanning:security-dependencies` - Dependency vulnerability scanning
@@ -584,22 +591,26 @@ Use these commands to explore available functionality:
 - `/frontend-mobile-security:xss-scan` - XSS vulnerability scanning
 
 **Infrastructure & Deployment:**
+
 - `/observability-monitoring:monitor-setup` - Setup monitoring infrastructure
 - `/observability-monitoring:slo-implement` - Implement SLO/SLI metrics
 - `/deployment-validation:config-validate` - Pre-deployment validation
 - `/cicd-automation:workflow-automate` - CI/CD pipeline automation
 
 **Data & ML:**
+
 - `/machine-learning-ops:ml-pipeline` - ML training pipeline orchestration
 - `/data-engineering:data-pipeline` - ETL/ELT pipeline construction
 - `/data-engineering:data-driven-feature` - Data-driven feature development
 
 **Documentation:**
+
 - `/code-documentation:doc-generate` - Generate comprehensive documentation
 - `/code-documentation:code-explain` - Explain code functionality
 - `/documentation-generation:doc-generate` - OpenAPI specs, diagrams, tutorials
 
 **Refactoring & Maintenance:**
+
 - `/code-refactoring:refactor-clean` - Code cleanup and refactoring
 - `/code-refactoring:tech-debt` - Technical debt management
 - `/codebase-cleanup:deps-audit` - Dependency auditing
@@ -609,21 +620,25 @@ Use these commands to explore available functionality:
 - `/framework-migration:deps-upgrade` - Dependency upgrades
 
 **Database:**
+
 - `/database-migrations:sql-migrations` - SQL migration automation
 - `/database-migrations:migration-observability` - Migration monitoring
 - `/database-cloud-optimization:cost-optimize` - Database and cloud optimization
 
 **Git & PR Workflows:**
+
 - `/git-pr-workflows:pr-enhance` - Enhance pull request quality
 - `/git-pr-workflows:onboard` - Team onboarding automation
 - `/git-pr-workflows:git-workflow` - Git workflow automation
 
 **Project Scaffolding:**
+
 - `/python-development:python-scaffold` - FastAPI/Django project setup
 - `/javascript-typescript:typescript-scaffold` - Next.js/React + Vite setup
 - `/systems-programming:rust-project` - Rust project scaffolding
 
 **AI & LLM Development:**
+
 - `/llm-application-dev:langchain-agent` - LangChain agent development
 - `/llm-application-dev:ai-assistant` - AI assistant implementation
 - `/llm-application-dev:prompt-optimize` - Prompt engineering optimization
@@ -631,20 +646,25 @@ Use these commands to explore available functionality:
 - `/agent-orchestration:improve-agent` - Agent improvement workflows
 
 **Testing & Performance:**
+
 - `/performance-testing-review:ai-review` - Performance analysis
 - `/application-performance:performance-optimization` - App optimization
 
 **Team Collaboration:**
+
 - `/team-collaboration:issue` - Issue management automation
 - `/team-collaboration:standup-notes` - Standup notes generation
 
 **Accessibility:**
+
 - `/accessibility-compliance:accessibility-audit` - WCAG compliance auditing
 
 **API Development:**
+
 - `/api-testing-observability:api-mock` - API mocking and testing
 
 **Context Management:**
+
 - `/context-management:context-save` - Save conversation context
 - `/context-management:context-restore` - Restore previous context
 
@@ -1007,5 +1027,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
 - [Claude Code Plugins Guide](https://docs.claude.com/en/docs/claude-code/plugins)
-- [Subagents Documentation](https://docs.claude.com/en/docs/claude-code/sub-agents)
+- [Claude Code Subagents Guide](https://docs.claude.com/en/docs/claude-code/sub-agents)
+- [Claude Code Slash Commands Reference](https://docs.claude.com/en/docs/claude-code/slash-commands)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
