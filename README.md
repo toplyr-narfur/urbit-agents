@@ -1,4 +1,4 @@
-# Claude Code Plugins for Agents, Commands, and Workflows
+# Claude Code Plugins: Orchestration and Productivity
 
 A comprehensive production-ready system combining **84 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **44 development tools** organized into **62 focused, single-purpose plugins** for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
 
