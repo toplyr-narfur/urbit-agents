@@ -24,7 +24,7 @@ This unified repository provides everything needed for intelligent automation an
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add https://github.com/wshobson/agents
+/plugin marketplace add wshobson/agents
 ```
 
 Then browse and install plugins using:
