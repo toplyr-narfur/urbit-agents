@@ -17,7 +17,7 @@ Implement comprehensive security hardening with defense-in-depth strategy throug
 - Context: Uses vulnerability scan results to inform threat priorities
 
 ### 3. Architecture Security Review
-- Use Task tool with subagent_type="backend-architect"
+- Use Task tool with subagent_type="backend-api-security::backend-architect"
 - Prompt: "Review architecture for security weaknesses in: $ARGUMENTS. Evaluate service boundaries, data flow security, authentication/authorization architecture, encryption implementation, network segmentation. Design zero-trust architecture patterns. Reference threat model and vulnerability findings."
 - Output: Security architecture assessment, zero-trust design recommendations, service mesh security requirements, data classification matrix
 - Context: Incorporates threat model to address architectural vulnerabilities
@@ -31,19 +31,19 @@ Implement comprehensive security hardening with defense-in-depth strategy throug
 - Context: Addresses high-priority items from vulnerability assessment
 
 ### 5. Backend Security Hardening
-- Use Task tool with subagent_type="backend-security-coder"
+- Use Task tool with subagent_type="backend-api-security::backend-security-coder"
 - Prompt: "Implement comprehensive backend security controls for: $ARGUMENTS. Add input validation with OWASP ESAPI, implement rate limiting and DDoS protection, secure API endpoints with OAuth2/JWT validation, add encryption for data at rest/transit using AES-256/TLS 1.3. Implement secure logging without PII exposure."
 - Output: Hardened API endpoints, validation middleware, encryption implementation, secure configuration templates
 - Context: Builds upon vulnerability fixes with preventive controls
 
 ### 6. Frontend Security Implementation
-- Use Task tool with subagent_type="frontend-security-coder"
+- Use Task tool with subagent_type="frontend-mobile-security::frontend-security-coder"
 - Prompt: "Implement frontend security measures for: $ARGUMENTS. Configure CSP headers with nonce-based policies, implement XSS prevention with DOMPurify, secure authentication flows with PKCE OAuth2, add SRI for external resources, implement secure cookie handling with SameSite/HttpOnly/Secure flags."
 - Output: Secure frontend components, CSP policy configuration, authentication flow implementation, security headers configuration
 - Context: Complements backend security with client-side protections
 
 ### 7. Mobile Security Hardening
-- Use Task tool with subagent_type="mobile-security-coder"
+- Use Task tool with subagent_type="frontend-mobile-security::mobile-security-coder"
 - Prompt: "Implement mobile app security for: $ARGUMENTS. Add certificate pinning, implement biometric authentication, secure local storage with encryption, obfuscate code with ProGuard/R8, implement anti-tampering and root/jailbreak detection, secure IPC communications."
 - Output: Hardened mobile application, security configuration files, obfuscation rules, certificate pinning implementation
 - Context: Extends security to mobile platforms if applicable
@@ -57,13 +57,13 @@ Implement comprehensive security hardening with defense-in-depth strategy throug
 - Context: Strengthens access controls based on architecture review
 
 ### 9. Infrastructure Security Controls
-- Use Task tool with subagent_type="deployment-engineer"
+- Use Task tool with subagent_type="deployment-strategies::deployment-engineer"
 - Prompt: "Deploy infrastructure security controls for: $ARGUMENTS. Configure WAF rules for OWASP protection, implement network segmentation with micro-segmentation, deploy IDS/IPS systems, configure cloud security groups and NACLs, implement DDoS protection with rate limiting and geo-blocking."
 - Output: WAF configuration, network security policies, IDS/IPS rules, cloud security configurations
 - Context: Implements network-level defenses
 
 ### 10. Secrets Management Implementation
-- Use Task tool with subagent_type="deployment-engineer"
+- Use Task tool with subagent_type="deployment-strategies::deployment-engineer"
 - Prompt: "Implement enterprise secrets management for: $ARGUMENTS. Deploy HashiCorp Vault or AWS Secrets Manager, implement secret rotation policies, remove hardcoded secrets, configure least-privilege IAM roles, implement encryption key management with HSM support."
 - Output: Secrets management configuration, rotation policies, IAM role definitions, key management procedures
 - Context: Eliminates secrets exposure vulnerabilities
@@ -83,7 +83,7 @@ Implement comprehensive security hardening with defense-in-depth strategy throug
 - Context: Ensures regulatory and industry standard compliance
 
 ### 13. Security Monitoring and SIEM Integration
-- Use Task tool with subagent_type="devops-troubleshooter"
+- Use Task tool with subagent_type="incident-response::devops-troubleshooter"
 - Prompt: "Implement security monitoring and SIEM for: $ARGUMENTS. Deploy Splunk/ELK/Sentinel integration, configure security event correlation, implement behavioral analytics for anomaly detection, set up automated incident response playbooks, create security dashboards and alerting."
 - Output: SIEM configuration, correlation rules, incident response playbooks, security dashboards, alert definitions
 - Context: Establishes continuous security monitoring

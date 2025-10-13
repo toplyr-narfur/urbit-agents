@@ -25,13 +25,13 @@ Optimize application performance end-to-end using specialized performance and op
 ## Phase 2: Database & Backend Optimization
 
 ### 4. Database Performance Optimization
-- Use Task tool with subagent_type="database-optimizer"
+- Use Task tool with subagent_type="database-cloud-optimization::database-optimizer"
 - Prompt: "Optimize database performance for: $ARGUMENTS based on profiling data: {context_from_phase_1}. Analyze slow query logs, create missing indexes, optimize execution plans, implement query result caching with Redis/Memcached. Review connection pooling, prepared statements, and batch processing opportunities. Consider read replicas and database sharding if needed."
 - Context: Performance bottlenecks from phase 1
 - Output: Optimized queries, new indexes, caching strategy, connection pool configuration
 
 ### 5. Backend Code & API Optimization
-- Use Task tool with subagent_type="backend-architect"
+- Use Task tool with subagent_type="backend-development::backend-architect"
 - Prompt: "Optimize backend services for: $ARGUMENTS targeting bottlenecks: {context_from_phase_1}. Implement efficient algorithms, add application-level caching, optimize N+1 queries, use async/await patterns effectively. Implement pagination, response compression, GraphQL query optimization, and batch API operations. Add circuit breakers and bulkheads for resilience."
 - Context: Database optimizations from step 4, profiling data from phase 1
 - Output: Optimized backend code, caching implementation, API improvements, resilience patterns
@@ -51,13 +51,13 @@ Optimize application performance end-to-end using specialized performance and op
 - Output: Optimized bundles, lazy loading implementation, improved Core Web Vitals
 
 ### 8. CDN & Edge Optimization
-- Use Task tool with subagent_type="cloud-architect"
+- Use Task tool with subagent_type="cloud-infrastructure::cloud-architect"
 - Prompt: "Optimize CDN and edge performance for: $ARGUMENTS. Configure CloudFlare/CloudFront for optimal caching, implement edge functions for dynamic content, set up image optimization with responsive images and WebP/AVIF formats. Configure HTTP/2 and HTTP/3, implement Brotli compression. Set up geographic distribution for global users."
 - Context: Frontend optimizations from step 7
 - Output: CDN configuration, edge caching rules, compression setup, geographic optimization
 
 ### 9. Mobile & Progressive Web App Optimization
-- Use Task tool with subagent_type="mobile-developer"
+- Use Task tool with subagent_type="frontend-mobile-development::mobile-developer"
 - Prompt: "Optimize mobile experience for: $ARGUMENTS. Implement service workers for offline functionality, optimize for slow networks with adaptive loading. Reduce JavaScript execution time for mobile CPUs. Implement virtual scrolling for long lists. Optimize touch responsiveness and smooth animations. Consider React Native/Flutter specific optimizations if applicable."
 - Context: Frontend optimizations from steps 7-8
 - Output: Mobile-optimized code, PWA implementation, offline functionality
@@ -71,7 +71,7 @@ Optimize application performance end-to-end using specialized performance and op
 - Output: Load test results, performance under load, breaking points, scalability analysis
 
 ### 11. Performance Regression Testing
-- Use Task tool with subagent_type="test-automator"
+- Use Task tool with subagent_type="performance-testing-review::test-automator"
 - Prompt: "Create automated performance regression tests for: $ARGUMENTS. Set up performance budgets for key metrics, integrate with CI/CD pipeline using GitHub Actions or similar. Create Lighthouse CI tests for frontend, API performance tests with Artillery, and database performance benchmarks. Implement automatic rollback triggers for performance regressions."
 - Context: Load test results from step 10, baseline metrics from phase 1
 - Output: Performance test suite, CI/CD integration, regression prevention system

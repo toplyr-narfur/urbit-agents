@@ -33,7 +33,7 @@ Build and deploy the same feature consistently across web, mobile, and desktop p
 - Expected output: Design system documentation, component library specs, platform guidelines
 
 ### 3. Shared Business Logic Architecture
-- Use Task tool with subagent_type="software-architect"
+- Use Task tool with subagent_type="comprehensive-review::architect-review"
 - Prompt: "Design shared business logic architecture for cross-platform feature. Define:
   - Core domain models and entities (platform-agnostic)
   - Business rules and validation logic
@@ -93,7 +93,7 @@ Build and deploy the same feature consistently across web, mobile, and desktop p
 - Expected output: Native Android implementation with tests
 
 ### 4d. Desktop Implementation (Optional - Electron/Tauri)
-- Use Task tool with subagent_type="desktop-developer"
+- Use Task tool with subagent_type="frontend-mobile-development::frontend-developer"
 - Prompt: "Implement desktop version using Tauri 2.0 or Electron with:
   - Shared web codebase where possible
   - Native OS integration (system tray, notifications)
@@ -109,7 +109,7 @@ Build and deploy the same feature consistently across web, mobile, and desktop p
 ## Phase 3: Integration and Validation
 
 ### 5. API Documentation and Testing
-- Use Task tool with subagent_type="api-documenter"
+- Use Task tool with subagent_type="documentation-generation::api-documenter"
 - Prompt: "Create comprehensive API documentation including:
   - Interactive OpenAPI/Swagger documentation
   - Platform-specific integration guides
@@ -125,7 +125,7 @@ Build and deploy the same feature consistently across web, mobile, and desktop p
 - Expected output: Complete API documentation portal, test results
 
 ### 6. Cross-Platform Testing and Feature Parity
-- Use Task tool with subagent_type="test-automator"
+- Use Task tool with subagent_type="unit-testing::test-automator"
 - Prompt: "Validate feature parity across all platforms:
   - Functional testing matrix (features work identically)
   - UI consistency verification (follows design system)
@@ -140,7 +140,7 @@ Build and deploy the same feature consistently across web, mobile, and desktop p
 - Expected output: Test report, parity matrix, performance metrics
 
 ### 7. Platform-Specific Optimizations
-- Use Task tool with subagent_type="performance-optimizer"
+- Use Task tool with subagent_type="application-performance::performance-engineer"
 - Prompt: "Optimize each platform implementation:
   - Web: Bundle size, lazy loading, CDN setup, SEO
   - iOS: App size, launch time, memory usage, battery

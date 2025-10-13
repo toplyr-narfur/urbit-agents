@@ -72,7 +72,7 @@
       "name": "git-pr-workflows",
       "source": "./plugins/git-pr-workflows",
       "description": "Git workflow automation, pull request enhancement, and team onboarding processes",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -102,7 +102,7 @@
       "name": "backend-development",
       "source": "./plugins/backend-development",
       "description": "Backend API design, GraphQL architecture, and test-driven backend development",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -161,7 +161,7 @@
       "name": "full-stack-orchestration",
       "source": "./plugins/full-stack-orchestration",
       "description": "End-to-end feature orchestration with testing, security, performance, and deployment",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -221,7 +221,7 @@
       "name": "tdd-workflows",
       "source": "./plugins/tdd-workflows",
       "description": "Test-driven development methodology with red-green-refactor cycles and code review",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -514,7 +514,7 @@
       "name": "data-engineering",
       "source": "./plugins/data-engineering",
       "description": "ETL pipeline construction, data warehouse design, batch processing workflows, and data-driven feature development",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -544,7 +544,7 @@
       "name": "incident-response",
       "source": "./plugins/incident-response",
       "description": "Production incident management, triage workflows, and automated incident resolution",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -812,7 +812,7 @@
       "name": "application-performance",
       "source": "./plugins/application-performance",
       "description": "Application profiling, performance optimization, and observability for frontend and backend systems",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -871,7 +871,7 @@
       "name": "comprehensive-review",
       "source": "./plugins/comprehensive-review",
       "description": "Multi-perspective code analysis covering architecture, security, and best practices",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -930,7 +930,7 @@
       "name": "framework-migration",
       "source": "./plugins/framework-migration",
       "description": "Framework updates, migration planning, and architectural transformation workflows",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1047,7 +1047,7 @@
       "name": "security-scanning",
       "source": "./plugins/security-scanning",
       "description": "SAST analysis, dependency vulnerability scanning, OWASP Top 10 compliance, container security scanning, and automated security hardening",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1364,7 +1364,7 @@
       "name": "multi-platform-apps",
       "source": "./plugins/multi-platform-apps",
       "description": "Cross-platform application development coordinating web, iOS, Android, and desktop implementations",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"

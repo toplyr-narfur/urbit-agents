@@ -27,7 +27,7 @@ Orchestrate multi-agent incident response with modern SRE practices for rapid re
 - Context: Initial alerts, monitoring dashboards, recent changes
 
 ### 2. Observability Analysis
-- Use Task tool with subagent_type="observability-engineer"
+- Use Task tool with subagent_type="observability-monitoring::observability-engineer"
 - Prompt: "Perform rapid observability sweep for incident: $ARGUMENTS. Query: 1) Distributed tracing (OpenTelemetry/Jaeger), 2) Metrics correlation (Prometheus/Grafana/DataDog), 3) Log aggregation (ELK/Splunk), 4) APM data, 5) Real User Monitoring. Identify anomalies, error patterns, and service degradation points."
 - Output: Observability findings, anomaly detection, service health matrix, trace analysis
 - Context: Severity level from step 1, affected services
@@ -41,19 +41,19 @@ Orchestrate multi-agent incident response with modern SRE practices for rapid re
 ## Phase 2: Investigation & Root Cause Analysis
 
 ### 4. Deep System Debugging
-- Use Task tool with subagent_type="debugger"
+- Use Task tool with subagent_type="error-debugging::debugger"
 - Prompt: "Conduct deep debugging for incident: $ARGUMENTS using observability data. Investigate: 1) Stack traces and error logs, 2) Database query performance and locks, 3) Network latency and timeouts, 4) Memory leaks and CPU spikes, 5) Dependency failures and cascading errors. Apply Five Whys analysis."
 - Output: Root cause identification, contributing factors, dependency impact map
 - Context: Observability analysis, mitigation status
 
 ### 5. Security Assessment
-- Use Task tool with subagent_type="security-auditor"
+- Use Task tool with subagent_type="security-scanning::security-auditor"
 - Prompt: "Assess security implications of incident: $ARGUMENTS. Check: 1) DDoS attack indicators, 2) Authentication/authorization failures, 3) Data exposure risks, 4) Certificate issues, 5) Suspicious access patterns. Review WAF logs, security groups, and audit trails."
 - Output: Security assessment, breach analysis, vulnerability identification
 - Context: Root cause findings, system logs
 
 ### 6. Performance Engineering Analysis
-- Use Task tool with subagent_type="performance-engineer"
+- Use Task tool with subagent_type="application-performance::performance-engineer"
 - Prompt: "Analyze performance aspects of incident: $ARGUMENTS. Examine: 1) Resource utilization patterns, 2) Query optimization opportunities, 3) Caching effectiveness, 4) Load balancer health, 5) CDN performance, 6) Autoscaling triggers. Identify bottlenecks and capacity issues."
 - Output: Performance bottlenecks, resource recommendations, optimization opportunities
 - Context: Debug findings, current mitigation state
@@ -61,13 +61,13 @@ Orchestrate multi-agent incident response with modern SRE practices for rapid re
 ## Phase 3: Resolution & Recovery
 
 ### 7. Fix Implementation
-- Use Task tool with subagent_type="backend-architect"
+- Use Task tool with subagent_type="backend-development::backend-architect"
 - Prompt: "Design and implement production fix for incident: $ARGUMENTS based on root cause. Requirements: 1) Minimal viable fix for rapid deployment, 2) Risk assessment and rollback capability, 3) Staged rollout plan with monitoring, 4) Validation criteria and health checks. Consider both immediate fix and long-term solution."
 - Output: Fix implementation, deployment strategy, validation plan, rollback procedures
 - Context: Root cause analysis, performance findings, security assessment
 
 ### 8. Deployment and Validation
-- Use Task tool with subagent_type="deployment-engineer"
+- Use Task tool with subagent_type="deployment-strategies::deployment-engineer"
 - Prompt: "Execute emergency deployment for incident fix: $ARGUMENTS. Process: 1) Blue-green or canary deployment, 2) Progressive rollout with monitoring, 3) Health check validation at each stage, 4) Rollback triggers configured, 5) Real-time monitoring during deployment. Coordinate with incident command."
 - Output: Deployment status, validation results, monitoring dashboard, rollback readiness
 - Context: Fix implementation, current system state
@@ -75,7 +75,7 @@ Orchestrate multi-agent incident response with modern SRE practices for rapid re
 ## Phase 4: Communication & Coordination
 
 ### 9. Stakeholder Communication
-- Use Task tool with subagent_type="content-marketer"
+- Use Task tool with subagent_type="content-marketing::content-marketer"
 - Prompt: "Manage incident communication for: $ARGUMENTS. Create: 1) Status page updates (public-facing), 2) Internal engineering updates (technical details), 3) Executive summary (business impact/ETA), 4) Customer support briefing (talking points), 5) Timeline documentation with key decisions. Update every 15-30 minutes based on severity."
 - Output: Communication artifacts, status updates, stakeholder briefings, timeline log
 - Context: All previous phases, current resolution status
@@ -89,19 +89,19 @@ Orchestrate multi-agent incident response with modern SRE practices for rapid re
 ## Phase 5: Postmortem & Prevention
 
 ### 11. Blameless Postmortem
-- Use Task tool with subagent_type="docs-architect"
+- Use Task tool with subagent_type="documentation-generation::docs-architect"
 - Prompt: "Conduct blameless postmortem for incident: $ARGUMENTS. Document: 1) Complete incident timeline with decisions, 2) Root cause and contributing factors (systems focus), 3) What went well in response, 4) What could improve, 5) Action items with owners and deadlines, 6) Lessons learned for team education. Follow SRE postmortem best practices."
 - Output: Postmortem document, action items list, process improvements, training needs
 - Context: Complete incident history, all agent outputs
 
 ### 12. Monitoring and Alert Enhancement
-- Use Task tool with subagent_type="observability-engineer"
+- Use Task tool with subagent_type="observability-monitoring::observability-engineer"
 - Prompt: "Enhance monitoring to prevent recurrence of: $ARGUMENTS. Implement: 1) New alerts for early detection, 2) SLI/SLO adjustments if needed, 3) Dashboard improvements for visibility, 4) Runbook automation opportunities, 5) Chaos engineering scenarios for testing. Ensure alerts are actionable and reduce noise."
 - Output: New monitoring configuration, alert rules, dashboard updates, runbook automation
 - Context: Postmortem findings, root cause analysis
 
 ### 13. System Hardening
-- Use Task tool with subagent_type="backend-architect"
+- Use Task tool with subagent_type="backend-development::backend-architect"
 - Prompt: "Design system improvements to prevent incident: $ARGUMENTS. Propose: 1) Architecture changes for resilience (circuit breakers, bulkheads), 2) Graceful degradation strategies, 3) Capacity planning adjustments, 4) Technical debt prioritization, 5) Dependency reduction opportunities. Create implementation roadmap."
 - Output: Architecture improvements, resilience patterns, technical debt items, roadmap
 - Context: Postmortem action items, performance analysis

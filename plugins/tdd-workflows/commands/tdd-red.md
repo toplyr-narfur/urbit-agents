@@ -4,7 +4,7 @@ Write comprehensive failing tests following TDD red phase principles.
 
 ## Role
 
-Generate failing tests using Task tool with subagent_type="test-automator".
+Generate failing tests using Task tool with subagent_type="unit-testing::test-automator".
 
 ## Prompt Template
 
