@@ -199,11 +199,12 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **full-stack-orchestration** | End-to-end feature orchestration    | `/plugin install full-stack-orchestration` |
 | **tdd-workflows**            | Test-driven development methodology | `/plugin install tdd-workflows`            |
 
-### ✅ Testing (1 plugin)
+### ✅ Testing (2 plugins)
 
-| Plugin           | Description                                        | Install                        |
-| ---------------- | -------------------------------------------------- | ------------------------------ |
-| **unit-testing** | Automated unit test generation (Python/JavaScript) | `/plugin install unit-testing` |
+| Plugin            | Description                                        | Install                         |
+| ----------------- | -------------------------------------------------- | ------------------------------- |
+| **unit-testing**  | Automated unit test generation (Python/JavaScript) | `/plugin install unit-testing`  |
+| **tdd-workflows** | Test-driven development methodology                | `/plugin install tdd-workflows` |
 
 ### 🔍 Quality (3 plugins)
 
@@ -391,9 +392,33 @@ Each plugin contains:
 
 ## Usage
 
+### Using Plugin Slash Commands
+
+After installing plugins, you can invoke their capabilities using **slash commands** - the primary interface for working with agents and workflows. Each plugin provides namespaced commands that you can run directly:
+
+```bash
+# List all available slash commands from installed plugins
+/plugin
+
+# Run a workflow command with arguments
+/backend-development:feature-development user authentication with JWT
+
+# Execute specialized tools
+/unit-testing:test-generate src/auth/login.py
+
+# Invoke security scans
+/security-scanning:security-sast
+```
+
+**Key benefits of slash commands:**
+- **Direct invocation** - No need to describe what you want in natural language
+- **Structured arguments** - Pass parameters explicitly for precise control
+- **Composability** - Chain commands together for complex workflows
+- **Discoverability** - Use `/plugin` to see all available commands
+
 ### Agent Invocation
 
-After installing plugins, agents are automatically available. Invoke them explicitly in natural language:
+Agents can also be invoked through natural language when you need Claude to reason about which specialist to use:
 
 ```
 "Use backend-architect to design the authentication API"
@@ -403,41 +428,225 @@ After installing plugins, agents are automatically available. Invoke them explic
 
 Claude Code automatically selects and coordinates the appropriate agents based on your request.
 
-### Multi-Agent Orchestration Examples
+### Multi-Agent Workflow Examples
 
-Plugins provide pre-configured multi-agent workflows that coordinate complex operations:
+Plugins provide pre-configured multi-agent workflows accessible via slash commands:
 
-**Full-Stack Development Plugin**
+#### Full-Stack Development
 
-```
+```bash
+# Command-based workflow invocation
+/full-stack-orchestration:full-stack-feature "user dashboard with real-time analytics"
+
+# Natural language alternative
 "Implement user dashboard with real-time analytics"
 ```
 
-→ backend-architect → graphql-architect → frontend-developer → mobile-developer → test-automator → security-auditor → performance-engineer → deployment-engineer
+**Orchestration:** backend-architect → database-architect → frontend-developer → test-automator → security-auditor → deployment-engineer → observability-engineer
 
-**Security Hardening Plugin**
+**What happens:**
+1. Database schema design with migrations
+2. Backend API implementation (REST/GraphQL)
+3. Frontend components with state management
+4. Comprehensive test suite (unit/integration/E2E)
+5. Security audit and hardening
+6. CI/CD pipeline setup with feature flags
+7. Observability and monitoring configuration
 
-```
+#### Security Hardening
+
+```bash
+# Comprehensive security assessment and remediation
+/security-scanning:security-hardening --level comprehensive
+
+# Natural language alternative
 "Perform security audit and implement OWASP best practices"
 ```
 
-→ security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
+**Orchestration:** security-auditor → backend-security-coder → frontend-security-coder → mobile-security-coder → test-automator
 
-**Data/ML Pipeline Plugin**
+#### Data/ML Pipeline
 
-```
+```bash
+# ML feature development with production deployment
+/machine-learning-ops:ml-pipeline "customer churn prediction model"
+
+# Natural language alternative
 "Build customer churn prediction model with deployment"
 ```
 
-→ data-scientist → data-engineer → ml-engineer → mlops-engineer → ai-engineer → performance-engineer
+**Orchestration:** data-scientist → data-engineer → ml-engineer → mlops-engineer → performance-engineer
 
-**Incident Response Plugin**
+#### Incident Response
 
-```
+```bash
+# Smart debugging with root cause analysis
+/incident-response:smart-fix "production memory leak in payment service"
+
+# Natural language alternative
 "Debug production memory leak and create runbook"
 ```
 
-→ incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
+**Orchestration:** incident-responder → devops-troubleshooter → debugger → error-detective → observability-engineer
+
+### Command Arguments and Options
+
+Many slash commands support arguments for precise control:
+
+```bash
+# Test generation for specific files
+/unit-testing:test-generate src/api/users.py
+
+# Feature development with methodology specification
+/backend-development:feature-development OAuth2 integration with social login
+
+# Security dependency scanning
+/security-scanning:security-dependencies
+
+# Component scaffolding
+/frontend-mobile-development:component-scaffold UserProfile component with hooks
+
+# TDD workflow cycle
+/tdd-workflows:tdd-red User can reset password
+/tdd-workflows:tdd-green
+/tdd-workflows:tdd-refactor
+
+# Smart debugging
+/debugging-toolkit:smart-debug memory leak in checkout flow
+
+# Python project scaffolding
+/python-development:python-scaffold fastapi-microservice
+```
+
+### Combining Natural Language and Commands
+
+You can mix both approaches for optimal flexibility:
+
+```
+# Start with a command for structured workflow
+/full-stack-orchestration:full-stack-feature "payment processing"
+
+# Then provide natural language guidance
+"Ensure PCI-DSS compliance and integrate with Stripe"
+"Add retry logic for failed transactions"
+"Set up fraud detection rules"
+```
+
+### Discovering Commands
+
+Use these commands to explore available functionality:
+
+```bash
+# List all installed plugins and their commands
+/plugin
+
+# Install a specific plugin
+/plugin install python-development
+
+# View available commands in a plugin
+# After installation, commands will be listed with the format:
+# /plugin-name:command-name
+```
+
+### Real Command Examples by Category
+
+**Development & Features:**
+- `/backend-development:feature-development` - End-to-end backend feature development
+- `/full-stack-orchestration:full-stack-feature` - Complete full-stack feature implementation
+- `/multi-platform-apps:multi-platform` - Cross-platform app development coordination
+
+**Testing & Quality:**
+- `/unit-testing:test-generate` - Generate comprehensive unit tests
+- `/tdd-workflows:tdd-cycle` - Complete TDD red-green-refactor cycle
+- `/tdd-workflows:tdd-red` - Write failing tests first
+- `/tdd-workflows:tdd-green` - Implement code to pass tests
+- `/tdd-workflows:tdd-refactor` - Refactor with passing tests
+
+**Code Quality & Review:**
+- `/code-review-ai:ai-review` - AI-powered code review
+- `/comprehensive-review:full-review` - Multi-perspective analysis
+- `/comprehensive-review:pr-enhance` - Enhance pull requests
+
+**Debugging & Troubleshooting:**
+- `/debugging-toolkit:smart-debug` - Interactive smart debugging
+- `/incident-response:incident-response` - Production incident management
+- `/incident-response:smart-fix` - Automated incident resolution
+- `/error-debugging:error-analysis` - Deep error analysis
+- `/error-debugging:error-trace` - Stack trace debugging
+- `/error-diagnostics:smart-debug` - Smart diagnostic debugging
+- `/distributed-debugging:debug-trace` - Distributed system tracing
+
+**Security:**
+- `/security-scanning:security-hardening` - Comprehensive security hardening
+- `/security-scanning:security-sast` - Static application security testing
+- `/security-scanning:security-dependencies` - Dependency vulnerability scanning
+- `/security-compliance:compliance-check` - SOC2/HIPAA/GDPR compliance
+- `/frontend-mobile-security:xss-scan` - XSS vulnerability scanning
+
+**Infrastructure & Deployment:**
+- `/observability-monitoring:monitor-setup` - Setup monitoring infrastructure
+- `/observability-monitoring:slo-implement` - Implement SLO/SLI metrics
+- `/deployment-validation:config-validate` - Pre-deployment validation
+- `/cicd-automation:workflow-automate` - CI/CD pipeline automation
+
+**Data & ML:**
+- `/machine-learning-ops:ml-pipeline` - ML training pipeline orchestration
+- `/data-engineering:data-pipeline` - ETL/ELT pipeline construction
+- `/data-engineering:data-driven-feature` - Data-driven feature development
+
+**Documentation:**
+- `/code-documentation:doc-generate` - Generate comprehensive documentation
+- `/code-documentation:code-explain` - Explain code functionality
+- `/documentation-generation:doc-generate` - OpenAPI specs, diagrams, tutorials
+
+**Refactoring & Maintenance:**
+- `/code-refactoring:refactor-clean` - Code cleanup and refactoring
+- `/code-refactoring:tech-debt` - Technical debt management
+- `/codebase-cleanup:deps-audit` - Dependency auditing
+- `/codebase-cleanup:tech-debt` - Technical debt reduction
+- `/framework-migration:legacy-modernize` - Legacy code modernization
+- `/framework-migration:code-migrate` - Framework migration
+- `/framework-migration:deps-upgrade` - Dependency upgrades
+
+**Database:**
+- `/database-migrations:sql-migrations` - SQL migration automation
+- `/database-migrations:migration-observability` - Migration monitoring
+- `/database-cloud-optimization:cost-optimize` - Database and cloud optimization
+
+**Git & PR Workflows:**
+- `/git-pr-workflows:pr-enhance` - Enhance pull request quality
+- `/git-pr-workflows:onboard` - Team onboarding automation
+- `/git-pr-workflows:git-workflow` - Git workflow automation
+
+**Project Scaffolding:**
+- `/python-development:python-scaffold` - FastAPI/Django project setup
+- `/javascript-typescript:typescript-scaffold` - Next.js/React + Vite setup
+- `/systems-programming:rust-project` - Rust project scaffolding
+
+**AI & LLM Development:**
+- `/llm-application-dev:langchain-agent` - LangChain agent development
+- `/llm-application-dev:ai-assistant` - AI assistant implementation
+- `/llm-application-dev:prompt-optimize` - Prompt engineering optimization
+- `/agent-orchestration:multi-agent-optimize` - Multi-agent optimization
+- `/agent-orchestration:improve-agent` - Agent improvement workflows
+
+**Testing & Performance:**
+- `/performance-testing-review:ai-review` - Performance analysis
+- `/application-performance:performance-optimization` - App optimization
+
+**Team Collaboration:**
+- `/team-collaboration:issue` - Issue management automation
+- `/team-collaboration:standup-notes` - Standup notes generation
+
+**Accessibility:**
+- `/accessibility-compliance:accessibility-audit` - WCAG compliance auditing
+
+**API Development:**
+- `/api-testing-observability:api-mock` - API mocking and testing
+
+**Context Management:**
+- `/context-management:context-save` - Save conversation context
+- `/context-management:context-restore` - Restore previous context
 
 ## Agent Categories
 
