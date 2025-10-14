@@ -1030,3 +1030,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [Claude Code Subagents Guide](https://docs.claude.com/en/docs/claude-code/sub-agents)
 - [Claude Code Slash Commands Reference](https://docs.claude.com/en/docs/claude-code/slash-commands)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=wshobson/agents&type=date&legend=top-left)](https://www.star-history.com/#wshobson/agents&type=date&legend=top-left)
