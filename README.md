@@ -321,8 +321,8 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **systems-programming**    | Rust, Go, C, C++ for systems development | `/plugin install systems-programming`    |
 | **jvm-languages**          | Java, Scala, C# with enterprise patterns | `/plugin install jvm-languages`          |
 | **web-scripting**          | PHP and Ruby for web applications        | `/plugin install web-scripting`          |
-| **functional-programming** | Elixir with OTP and Phoenix              | `/plugin install functional-programming` |
-| **embedded-systems**       | ARM Cortex-M firmware and drivers        | `/plugin install embedded-systems`       |
+| **functional-programming**        | Elixir with OTP and Phoenix              | `/plugin install functional-programming`        |
+| **arm-cortex-microcontrollers** | ARM Cortex-M firmware and drivers        | `/plugin install arm-cortex-microcontrollers` |
 
 ### 🔗 Blockchain (1 plugin)
 
@@ -862,7 +862,7 @@ Use these commands to explore available functionality:
 
 | Agent                                                                        | Model  | Description                                                |
 | ---------------------------------------------------------------------------- | ------ | ---------------------------------------------------------- |
-| [arm-cortex-expert](plugins/embedded-systems/agents/arm-cortex-expert.md)   | sonnet | ARM Cortex-M firmware and peripheral driver development    |
+| [arm-cortex-expert](plugins/arm-cortex-microcontrollers/agents/arm-cortex-expert.md)   | sonnet | ARM Cortex-M firmware and peripheral driver development    |
 | [blockchain-developer](plugins/blockchain-web3/agents/blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols                 |
 | [payment-integration](plugins/payment-processing/agents/payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
 | [legacy-modernizer](plugins/framework-migration/agents/legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization      |
