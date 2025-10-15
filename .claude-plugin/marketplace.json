@@ -1816,8 +1816,8 @@
       ]
     },
     {
-      "name": "arm-cortex-microcontrollers",
-      "source": "./agents",
+      "name": "embedded-systems",
+      "source": "./plugins/embedded-systems",
       "description": "ARM Cortex-M firmware development for Teensy, STM32, nRF52, and SAMD with peripheral drivers and memory safety patterns",
       "version": "1.2.0",
       "author": {
@@ -1840,7 +1840,7 @@
       "strict": false,
       "commands": [],
       "agents": [
-        "./arm-cortex-expert.md"
+        "./agents/arm-cortex-expert.md"
       ]
     }
   ]

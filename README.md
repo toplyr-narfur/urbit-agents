@@ -1,19 +1,19 @@
 # Claude Code Plugins: Orchestration and Automation
 
-A comprehensive production-ready system combining **84 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **44 development tools** organized into **62 focused, single-purpose plugins** for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
+A comprehensive production-ready system combining **85 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **44 development tools** organized into **63 focused, single-purpose plugins** for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
 
 ## Overview
 
 This unified repository provides everything needed for intelligent automation and multi-agent orchestration across modern software development:
 
-- **62 Focused Plugins** - Granular, single-purpose plugins optimized for minimal token usage and composability
-- **84 Specialized Agents** - Domain experts with deep knowledge across architecture, languages, infrastructure, quality, data/AI, documentation, business operations, and SEO
+- **63 Focused Plugins** - Granular, single-purpose plugins optimized for minimal token usage and composability
+- **85 Specialized Agents** - Domain experts with deep knowledge across architecture, languages, infrastructure, quality, data/AI, documentation, business operations, and SEO
 - **15 Workflow Orchestrators** - Multi-agent coordination systems for complex operations like full-stack development, security hardening, ML pipelines, and incident response
 - **44 Development Tools** - Optimized utilities including project scaffolding, security scanning, test automation, and infrastructure setup
 
 ### Key Features
 
-- **Granular Plugin Architecture**: 62 focused plugins optimized for minimal token usage
+- **Granular Plugin Architecture**: 63 focused plugins optimized for minimal token usage
 - **Comprehensive Tooling**: 44 development tools including test generation, scaffolding, and security scanning
 - **100% Agent Coverage**: All plugins include specialized agents
 - **Clear Organization**: 23 categories with 1-6 plugins each for easy discovery
@@ -40,7 +40,7 @@ Add this marketplace to Claude Code:
 /plugin marketplace add wshobson/agents
 ```
 
-This makes all 62 plugins available for installation, but **does not load any agents or tools** into your context.
+This makes all 63 plugins available for installation, but **does not load any agents or tools** into your context.
 
 ### Step 2: Install Specific Plugins
 
@@ -173,7 +173,7 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 
 ## Complete Plugin Reference
 
-> 📋 **All 62 Plugins** - Browse by category to find specialized plugins for your workflow.
+> 📋 **All 63 Plugins** - Browse by category to find specialized plugins for your workflow.
 
 ### 🎨 Development (4 plugins)
 
@@ -312,7 +312,7 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **hr-legal-compliance**       | HR policies and legal templates      | `/plugin install hr-legal-compliance`       |
 | **customer-sales-automation** | Support and sales automation         | `/plugin install customer-sales-automation` |
 
-### 💻 Languages (6 plugins)
+### 💻 Languages (7 plugins)
 
 | Plugin                     | Description                              | Install                                  |
 | -------------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -322,6 +322,7 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **jvm-languages**          | Java, Scala, C# with enterprise patterns | `/plugin install jvm-languages`          |
 | **web-scripting**          | PHP and Ruby for web applications        | `/plugin install web-scripting`          |
 | **functional-programming** | Elixir with OTP and Phoenix              | `/plugin install functional-programming` |
+| **embedded-systems**       | ARM Cortex-M firmware and drivers        | `/plugin install embedded-systems`       |
 
 ### 🔗 Blockchain (1 plugin)
 
@@ -861,7 +862,7 @@ Use these commands to explore available functionality:
 
 | Agent                                                                        | Model  | Description                                                |
 | ---------------------------------------------------------------------------- | ------ | ---------------------------------------------------------- |
-| [arm-cortex-expert](agents/arm-cortex-expert.md)                            | sonnet | ARM Cortex-M firmware and peripheral driver development    |
+| [arm-cortex-expert](plugins/embedded-systems/agents/arm-cortex-expert.md)   | sonnet | ARM Cortex-M firmware and peripheral driver development    |
 | [blockchain-developer](plugins/blockchain-web3/agents/blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols                 |
 | [payment-integration](plugins/payment-processing/agents/payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
 | [legacy-modernizer](plugins/framework-migration/agents/legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization      |
@@ -876,7 +877,7 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | Model  | Agent Count | Use Case                                                 |
 | ------ | ----------- | -------------------------------------------------------- |
 | Haiku  | 11          | Quick, focused tasks with minimal computational overhead |
-| Sonnet | 50          | Standard development and specialized engineering tasks   |
+| Sonnet | 51          | Standard development and specialized engineering tasks   |
 | Opus   | 23          | Complex reasoning, architecture, and critical analysis   |
 
 ### Haiku Model Agents
@@ -896,6 +897,7 @@ Agents are assigned to specific Claude models based on task complexity and compu
 | Quality & Testing     | 4     | `test-automator`, `tdd-orchestrator`, `debugger`, `error-detective`                                                                                                                                         |
 | Business & Support    | 6     | `business-analyst`, `risk-manager`, `content-marketer`, `customer-support`, `mermaid-expert`, `legacy-modernizer`                                                                                           |
 | Data & Content        | 5     | `data-engineer`, `payment-integration`, `seo-content-auditor`, `seo-authority-builder`, `seo-content-writer`                                                                                                |
+| Specialized Domains   | 1     | `arm-cortex-expert`                                                                                                                                                                                          |
 
 ### Opus Model Agents
 
@@ -920,13 +922,13 @@ This marketplace follows industry best practices with a focus on granularity, co
 
 ### Granular Plugin Architecture
 
-- **62 focused plugins** optimized for specific use cases
+- **63 focused plugins** optimized for specific use cases
 - **23 clear categories** with 1-6 plugins each for easy discovery
 - Organized by domain:
   - **Development**: 4 plugins (debugging, backend, frontend, multi-platform)
   - **Security**: 4 plugins (scanning, compliance, backend-api, frontend-mobile)
   - **Operations**: 4 plugins (incident, diagnostics, distributed, observability)
-  - **Languages**: 6 plugins (Python, JS/TS, systems, JVM, scripting, functional)
+  - **Languages**: 7 plugins (Python, JS/TS, systems, JVM, scripting, functional, embedded)
   - **Infrastructure**: 5 plugins (deployment, validation, K8s, cloud, CI/CD)
   - And 18 more specialized categories
 
@@ -948,7 +950,7 @@ This marketplace follows industry best practices with a focus on granularity, co
 - **Better context efficiency** - granular plugins reduce unnecessary context
 - **Clear discoverability** - well-organized categories and focused purposes
 - **Isolated dependencies** - each plugin contains only its required resources
-- **100% component coverage** - all 84 agents available across plugins
+- **100% component coverage** - all 85 agents available across plugins
 
 ### Design Philosophy
 
