@@ -870,44 +870,99 @@ Use these commands to explore available functionality:
 
 ## Model Configuration
 
-Agents are assigned to specific Claude models based on task complexity and computational requirements. The system uses three model tiers:
+Agents are assigned to specific Claude models based on task complexity and computational requirements. The system uses two model tiers:
 
 ### Model Distribution Summary
 
-| Model  | Agent Count | Use Case                                                 |
-| ------ | ----------- | -------------------------------------------------------- |
-| Haiku  | 11          | Quick, focused tasks with minimal computational overhead |
-| Sonnet | 51          | Standard development and specialized engineering tasks   |
-| Opus   | 23          | Complex reasoning, architecture, and critical analysis   |
+| Model  | Agent Count | Use Case                                                                           |
+| ------ | ----------- | ---------------------------------------------------------------------------------- |
+| Haiku  | 47          | Fast execution tasks: testing, documentation, ops, database optimization, business |
+| Sonnet | 97          | Complex reasoning, architecture, language expertise, orchestration, security       |
 
 ### Haiku Model Agents
 
-| Category            | Agents                                                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Context & Reference | `context-manager`, `reference-builder`, `sales-automator`, `search-specialist`                                                                                                  |
-| SEO Optimization    | `seo-meta-optimizer`, `seo-keyword-strategist`, `seo-structure-architect`, `seo-snippet-hunter`, `seo-content-refresher`, `seo-cannibalization-detector`, `seo-content-planner` |
+| Category                   | Count | Agents                                                                                                                                                                          |
+| -------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Testing & Debugging        | 7     | `test-automator`, `debugger`, `error-detective`                                                                                                                                 |
+| Documentation              | 4     | `api-documenter`, `tutorial-engineer`, `mermaid-expert`                                                                                                                         |
+| Infrastructure & DevOps    | 10    | `deployment-engineer`, `devops-troubleshooter`, `network-engineer`, `database-admin`                                                                                            |
+| Database Optimization      | 3     | `database-optimizer`, `sql-pro`                                                                                                                                                 |
+| Code Quality & Refactoring | 3     | `legacy-modernizer`                                                                                                                                                             |
+| Business Operations        | 4     | `customer-support`, `business-analyst`, `content-marketer`, `risk-manager`                                                                                                      |
+| Developer Experience       | 3     | `dx-optimizer`, `terraform-specialist`                                                                                                                                          |
+| Specialized Tools          | 2     | `payment-integration`, `context-manager`                                                                                                                                        |
+| SEO Optimization           | 7     | `seo-meta-optimizer`, `seo-keyword-strategist`, `seo-structure-architect`, `seo-snippet-hunter`, `seo-content-refresher`, `seo-cannibalization-detector`, `seo-content-planner` |
+| Context & Reference        | 4     | `context-manager`, `reference-builder`, `sales-automator`, `search-specialist`                                                                                                  |
 
 ### Sonnet Model Agents
 
-| Category              | Count | Agents                                                                                                                                                                                                      |
-| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Programming Languages | 18    | All language-specific agents (JavaScript, Python, Java, C++, etc.)                                                                                                                                          |
-| Frontend & UI         | 5     | `frontend-developer`, `ui-ux-designer`, `ui-visual-validator`, `mobile-developer`, `ios-developer`                                                                                                          |
-| Infrastructure        | 10    | `devops-troubleshooter`, `deployment-engineer`, `terraform-specialist`, `dx-optimizer`, `database-admin`, `database-optimizer`, `network-engineer`, `flutter-expert`, `api-documenter`, `tutorial-engineer` |
-| Quality & Testing     | 4     | `test-automator`, `tdd-orchestrator`, `debugger`, `error-detective`                                                                                                                                         |
-| Business & Support    | 6     | `business-analyst`, `risk-manager`, `content-marketer`, `customer-support`, `mermaid-expert`, `legacy-modernizer`                                                                                           |
-| Data & Content        | 5     | `data-engineer`, `payment-integration`, `seo-content-auditor`, `seo-authority-builder`, `seo-content-writer`                                                                                                |
-| Specialized Domains   | 1     | `arm-cortex-expert`                                                                                                                                                                                          |
+| Category                    | Count | Key Agents                                                                                                                                                              |
+| --------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Architecture & Design       | 12    | `backend-architect`, `frontend-developer`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `database-architect`, `graphql-architect`               |
+| Programming Languages       | 18    | All language-specific experts: `python-pro`, `javascript-pro`, `typescript-pro`, `rust-pro`, `golang-pro`, `java-pro`, `cpp-pro`, `c-pro`, etc.                        |
+| Security & Code Review      | 8     | `code-reviewer`, `security-auditor`, `backend-security-coder`, `frontend-security-coder`, `mobile-security-coder`                                                      |
+| Frontend & UI               | 5     | `frontend-developer`, `ui-ux-designer`, `ui-visual-validator`, `mobile-developer`, `ios-developer`, `flutter-expert`                                                   |
+| AI/ML & Data                | 7     | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer`, `data-engineer`                                                                   |
+| Performance & Observability | 3     | `performance-engineer`, `observability-engineer`, `incident-responder`                                                                                                  |
+| Framework Specialists       | 6     | `django-pro`, `fastapi-pro`, `tdd-orchestrator`, `graphql-architect`                                                                                                   |
+| Documentation               | 2     | `docs-architect`, `tutorial-engineer`                                                                                                                                   |
+| Business Critical           | 4     | `hr-pro`, `legal-advisor`, `quant-analyst`                                                                                                                              |
+| SEO & Content               | 3     | `seo-content-auditor`, `seo-authority-builder`, `seo-content-writer`                                                                                                    |
+| Specialized Domains         | 6     | `blockchain-developer`, `unity-developer`, `minecraft-bukkit-pro`, `arm-cortex-expert`, `payment-integration`, `elixir-pro`                                             |
+| Infrastructure & Tools      | 23    | Remaining infrastructure, DevOps, database, and tooling agents                                                                                                          |
 
-### Opus Model Agents
+### Hybrid Orchestration Patterns
 
-| Category                    | Count | Agents                                                                                                            |
-| --------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
-| Architecture & Design       | 5     | `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `database-architect`    |
-| Security & Code Review      | 5     | `code-reviewer`, `security-auditor`, `backend-security-coder`, `frontend-security-coder`, `mobile-security-coder` |
-| Performance & Observability | 3     | `performance-engineer`, `observability-engineer`, `incident-responder`                                            |
-| AI/ML Complex               | 5     | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer`                               |
-| Business Critical           | 5     | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst`, `risk-manager`                                      |
+The plugin ecosystem leverages Sonnet + Haiku orchestration for optimal performance and cost efficiency:
+
+#### Pattern 1: Planning → Execution
+```
+Sonnet: backend-architect (design API architecture)
+  ↓
+Haiku: Generate API endpoints following spec
+  ↓
+Haiku: test-automator (generate comprehensive tests)
+  ↓
+Sonnet: code-reviewer (architectural review)
+```
+
+#### Pattern 2: Reasoning → Action (Incident Response)
+```
+Sonnet: incident-responder (diagnose issue, create strategy)
+  ↓
+Haiku: devops-troubleshooter (execute fixes)
+  ↓
+Haiku: deployment-engineer (deploy hotfix)
+  ↓
+Haiku: Implement monitoring alerts
+```
+
+#### Pattern 3: Complex → Simple (Database Design)
+```
+Sonnet: database-architect (schema design, technology selection)
+  ↓
+Haiku: sql-pro (generate migration scripts)
+  ↓
+Haiku: database-admin (execute migrations)
+  ↓
+Haiku: database-optimizer (tune query performance)
+```
+
+#### Pattern 4: Multi-Agent Workflows
+```
+Full-Stack Feature Development:
+Sonnet: backend-architect + frontend-developer (design components)
+  ↓
+Haiku: Generate code following designs
+  ↓
+Haiku: test-automator (unit + integration tests)
+  ↓
+Sonnet: security-auditor (security review)
+  ↓
+Haiku: deployment-engineer (CI/CD setup)
+  ↓
+Haiku: Setup observability stack
+```
 
 ## Architecture & Design Principles
 
@@ -1018,9 +1073,38 @@ System prompt defining the subagent's expertise and behavior
 
 ### Model Selection Criteria
 
-- **haiku**: Simple, deterministic tasks with minimal reasoning
-- **sonnet**: Standard development and engineering tasks
-- **opus**: Complex analysis, architecture, and critical operations
+Choose the right model for your agent based on these guidelines:
+
+#### Haiku - Fast Execution & Deterministic Tasks
+**Use when:**
+- Generating code from well-defined specifications
+- Creating tests following established patterns
+- Writing documentation with clear templates
+- Executing infrastructure operations
+- Performing database query optimization
+- Handling customer support responses
+- Processing SEO optimization tasks
+- Managing deployment pipelines
+
+#### Sonnet - Complex Reasoning & Architecture
+**Use when:**
+- Designing system architecture
+- Making technology selection decisions
+- Performing security audits
+- Reviewing code for architectural patterns
+- Creating complex AI/ML pipelines
+- Providing language-specific expertise
+- Orchestrating multi-agent workflows
+- Handling business-critical legal/HR matters
+
+**Decision Tree:**
+```
+Does the task require architectural decisions or domain expertise?
+  YES → sonnet
+  NO  → Is it a well-defined, deterministic execution task?
+    YES → haiku
+    NO  → sonnet (default)
+```
 
 ## License
 
