@@ -1,5 +1,7 @@
 # Claude Code Plugins: Orchestration and Automation
 
+> **⚡ Updated for Sonnet 4.5 & Haiku 4.5** — All agents optimized for latest models with hybrid orchestration
+
 A comprehensive production-ready system combining **85 specialized AI agents**, **15 multi-agent workflow orchestrators**, and **44 development tools** organized into **63 focused, single-purpose plugins** for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
 
 ## Overview
