@@ -400,7 +400,7 @@
       "name": "llm-application-dev",
       "source": "./plugins/llm-application-dev",
       "description": "LLM application development, prompt engineering, and AI assistant optimization",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -494,7 +494,7 @@
       "name": "machine-learning-ops",
       "source": "./plugins/machine-learning-ops",
       "description": "ML model training pipelines, hyperparameter tuning, model deployment automation, experiment tracking, and MLOps workflows",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -645,7 +645,7 @@
       "name": "observability-monitoring",
       "source": "./plugins/observability-monitoring",
       "description": "Metrics collection, logging infrastructure, distributed tracing, SLO implementation, and monitoring dashboards",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -740,7 +740,7 @@
       "name": "kubernetes-operations",
       "source": "./plugins/kubernetes-operations",
       "description": "Kubernetes manifest generation, networking configuration, security policies, observability setup, GitOps workflows, and auto-scaling",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -773,7 +773,7 @@
       "name": "cloud-infrastructure",
       "source": "./plugins/cloud-infrastructure",
       "description": "Cloud architecture design for AWS/Azure/GCP, Kubernetes cluster configuration, Terraform infrastructure-as-code, hybrid cloud networking, and multi-cloud cost optimization",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -812,7 +812,7 @@
       "name": "cicd-automation",
       "source": "./plugins/cicd-automation",
       "description": "CI/CD pipeline configuration, GitHub Actions/GitLab CI workflow setup, and automated deployment pipeline orchestration",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1236,7 +1236,7 @@
       "name": "api-scaffolding",
       "source": "./plugins/api-scaffolding",
       "description": "REST and GraphQL API scaffolding, framework selection, backend architecture, and API generation",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1557,7 +1557,7 @@
       "name": "blockchain-web3",
       "source": "./plugins/blockchain-web3",
       "description": "Smart contract development with Solidity, DeFi protocol implementation, NFT platforms, and Web3 application architecture",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1618,7 +1618,7 @@
       "name": "payment-processing",
       "source": "./plugins/payment-processing",
       "description": "Payment gateway integration with Stripe, PayPal, checkout flow implementation, subscription billing, and PCI compliance",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1708,7 +1708,7 @@
       "name": "python-development",
       "source": "./plugins/python-development",
       "description": "Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1745,7 +1745,7 @@
       "name": "javascript-typescript",
       "source": "./plugins/javascript-typescript",
       "description": "JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
