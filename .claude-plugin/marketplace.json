@@ -126,6 +126,11 @@
         "./agents/backend-architect.md",
         "./agents/graphql-architect.md",
         "./agents/tdd-orchestrator.md"
+      ],
+      "skills": [
+        "./skills/api-design-principles",
+        "./skills/architecture-patterns",
+        "./skills/microservices-patterns"
       ]
     },
     {
@@ -421,6 +426,12 @@
       "agents": [
         "./agents/ai-engineer.md",
         "./agents/prompt-engineer.md"
+      ],
+      "skills": [
+        "./skills/langchain-architecture",
+        "./skills/llm-evaluation",
+        "./skills/prompt-engineering-patterns",
+        "./skills/rag-implementation"
       ]
     },
     {
@@ -508,6 +519,9 @@
         "./agents/data-scientist.md",
         "./agents/ml-engineer.md",
         "./agents/mlops-engineer.md"
+      ],
+      "skills": [
+        "./skills/ml-pipeline-workflow"
       ]
     },
     {
@@ -660,6 +674,12 @@
         "./agents/performance-engineer.md",
         "./agents/database-optimizer.md",
         "./agents/network-engineer.md"
+      ],
+      "skills": [
+        "./skills/distributed-tracing",
+        "./skills/grafana-dashboards",
+        "./skills/prometheus-configuration",
+        "./skills/slo-implementation"
       ]
     },
     {
@@ -741,6 +761,12 @@
       "commands": [],
       "agents": [
         "./agents/kubernetes-architect.md"
+      ],
+      "skills": [
+        "./skills/gitops-workflow",
+        "./skills/helm-chart-scaffolding",
+        "./skills/k8s-manifest-generator",
+        "./skills/k8s-security-policies"
       ]
     },
     {
@@ -774,6 +800,12 @@
         "./agents/terraform-specialist.md",
         "./agents/network-engineer.md",
         "./agents/deployment-engineer.md"
+      ],
+      "skills": [
+        "./skills/cost-optimization",
+        "./skills/hybrid-cloud-networking",
+        "./skills/multi-cloud-architecture",
+        "./skills/terraform-module-library"
       ]
     },
     {
@@ -806,6 +838,12 @@
         "./agents/kubernetes-architect.md",
         "./agents/cloud-architect.md",
         "./agents/terraform-specialist.md"
+      ],
+      "skills": [
+        "./skills/deployment-pipeline-design",
+        "./skills/github-actions-templates",
+        "./skills/gitlab-ci-patterns",
+        "./skills/secrets-management"
       ]
     },
     {
@@ -955,6 +993,12 @@
       "agents": [
         "./agents/legacy-modernizer.md",
         "./agents/architect-review.md"
+      ],
+      "skills": [
+        "./skills/angular-migration",
+        "./skills/database-migration",
+        "./skills/dependency-upgrade",
+        "./skills/react-modernization"
       ]
     },
     {
@@ -1071,6 +1115,9 @@
       ],
       "agents": [
         "./agents/security-auditor.md"
+      ],
+      "skills": [
+        "./skills/sast-configuration"
       ]
     },
     {
@@ -1213,6 +1260,9 @@
         "./agents/graphql-architect.md",
         "./agents/fastapi-pro.md",
         "./agents/django-pro.md"
+      ],
+      "skills": [
+        "./skills/fastapi-templates"
       ]
     },
     {
@@ -1529,6 +1579,12 @@
       "commands": [],
       "agents": [
         "./agents/blockchain-developer.md"
+      ],
+      "skills": [
+        "./skills/defi-protocol-templates",
+        "./skills/nft-standards",
+        "./skills/solidity-security",
+        "./skills/web3-testing"
       ]
     },
     {
@@ -1584,6 +1640,12 @@
       "commands": [],
       "agents": [
         "./agents/payment-integration.md"
+      ],
+      "skills": [
+        "./skills/billing-automation",
+        "./skills/paypal-integration",
+        "./skills/pci-compliance",
+        "./skills/stripe-integration"
       ]
     },
     {
@@ -1670,6 +1732,13 @@
         "./agents/python-pro.md",
         "./agents/django-pro.md",
         "./agents/fastapi-pro.md"
+      ],
+      "skills": [
+        "./skills/async-python-patterns",
+        "./skills/python-testing-patterns",
+        "./skills/python-packaging",
+        "./skills/python-performance-optimization",
+        "./skills/uv-package-manager"
       ]
     },
     {
@@ -1699,6 +1768,12 @@
       "agents": [
         "./agents/javascript-pro.md",
         "./agents/typescript-pro.md"
+      ],
+      "skills": [
+        "./skills/typescript-advanced-types",
+        "./skills/nodejs-backend-patterns",
+        "./skills/javascript-testing-patterns",
+        "./skills/modern-javascript-patterns"
       ]
     },
     {
