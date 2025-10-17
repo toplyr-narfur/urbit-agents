@@ -102,7 +102,7 @@
       "name": "backend-development",
       "source": "./plugins/backend-development",
       "description": "Backend API design, GraphQL architecture, and test-driven backend development",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -968,7 +968,7 @@
       "name": "framework-migration",
       "source": "./plugins/framework-migration",
       "description": "Framework updates, migration planning, and architectural transformation workflows",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
@@ -1091,7 +1091,7 @@
       "name": "security-scanning",
       "source": "./plugins/security-scanning",
       "description": "SAST analysis, dependency vulnerability scanning, OWASP Top 10 compliance, container security scanning, and automated security hardening",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "author": {
         "name": "Seth Hobson",
         "url": "https://github.com/wshobson"
