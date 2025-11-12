@@ -1,25 +1,24 @@
 # Hoon Development Plugin
 
-Master Hoon programming language for Urbit application development through specialized agents, comprehensive skills, and workflow commands.
+Expert Hoon programming for production Urbit application development through specialized agents, comprehensive skills, and workflow commands.
 
 ## Overview
 
-The **hoon-development** plugin provides complete Hoon programming expertise through Claude Code's agent system, covering everything from language fundamentals through production Gall agent development.
+The **hoon-development** plugin provides expert-level Hoon programming assistance through Claude Code's agent system, covering language architecture through production Gall agent development.
 
 ### Key Features
 
-- **5 Specialized Agents**: Domain experts for different aspects of Hoon development
-- **18 Comprehensive Skills**: Modular knowledge packages from basics to advanced patterns
-- **8 Workflow Commands**: Production-ready workflows for common development tasks
-- **Progressive Learning**: Structured path from beginner to expert
-- **Production Focus**: Real-world patterns and best practices
+- **4 Specialized Agents**: Expert developers for code implementation, review, debugging, and architecture
+- **18 Comprehensive Skills**: Modular knowledge from syntax reference to advanced patterns
+- **7 Workflow Commands**: Production-ready workflows for development, testing, and deployment
+- **Production Focus**: Real-world patterns, best practices, and performance optimization
 
 ## Agents
 
-### Core Development Agents
+### Development Specialists
 
 #### `hoon-expert` (Sonnet)
-Master Hoon developer specializing in functional programming, type systems, and production-ready Urbit application development.
+Expert Hoon developer specializing in functional programming, type systems, and production-ready Urbit application development.
 
 **Use for:**
 - Complex Hoon code implementation
@@ -28,19 +27,6 @@ Master Hoon developer specializing in functional programming, type systems, and 
 - Production application development
 
 **Skills**: hoon-fundamentals, rune-reference, advanced-patterns, stdlib-reference, functional-programming-patterns, type-system, gall-agents
-
----
-
-#### `hoon-tutor` (Sonnet)
-Educational specialist focusing on teaching Hoon through progressive exercises, interactive examples, and hands-on practice.
-
-**Use for:**
-- Learning Hoon from scratch
-- Understanding complex concepts
-- Structured tutorials
-- Practice exercises
-
-**Skills**: hoon-basics, hoon-fundamentals, rune-reference, functional-programming-patterns, gall-agents
 
 ---
 
@@ -89,8 +75,8 @@ Skills are modular knowledge packages activated by agents as needed. All skills 
 
 ### Foundation Skills (3)
 
-1. **hoon-basics** - Brief beginner introduction to Hoon
-2. **hoon-fundamentals** (2300+ lines) - Subject-oriented programming, noun model, type foundations
+1. **hoon-basics** - Quick reference for syntax fundamentals, rune forms, and common idioms
+2. **hoon-fundamentals** - Architectural reference for subject-oriented programming, noun model, and compilation semantics
 3. **rune-reference** - Complete reference for all 90+ runes across 13 families
 
 ### Language Skills (5)
@@ -199,22 +185,6 @@ Workflow orchestrators for common development tasks. Each command provides a mul
 
 ---
 
-### `/hoon-learn`
-**Subagent**: hoon-tutor
-**Purpose**: Interactive learning path for mastering Hoon
-
-**6-Level Path:**
-1. Hoon Fundamentals (Day 1-3) - Basics and syntax
-2. Control Flow and Functions (Day 4-7) - Conditionals and gates
-3. Data Structures (Day 8-12) - Lists, maps, sets
-4. Type System (Day 13-17) - Molds and tagged unions
-5. Gall Agents (Day 18-25) - Stateful applications
-6. Advanced Patterns (Day 26-30) - Doors, wet gates, parsers
-
-**Output**: Hands-on exercises with solutions
-
----
-
 ### `/hoon-migrate`
 **Subagent**: app-architect
 **Purpose**: Safe state migration for Gall agents
@@ -248,11 +218,41 @@ Workflow orchestrators for common development tasks. Each command provides a mul
 
 ## Related Plugins
 
+### nock-development
+
+Understand how your Hoon code compiles to Nock assembly with the **nock-development** plugin. Analyze performance, build interpreters, and optimize execution.
+
+**Workflow**: Develop Hoon → Analyze Nock → Optimize Performance → Deploy
+
+**nock-development provides:**
+- Hoon→Nock compilation analysis (`/hoon-to-nock`)
+- Nock interpreter implementation (`/build-nock-interpreter`)
+- Performance optimization and jetting (`/optimize-nock-performance`)
+- Nock fundamentals reference (`/learn-nock-fundamentals`)
+- Systematic debugging (`/debug-nock-execution`)
+
+**When to use nock-development:**
+- After writing Hoon code, understand its compiled Nock output
+- When optimizing slow Hoon code by analyzing underlying Nock
+- Understanding how Hoon constructs map to Nock primitives
+- When building custom Nock interpreters or jets
+- To achieve 100x-1000x speedups through native code acceleration
+
+**Cross-plugin workflow:**
+1. Write Hoon code with **hoon-development** (`/hoon-scaffold`, `/hoon-review`)
+2. Compile to Nock and analyze with **nock-development** (`/hoon-to-nock`)
+3. Identify bottlenecks and jet opportunities (`/optimize-nock-performance`)
+4. Deploy optimized application with **urbit-operations** (`/deploy-planet`)
+
+See: `/plugin install nock-development`
+
+---
+
 ### urbit-operations
 
 After building your Hoon applications with **hoon-development**, deploy them to production infrastructure with the **urbit-operations** plugin.
 
-**Workflow**: Learn Hoon → Build Gall Agents → Deploy Infrastructure
+**Workflow**: Develop Hoon → Build Gall Agents → Deploy Infrastructure
 
 **urbit-operations provides:**
 - Bare-metal and VPS deployment (`/deploy-planet`, `/deploy-vps-planet`)
@@ -275,22 +275,13 @@ See: `/plugin install urbit-operations`
 
 ```bash
 # In Claude Code, install the plugin
-/install hoon-development
+/plugin install hoon-development
 
 # Verify installation
 /plugins
 ```
 
 ## Quick Start
-
-### Learning Hoon
-```bash
-# Start interactive learning
-/hoon-learn
-
-# Get help with specific concept
-"Explain how the subject works in Hoon"
-```
 
 ### Building an Application
 ```bash
@@ -328,7 +319,7 @@ Once your application is built and tested, use the **urbit-operations** plugin t
 /setup-production
 ```
 
-### Debugging Issues
+### Debugging and Optimization
 ```bash
 # Debug errors
 /hoon-debug
@@ -345,7 +336,82 @@ Once your application is built and tested, use the **urbit-operations** plugin t
 
 ## Usage Examples
 
-### Example 1: Learning Hoon Basics
+### Example: Building a Production Gall Agent
 
 ```
-User: I want to learn Hoon from scratch
+User: Build a Gall agent that manages a distributed task queue with priority scheduling
+
+Claude: I'll help you architect and implement a production-grade task queue Gall agent. Let me activate the app-architect agent and gall-agents skill.
+
+[Agent activates gall-agents, app-development-workflow, type-system, advanced-patterns skills]
+
+I'll design this with:
+- Priority queue data structure (mops for O(log n) operations)
+- State management for pending/active/completed tasks
+- Subscription system for queue updates
+- Poke handlers for task submission and management
+- Watch patterns for distributed coordination
+
+Let's start with type definitions in sur/task-queue.hoon...
+```
+
+### Example: Code Review and Optimization
+
+```
+User: Review this Gall agent for performance and security issues
+
+Claude: I'll perform a comprehensive code review using the code-reviewer agent.
+
+[Agent activates hoon-style-guide, functional-programming-patterns, type-system, advanced-patterns skills]
+
+Running 5-phase review:
+1. Initial Assessment - Analyzing agent structure
+2. Correctness and Type Safety - Checking type annotations
+3. Security Review - Scanning for vulnerabilities
+4. Performance Analysis - Identifying bottlenecks
+5. Code Quality - Assessing maintainability
+
+**P0 (Critical)**: State update in on-watch lacks proper authorization check
+**P1 (High)**: O(n) linear search in hot path - use mop instead of list
+**P2 (Medium)**: Missing error handling in JSON parsing
+**P3 (Nit)**: Inconsistent naming convention for arms
+
+Detailed analysis and fixes...
+```
+
+### Example: Debugging Type Errors
+
+```
+User: Getting nest-fail error in my Gall agent on-poke handler
+
+Claude: I'll help debug this systematically using the debugging-specialist agent.
+
+[Agent activates hoon-fundamentals, type-system, gall-agents skills]
+
+**Error Classification**: Type mismatch (nest-fail)
+
+Let me analyze your on-poke handler structure:
+1. Expected type: card:agent:gall
+2. Actual type: [%give %fact paths=wire ...]
+
+The issue: You're using `wire` instead of `(list path)` for paths.
+
+**Root Cause**: on-poke returns `(quip card _this)`, but you're producing a card with incorrect path type.
+
+**Fix**: Change `paths=wire` to `paths=(list path)` or use the proper path list syntax...
+```
+
+## Support
+
+- **Documentation**: [Hoon School](https://developers.urbit.org/guides/core/hoon-school)
+- **Reference**: [Hoon Language Reference](https://developers.urbit.org/reference/hoon)
+- **Community**: Urbit developer groups
+- **Issues**: [GitHub repository](https://github.com/toplyr-narfur/urbit-agents/issues)
+
+## Contributing
+
+This plugin is maintained as part of the urbit-agents marketplace fork. Contributions welcome!
+
+## License
+
+MIT

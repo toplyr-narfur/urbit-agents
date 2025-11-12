@@ -2118,13 +2118,11 @@
         "./commands/hoon-debug.md",
         "./commands/hoon-refactor.md",
         "./commands/hoon-test.md",
-        "./commands/hoon-learn.md",
         "./commands/hoon-migrate.md",
         "./commands/hoon-scaffold.md"
       ],
       "agents": [
         "./agents/hoon-expert.md",
-        "./agents/hoon-tutor.md",
         "./agents/code-reviewer.md",
         "./agents/debugging-specialist.md",
         "./agents/app-architect.md"
@@ -2148,6 +2146,60 @@
         "./skills/parsing",
         "./skills/app-development-workflow",
         "./skills/sail-markup"
+      ]
+    },
+    {
+      "name": "nock-development",
+      "source": "./plugins/nock-development",
+      "description": "Nock assembly language expertise for building interpreters, optimizing performance, and understanding Urbit's computational substrate with implementation focus",
+      "version": "1.0.0",
+      "author": {
+        "name": "Drake Edwards",
+        "url": "https://github.com/toplyr-narfur"
+      },
+      "homepage": "https://github.com/toplyr-narfur/urbit-agents",
+      "repository": "https://github.com/toplyr-narfur/urbit-agents",
+      "license": "MIT",
+      "keywords": [
+        "nock",
+        "urbit",
+        "assembly",
+        "interpreter",
+        "vm",
+        "jetting",
+        "performance",
+        "optimization",
+        "functional"
+      ],
+      "category": "languages",
+      "strict": false,
+      "commands": [
+        "./commands/build-nock-interpreter.md",
+        "./commands/optimize-nock-performance.md",
+        "./commands/learn-nock-fundamentals.md",
+        "./commands/debug-nock-execution.md",
+        "./commands/hoon-to-nock.md",
+        "./commands/nock-implement-exercise.md"
+      ],
+      "agents": [
+        "./agents/nock-interpreter-engineer.md",
+        "./agents/nock-optimization-specialist.md",
+        "./agents/nock-specification-expert.md",
+        "./agents/nock-fundamentals-tutor.md"
+      ],
+      "skills": [
+        "./skills/nock-essentials",
+        "./skills/nock-operators",
+        "./skills/nock-instructions",
+        "./skills/nock-interpreter-patterns",
+        "./skills/nock-multi-language-implementations",
+        "./skills/nock-jetting-optimization",
+        "./skills/nock-performance-profiling",
+        "./skills/nock-tree-addressing",
+        "./skills/nock-cores-arms-batteries",
+        "./skills/nock-metacircular-evaluation",
+        "./skills/nock-hoon-compilation",
+        "./skills/nock-specification-reference"
       ]
     }
   ]

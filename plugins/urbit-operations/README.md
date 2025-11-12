@@ -140,7 +140,7 @@ Skills are modular knowledge packages activated by agents as needed. All skills 
 
 20. **fleet-operations** - Large-scale fleet management, Terraform IaC, Helm templating
 21. **managed-hosting-comparison** - Tlon vs Red Horizon vs self-hosting analysis
-22. **app-development-workflow** - Local development, Gall agents, desk publishing (see hoon-development plugin for learning Hoon and building apps)
+22. **app-development-workflow** - Local development, Gall agents, desk publishing (see hoon-development plugin for building apps)
 
 ### Compliance (1)
 
@@ -325,6 +325,40 @@ Before deploying Urbit ships with **urbit-operations**, learn Hoon and build cus
 - Optimizing and debugging Hoon code
 
 See: `/plugin install hoon-development`
+
+---
+
+### nock-development
+
+Optimize your deployed Urbit ships' performance by understanding how Hoon compiles to Nock assembly with the **nock-development** plugin. Analyze runtime behavior, implement jets, and achieve 100x-1000x performance improvements.
+
+**Workflow**: Deploy Ships → Profile Performance → Analyze Nock → Implement Jets → Redeploy Optimized
+
+**nock-development provides:**
+- Hoon→Nock compilation analysis (`/hoon-to-nock`)
+- Nock interpreter implementation (`/build-nock-interpreter`)
+- Performance optimization and jetting (`/optimize-nock-performance`)
+- Nock fundamentals learning (`/learn-nock-fundamentals`)
+- Systematic debugging (`/debug-nock-execution`)
+- Hands-on implementation exercises (`/nock-implement-exercise`)
+
+**When to use nock-development:**
+- After deploying Urbit ships, when optimizing performance bottlenecks
+- Understanding how your Hoon applications compile to Nock assembly
+- Implementing native jets for 100x-1000x performance improvements
+- Building custom Nock interpreters or runtimes
+- Debugging low-level execution issues in production ships
+- Learning the computational substrate underlying Urbit
+
+**Cross-plugin workflow:**
+1. Build Gall agents with **hoon-development** (`/hoon-scaffold`, `/hoon-test`)
+2. Deploy to infrastructure with **urbit-operations** (`/deploy-planet`, `/setup-production`)
+3. Profile performance with **urbit-operations** (`/optimize-performance`)
+4. Analyze Nock output with **nock-development** (`/hoon-to-nock`)
+5. Implement jets for bottlenecks (`/optimize-nock-performance`)
+6. Redeploy optimized ships with **urbit-operations**
+
+See: `/plugin install nock-development`
 
 ---
 

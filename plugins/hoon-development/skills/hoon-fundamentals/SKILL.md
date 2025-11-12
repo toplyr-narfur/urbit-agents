@@ -1,37 +1,21 @@
 ---
 name: hoon-fundamentals
-description: Master subject-oriented programming, the noun data model, and Hoon's compilation to Nock. Use when understanding core Hoon architecture, debugging low-level issues, explaining fundamental concepts, or working with subject transformations and noun-level operations.
+description: Architectural reference for subject-oriented programming, noun data model, and Hoon-to-Nock compilation. Use when debugging low-level issues, working with subject transformations, understanding compilation semantics, or architecting noun-level operations.
 ---
 
-# Hoon Fundamentals Skill
+# Hoon Fundamentals: Architectural Reference
 
-Master subject-oriented programming, the noun data model, and Hoon's compilation to Nock. Use when understanding core Hoon architecture, debugging low-level issues, or explaining fundamental concepts.
-
-## Overview
-
-This skill provides deep knowledge of Hoon's foundational concepts: subject-oriented programming, the noun data model, compilation to Nock, and the unique paradigm that distinguishes Hoon from other functional languages.
-
-## Learning Objectives
-
-After mastering this skill, you will understand:
-
-1. **Subject-Oriented Programming**: How Hoon's subject model differs from traditional scoping
-2. **Noun Data Model**: Atoms, cells, and tree-structured data
-3. **Compilation Model**: How Hoon compiles to Nock
-4. **Type System Foundation**: How molds and auras build on nouns
-5. **Rune Semantics**: How runes manipulate the subject
-6. **Functional Purity**: Immutability and referential transparency in Hoon
+Deep architectural reference for Hoon's foundational paradigms: subject-oriented programming, noun data model, and compilation to Nock.
 
 ## 1. Subject-Oriented Programming
 
-### What is the Subject?
+### The Subject
 
-The **subject** is the fundamental context in which all Hoon code executes. Think of it as:
-- **Scope** in traditional languages (but explicit)
-- **"this"** in JavaScript (but immutable)
-- **Environment** in Lisp (but type-safe)
+The **subject** is the fundamental context in which all Hoon code executes. Every Hoon expression evaluates in the context of a subject, which is a noun containing all accessible data and code.
 
-Every Hoon expression evaluates in the context of a subject, which is a noun containing all accessible data and code.
+**Contrast with traditional paradigms**:
+- Traditional languages: Variables exist in nested scopes (invisible, implicit context)
+- Hoon: The subject IS the context (explicit, immutable noun, transformable)
 
 ### Subject Transformation
 
@@ -55,11 +39,6 @@ When you reference a name like `x`, Hoon searches the subject:
 1. Check if `x` is a face (named value) in the current subject
 2. Search outward through subject layers
 3. If not found: compile error (`-find-limb.x`)
-
-### Key Insight
-
-**In traditional languages**: Variables exist in nested scopes (invisible context)
-**In Hoon**: The subject IS the context (explicit, immutable, transformable)
 
 ## 2. Noun Data Model
 
@@ -153,12 +132,15 @@ A **mold** is a type that validates and normalizes nouns:
 ^-  point  p  ::  Type-checks!
 ```
 
-### The Power of Nouns
+### Noun Properties
 
-1. **Homoiconicity**: Code and data have the same structure
-2. **Serialization**: Any noun can be serialized to/from atoms
-3. **Network Transfer**: Nouns are the unit of Ames networking
-4. **State Persistence**: Ship state is a noun
+**Homoiconicity**: Code and data have the same structure (both are nouns)
+
+**Serialization**: Any noun can be serialized to/from atoms via `jam`/`cue`
+
+**Network Transfer**: Nouns are the atomic unit of Ames peer-to-peer networking
+
+**State Persistence**: Ship state is a single noun in the loom
 
 ## 4. Hoon to Nock Compilation
 
@@ -184,12 +166,15 @@ Result Noun
 [0 4]  ::  Nock opcode: Add atoms at address 4
 ```
 
-### Why This Matters
+### Compilation Properties
 
-- **Determinism**: Same Hoon always compiles to same Nock
-- **Portability**: Any Nock interpreter produces identical results
-- **Debugging**: Understanding Nock helps debug deep issues
-- **Performance**: Jet acceleration works on Nock patterns
+**Determinism**: Same Hoon always compiles to same Nock (frozen compilation semantics)
+
+**Portability**: Any Nock interpreter produces identical results (noun-level determinism)
+
+**Debugging**: Understanding Nock output aids deep issue debugging (Hoon→Nock tracing)
+
+**Performance**: Jet acceleration replaces Nock patterns with native code (100x-1000x speedup)
 
 ## 5. Runes: Subject Manipulation
 
@@ -228,7 +213,7 @@ All Hoon data is immutable:
 =/  x  5
 ::  Cannot mutate x!
 ::  Must create new value
-=/  x  (add x 1)  ::  x is now 6 (new binding)
+=/  x  (add x 1)  ::  x is now 6 (new binding in subject)
 ```
 
 ### Referential Transparency
@@ -239,7 +224,7 @@ Same inputs always produce same outputs:
   |=  n=@ud
   (mul 2 n)
 
-(double 5)  ::  Always 10, every time
+(double 5)  ::  Always 10, deterministic
 ```
 
 ### No Side Effects
@@ -261,9 +246,14 @@ Pure computation only - effects happen via Gall cards (not in pure Hoon):
 
 ### Debugging Strategy
 
-1. **Print subject**: Use `!>` to inspect what's in scope
-2. **Trace subject transformations**: Follow `=/`, `=>`, `=<` runes
-3. **Understand resolution**: Know how names resolve in subject
+**Print subject**: Use `!>` to inspect what's in scope
+```hoon
+!>(.)  ::  Vase of entire subject
+```
+
+**Trace subject transformations**: Follow `=/`, `=>`, `=<` runes to understand context flow
+
+**Understand resolution**: Know how names resolve in subject (outward search through layers)
 
 ### Code Organization
 
@@ -329,24 +319,26 @@ The subject itself is a noun that can be captured:
 Every Hoon program:
 1. Starts with a subject (context)
 2. Transforms the subject (computation)
-3. Produces a new subject or extract value from it
+3. Produces a new subject or extracts value from it
 
 ### Wings, Limbs, and Faces
 
-- **Face**: A name bound to a value (`x=5`)
-- **Limb**: An axis or face in the subject
-- **Wing**: A path through the subject (`a.b.c`)
+**Face**: A name bound to a value (`x=5`)
 
-## 10. Key Takeaways
+**Limb**: An axis or face in the subject
 
-1. **Subject-oriented** programming is Hoon's core paradigm
-2. **Nouns** are the only data structure (atoms or cells)
-3. **Auras** give meaning to atoms
-4. **Molds** give structure to nouns
-5. **Runes** manipulate the subject
-6. **Compilation** to Nock ensures determinism
-7. **Immutability** and **purity** are enforced
-8. **Understanding the subject** is key to mastering Hoon
+**Wing**: A path through the subject (`a.b.c`)
+
+## Core Architectural Principles
+
+1. **Subject-oriented** programming is Hoon's core paradigm (explicit context)
+2. **Nouns** are the only data structure (atoms or cells, forming binary trees)
+3. **Auras** give meaning to atoms (@ud, @ux, @p, @t, etc.)
+4. **Molds** give structure and validation to nouns
+5. **Runes** manipulate the subject explicitly
+6. **Compilation** to Nock ensures determinism and portability
+7. **Immutability** and **purity** are enforced (no mutation, no side effects)
+8. **Understanding the subject** is the key architectural mental model
 
 ## Resources
 
@@ -354,7 +346,3 @@ Every Hoon program:
 - [Subject-Oriented Programming](https://docs.urbit.org/language/hoon/reference/concepts#subject-oriented-programming)
 - [Noun Documentation](https://docs.urbit.org/language/hoon/reference/nouns)
 - [Nock Specification](https://docs.urbit.org/language/nock/reference/specification)
-
-## Summary
-
-Hoon's subject-oriented programming model, built on the simple noun data structure, provides a unique and powerful approach to functional programming. Mastering these fundamentals unlocks understanding of all higher-level Hoon concepts and enables effective Hoon development.
