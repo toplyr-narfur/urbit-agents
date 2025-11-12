@@ -1,3 +1,8 @@
+---
+name: managed-hosting-comparison
+description: Detailed comparison of Urbit managed hosting providers including Tlon, Red Horizon, UrbitHost, and self-hosting options with 2025 pricing, features, SLAs, migration procedures, and decision frameworks. Use when evaluating hosting options, comparing providers, planning migrations, or making build-vs-buy decisions.
+---
+
 # Managed Hosting Comparison Skill
 
 Detailed comparison of Urbit managed hosting providers with pricing, features, SLAs, and decision matrices (2025).

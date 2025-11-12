@@ -1,3 +1,8 @@
+---
+name: kubernetes-urbit
+description: Production Kubernetes deployment for Urbit ships using StatefulSets, persistent volumes, LoadBalancers, and service mesh integration with automatic failover and centralized management for enterprise fleets (25+ ships). Use when deploying Kubernetes fleets, architecting enterprise infrastructure, implementing high availability, or managing mission-critical Urbit deployments.
+---
+
 # Kubernetes Urbit Deployment Skill
 
 Production Kubernetes deployment for Urbit ships using StatefulSets, persistent volumes, and service mesh integration (2025).

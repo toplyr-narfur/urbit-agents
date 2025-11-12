@@ -1,3 +1,8 @@
+---
+name: ship-deployment-guide
+description: Step-by-step procedures for deploying Urbit planets, comets, and fake ships on bare-metal Ubuntu/Debian systems with system preparation, binary installation, network configuration, systemd integration, and production validation. Use when deploying ships, booting from keyfiles, configuring networking, or setting up production environments.
+---
+
 # Ship Deployment Guide Skill
 
 Step-by-step procedures for deploying Urbit planets, comets, and fake ships on bare-metal Ubuntu/Debian systems with production-ready configurations.

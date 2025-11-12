@@ -1,3 +1,8 @@
+---
+name: multi-ship-orchestration
+description: Managing fleets of Urbit ships with GroundSeg including resource planning, lifecycle management, fleet sizing, monitoring, and operational workflows for coordinating multiple ships on shared infrastructure. Use when managing ship fleets, planning multi-ship deployments, allocating resources, or operating GroundSeg orchestration environments.
+---
+
 # Multi-Ship Orchestration Skill
 
 Managing fleets of Urbit ships with GroundSeg including lifecycle management, resource allocation, monitoring, and operational workflows.

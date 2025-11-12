@@ -1,10 +1,22 @@
-# Urbit Operations: Production Deployment & Fleet Management
+# Urbit Agents: Operations & Development
 
 > **⚡ Optimized for Sonnet 4.5 & Haiku 4.5** — All agents tuned for latest models with hybrid orchestration
 >
-> **🚀 Urbit-Specific Expertise** — 23 specialized skills for production-grade Urbit infrastructure
+> **🚀 Urbit-Specific Expertise** — Complete Urbit stack from Hoon development to fleet operations
 
-A comprehensive production-ready system combining **6 specialized agents**, **10 operational commands**, and **23 deployment skills** organized into a single focused plugin for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview), purpose-built for Urbit ship deployment and fleet management.
+A comprehensive production-ready system for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) with **two specialized plugins** for the complete Urbit development and operations lifecycle:
+
+## Plugins
+
+### **urbit-operations** - Deployment & Fleet Management
+Production Urbit ship deployment and fleet management with **6 agents**, **10 commands**, and **23 skills** for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting.
+
+[→ View urbit-operations documentation](#urbit-operations-plugin)
+
+### **hoon-development** - Language & Application Development
+Master Hoon programming with **5 agents**, **8 commands**, and **18 skills** covering language fundamentals through production Gall agent development.
+
+[→ View hoon-development documentation](#hoon-development-plugin)
 
 ## Overview
 
@@ -94,6 +106,69 @@ Before deploying Urbit ships, ensure you have:
 - [Fleet Management](#fleet-operations) - 100-1,000+ ship orchestration
 - [Migration Guide](plugins/urbit-operations/commands/migrate-deployment.md) - Cross-provider migration
 - [Troubleshooting](plugins/urbit-operations/commands/troubleshoot-ship.md) - Diagnostic workflows
+
+---
+
+## Hoon Development Plugin
+
+Master Hoon programming language for building Urbit applications with comprehensive learning paths, development workflows, and production best practices.
+
+### Features
+
+- **5 Specialized Agents** - hoon-expert, hoon-tutor, code-reviewer, debugging-specialist, app-architect
+- **8 Workflow Commands** - Review, optimize, debug, refactor, test, learn, migrate, scaffold
+- **18 Comprehensive Skills** - From fundamentals through advanced patterns
+- **Progressive Learning** - Structured 30-day learning path from beginner to expert
+
+### Quick Start: Hoon Development
+
+```bash
+# Install hoon-development plugin
+/plugin install hoon-development
+
+# Start learning Hoon
+/hoon-learn
+
+# Build a Gall agent
+/hoon-scaffold
+
+# Review your code
+/hoon-review
+```
+
+### Use Cases
+
+**Learning Hoon**: Interactive tutorials with hands-on exercises
+```bash
+/hoon-learn
+"Explain how subject-oriented programming works"
+```
+
+**Building Applications**: Complete Gall agent development
+```bash
+/hoon-scaffold  # Bootstrap project
+"Build a counter app with state persistence"
+/hoon-test      # Comprehensive testing
+```
+
+**Code Quality**: Reviews and optimization
+```bash
+/hoon-review    # P0-P3 prioritized review
+/hoon-optimize  # Performance tuning
+```
+
+**State Migrations**: Safe zero-downtime upgrades
+```bash
+/hoon-migrate   # Guided migration workflow
+```
+
+[→ View complete hoon-development documentation](plugins/hoon-development/README.md)
+
+---
+
+## Urbit Operations Plugin
+
+Production-grade Urbit ship deployment and fleet management across all hosting models.
 
 ## What's New
 

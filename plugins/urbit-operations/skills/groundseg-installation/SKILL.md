@@ -1,3 +1,8 @@
+---
+name: groundseg-installation
+description: Complete installation and configuration of GroundSeg Docker-based platform for multi-ship Urbit deployments including web UI, StarTram/Anchor networking, MinIO S3 integration, and automated ship lifecycle management. Use when installing GroundSeg, setting up multi-ship environments, configuring Docker orchestration, or deploying containerized Urbit infrastructure.
+---
+
 # GroundSeg Installation Skill
 
 Complete installation and initial configuration of the GroundSeg container orchestration platform for multi-ship Urbit deployments.

@@ -1,3 +1,8 @@
+---
+name: fleet-operations
+description: Large-scale Urbit ship fleet management for 5-100+ ships including resource planning, batch operations, automation, Infrastructure-as-Code with Terraform, Helm templating, and GitOps workflows. Use when managing ship fleets, planning large deployments, automating operations, or implementing IaC for Urbit infrastructure.
+---
+
 # Fleet Operations Skill
 
 Large-scale Urbit ship fleet management including multi-ship orchestration, resource planning, batch operations, and automation (2025).

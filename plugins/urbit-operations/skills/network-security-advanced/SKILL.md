@@ -1,3 +1,8 @@
+---
+name: network-security-advanced
+description: Advanced VPS security hardening for Urbit deployments including SSH hardening, firewall configuration, intrusion detection, fail2ban, DDoS protection, VPN setup, and zero-trust principles following 2025 security best practices. Use when hardening VPS security, implementing defense-in-depth, configuring firewalls, or meeting security compliance requirements.
+---
+
 # Network Security Advanced Skill
 
 Advanced VPS security hardening for Urbit ship deployments including SSH hardening, firewall configuration, intrusion detection, and zero-trust principles (2025).

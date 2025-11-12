@@ -1,3 +1,8 @@
+---
+name: performance-profiling
+description: Advanced performance profiling techniques for Urbit ships including CPU profiling with htop/perf, memory analysis, I/O tracing with iotop, network analysis, and systematic bottleneck identification. Use when diagnosing performance issues, identifying bottlenecks, profiling resource usage, or analyzing slow performance.
+---
+
 # Performance Profiling Skill
 
 Advanced performance profiling techniques for Urbit ships including CPU profiling, memory analysis, I/O tracing, and application-level profiling.
