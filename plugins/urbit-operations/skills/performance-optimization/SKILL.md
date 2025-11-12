@@ -1,3 +1,8 @@
+---
+name: performance-optimization
+description: System-level and Urbit-specific performance tuning including I/O scheduler optimization, kernel parameters, disk performance, memory management, CPU pinning, and ship state optimization. Use when optimizing ship performance, tuning system parameters, eliminating bottlenecks, or improving responsiveness.
+---
+
 # Performance Optimization Skill
 
 System-level and Urbit-specific performance tuning for production deployments including I/O optimization, kernel tuning, and ship state management.

@@ -1,3 +1,8 @@
+---
+name: monitoring-observability
+description: Production monitoring and observability for Urbit deployments using Prometheus, Grafana, Node Exporter, and Alertmanager with metrics collection, visualization, alerting, and capacity planning. Use when implementing monitoring, setting up dashboards, configuring alerts, tracking ship health, or planning capacity.
+---
+
 # Monitoring and Observability Skill
 
 Production monitoring and observability for Urbit ship deployments using Prometheus, Grafana, and cloud-native monitoring solutions (2025).

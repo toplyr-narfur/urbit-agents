@@ -1,3 +1,8 @@
+---
+name: urbit-fundamentals
+description: Deep understanding of Urbit's architecture including Nock, Hoon, Arvo OS, Vere runtime, vanes (kernel modules), loom memory model, event log, Azimuth identity system, and Ames networking. Use when explaining Urbit internals, diagnosing low-level issues, architecting deployments, or understanding system constraints.
+---
+
 # Urbit Fundamentals Skill
 
 Deep understanding of Urbit's architecture, components, and operational principles essential for effective deployment, troubleshooting, and optimization.

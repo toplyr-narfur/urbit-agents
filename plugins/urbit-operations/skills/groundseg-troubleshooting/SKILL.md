@@ -1,3 +1,8 @@
+---
+name: groundseg-troubleshooting
+description: Systematic diagnostic procedures for GroundSeg container platform issues including Docker configuration problems, UI accessibility, networking failures, ship lifecycle issues, and multi-ship coordination problems. Use when diagnosing GroundSeg issues, resolving Docker problems, debugging container networking, or troubleshooting ship management failures.
+---
+
 # GroundSeg Troubleshooting Skill
 
 Systematic diagnostic procedures for GroundSeg container platform issues including Docker problems, networking failures, and ship lifecycle issues.

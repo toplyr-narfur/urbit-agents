@@ -1,3 +1,8 @@
+---
+name: backup-disaster-recovery
+description: Comprehensive backup strategies and recovery procedures for Urbit ships including automated backups, 3-2-1 backup rule, safe pier backup procedures, recovery testing, and business continuity planning. Use when implementing backups, planning disaster recovery, recovering from failures, or ensuring data protection.
+---
+
 # Backup and Disaster Recovery Skill
 
 Comprehensive backup strategies, recovery procedures, and business continuity planning for Urbit ship deployments.

@@ -1,3 +1,8 @@
+---
+name: container-security
+description: Docker and container security hardening for GroundSeg Urbit deployments including image scanning, runtime protection, network isolation, rootless containers, secrets management, and compliance. Use when securing Docker environments, hardening GroundSeg, implementing container best practices, or meeting containerized deployment security requirements.
+---
+
 # Container Security Skill
 
 Docker and container security hardening for GroundSeg Urbit deployments including image security, runtime protection, and compliance.

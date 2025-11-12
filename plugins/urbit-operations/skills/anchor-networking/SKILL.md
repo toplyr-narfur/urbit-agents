@@ -1,3 +1,8 @@
+---
+name: anchor-networking
+description: Self-hosted networking solution for Urbit ships providing StarTram-like functionality with reverse proxy, SSL/TLS termination, NAT traversal, and full infrastructure control. Use when self-hosting networking, configuring reverse proxies, setting up SSL/TLS, avoiding managed services, or implementing custom networking infrastructure.
+---
+
 # Anchor Networking Skill
 
 Self-hosted networking solution for Urbit ships providing StarTram-like functionality with full infrastructure control.

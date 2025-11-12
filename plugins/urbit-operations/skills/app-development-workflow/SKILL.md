@@ -1,3 +1,8 @@
+---
+name: app-development-workflow
+description: Complete workflow for developing, testing, and distributing Urbit applications including Gall agent development, React front-ends, desk packaging, local development with fake ships, testing, and peer-to-peer distribution. Use when developing Urbit apps, setting up development environments, testing agents, or publishing desks.
+---
+
 # App Development Workflow Skill
 
 Complete workflow for developing, testing, and distributing Urbit applications including Gall agent development, desk publishing, and peer-to-peer distribution (2025).

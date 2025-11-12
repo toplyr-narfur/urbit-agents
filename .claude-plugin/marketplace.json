@@ -2019,6 +2019,136 @@
         "./skills/debugging-strategies",
         "./skills/monorepo-management"
       ]
+    },
+    {
+      "name": "urbit-operations",
+      "source": "./plugins/urbit-operations",
+      "description": "Production-ready Urbit ship deployment and fleet management with 6 agents, 10 commands, and 23 skills for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting",
+      "version": "1.0.0",
+      "author": {
+        "name": "Drake Edwards",
+        "url": "https://github.com/toplyr-narfur"
+      },
+      "homepage": "https://github.com/toplyr-narfur/urbit-agents",
+      "repository": "https://github.com/toplyr-narfur/urbit-agents",
+      "license": "MIT",
+      "keywords": [
+        "urbit",
+        "deployment",
+        "fleet-management",
+        "kubernetes",
+        "groundseg",
+        "ops",
+        "infrastructure"
+      ],
+      "category": "infrastructure",
+      "strict": false,
+      "commands": [
+        "./commands/deploy-planet.md",
+        "./commands/deploy-vps-planet.md",
+        "./commands/deploy-groundseg.md",
+        "./commands/deploy-fleet.md",
+        "./commands/setup-production.md",
+        "./commands/setup-monitoring.md",
+        "./commands/setup-cicd-pipeline.md",
+        "./commands/troubleshoot-ship.md",
+        "./commands/migrate-deployment.md",
+        "./commands/optimize-performance.md"
+      ],
+      "agents": [
+        "./agents/urbit-deployment-specialist.md",
+        "./agents/vps-deployment-specialist.md",
+        "./agents/groundseg-operator.md",
+        "./agents/fleet-manager.md",
+        "./agents/managed-hosting-advisor.md",
+        "./agents/performance-engineer.md"
+      ],
+      "skills": [
+        "./skills/urbit-fundamentals",
+        "./skills/ship-deployment-guide",
+        "./skills/urbit-troubleshooting",
+        "./skills/vps-deployment-providers",
+        "./skills/groundseg-installation",
+        "./skills/groundseg-troubleshooting",
+        "./skills/kubernetes-urbit",
+        "./skills/multi-ship-orchestration",
+        "./skills/anchor-networking",
+        "./skills/network-security-advanced",
+        "./skills/container-security",
+        "./skills/advanced-security-patterns",
+        "./skills/minio-s3-integration",
+        "./skills/backup-disaster-recovery",
+        "./skills/disaster-recovery-advanced",
+        "./skills/monitoring-observability",
+        "./skills/performance-optimization",
+        "./skills/performance-profiling",
+        "./skills/sla-management",
+        "./skills/fleet-operations",
+        "./skills/managed-hosting-comparison",
+        "./skills/app-development-workflow",
+        "./skills/compliance-frameworks"
+      ]
+    },
+    {
+      "name": "hoon-development",
+      "source": "./plugins/hoon-development",
+      "description": "Hoon programming language mastery for Urbit development covering functional programming, type systems, Gall agents, and production application development",
+      "version": "1.0.0",
+      "author": {
+        "name": "Drake Edwards",
+        "url": "https://github.com/toplyr-narfur"
+      },
+      "homepage": "https://github.com/toplyr-narfur/urbit-agents",
+      "repository": "https://github.com/toplyr-narfur/urbit-agents",
+      "license": "MIT",
+      "keywords": [
+        "hoon",
+        "urbit",
+        "functional-programming",
+        "gall",
+        "type-systems",
+        "nock",
+        "arvo"
+      ],
+      "category": "languages",
+      "strict": false,
+      "commands": [
+        "./commands/hoon-review.md",
+        "./commands/hoon-optimize.md",
+        "./commands/hoon-debug.md",
+        "./commands/hoon-refactor.md",
+        "./commands/hoon-test.md",
+        "./commands/hoon-learn.md",
+        "./commands/hoon-migrate.md",
+        "./commands/hoon-scaffold.md"
+      ],
+      "agents": [
+        "./agents/hoon-expert.md",
+        "./agents/hoon-tutor.md",
+        "./agents/code-reviewer.md",
+        "./agents/debugging-specialist.md",
+        "./agents/app-architect.md"
+      ],
+      "skills": [
+        "./skills/hoon-basics",
+        "./skills/hoon-fundamentals",
+        "./skills/rune-reference",
+        "./skills/type-system",
+        "./skills/functional-programming-patterns",
+        "./skills/advanced-patterns",
+        "./skills/irregular-forms",
+        "./skills/hoon-style-guide",
+        "./skills/data-structures",
+        "./skills/string-handling",
+        "./skills/serialization",
+        "./skills/stdlib-reference",
+        "./skills/zuse-libraries",
+        "./skills/gall-agents",
+        "./skills/generators",
+        "./skills/parsing",
+        "./skills/app-development-workflow",
+        "./skills/sail-markup"
+      ]
     }
   ]
 }

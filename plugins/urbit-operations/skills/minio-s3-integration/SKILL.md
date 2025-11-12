@@ -1,3 +1,8 @@
+---
+name: minio-s3-integration
+description: Self-hosted S3-compatible object storage with MinIO for Urbit ships with GroundSeg including setup, bucket management, application integration, and preventing pier bloat by offloading large files. Use when implementing S3 storage, managing media files, preventing loom bloat, or integrating object storage with Urbit applications.
+---
+
 # MinIO S3 Integration Skill
 
 Self-hosted S3-compatible object storage for Urbit ships with GroundSeg including setup, bucket management, and application integration.
