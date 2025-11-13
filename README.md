@@ -1,16 +1,16 @@
 # Urbit Agents: Operations & Development
 
-> **⚡ Optimized for Sonnet 4.5 & Haiku 4.5** — All agents tuned for latest models with hybrid orchestration
->
-> **🚀 Urbit-Specific Expertise** — Complete Urbit stack from Hoon development to fleet operations
-
-A comprehensive production-ready system for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) with **three specialized plugins** for the complete Urbit development, low-level Nock expertise, and operations lifecycle:
-
 ## About
 
 This repository provides specialized Claude Code plugins exclusively for Urbit development and operations. It is maintained as an independent project focused on helping operators and developers deploy, manage, and optimize Urbit infrastructure at any scale.
 
 For questions, feedback, or support, reach out to **~toplyr-narfur** on Tlon (Urbit's social network).
+
+> **⚡ Optimized for Sonnet 4.5 & Haiku 4.5** — All agents tuned for latest models with hybrid orchestration
+>
+> **🚀 Urbit-Specific Expertise** — Complete Urbit stack from Hoon development to fleet operations
+
+A comprehensive production-ready system for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) with **three specialized plugins** for the complete Urbit development, low-level Nock expertise, and operations lifecycle:
 
 ## Support This Project
 
