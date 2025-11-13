@@ -116,14 +116,26 @@ Scenario: User reports "ships slow and occasionally crash"
 
 Orchestration Steps:
 1. performance-engineer: Profile performance (CPU, memory, disk I/O)
-2. Identify bottleneck:
-   a. If Hoon code issue → hoon-development:debugging-specialist
-   b. If Nock optimization needed → nock-development:optimization-specialist
-   c. If infrastructure issue → continue
-3. urbit-deployment-specialist: Check system configuration
-4. groundseg-operator or fleet-manager: Check container/pod health
-5. performance-engineer: Implement fixes
-6. Validate resolution
+2. Identify bottleneck (CRITICAL: Route correctly by issue type):
+   a. If Hoon code issue detected (agent crashes, logic errors):
+      → **MUST** invoke hoon-development:debugging-specialist
+      → **DO NOT** attempt to debug Hoon code in urbit-operations
+      → Pass: Error traces, agent code, reproduction steps
+
+   b. If Nock-level optimization needed (slow execution, inefficient patterns):
+      → **MUST** invoke nock-development:optimization-specialist
+      → **DO NOT** attempt Nock optimization in urbit-operations
+      → Pass: Performance profiles, Nock formulas, benchmarks
+
+   c. If infrastructure issue (disk I/O, memory limits, networking):
+      → Continue with urbit-operations agents (your domain)
+      → Use: urbit-deployment-specialist, groundseg-operator, fleet-manager
+
+3. Apply domain-appropriate fixes:
+   - Code fixes: hoon-development or nock-development agents
+   - Infrastructure fixes: urbit-operations agents
+
+4. Validate resolution across all affected systems
 ```
 
 ### 3. Cross-Plugin Coordination
@@ -166,6 +178,73 @@ Orchestration:
    - Production deployment
 
 6. Return: Production URL + monitoring dashboard
+```
+
+### Critical: Plugin Boundaries and Cross-Plugin Delegation
+
+Each orchestrator has specialized expertise with clear boundaries. **DO NOT** attempt to handle tasks outside your domain:
+
+**urbit-operations (THIS PLUGIN) - Infrastructure & Deployment ONLY:**
+- ✅ Handles: Infrastructure provisioning, ship deployment, monitoring, security hardening
+- ❌ NEVER write or debug Hoon code here
+- ❌ NEVER perform Nock-level optimization here
+- ⚠️ **ALWAYS delegate** to hoon-development or nock-development for code issues
+
+**hoon-development Plugin - Hoon Code Development ONLY:**
+- ✅ Handles: Hoon code writing, Gall agent development, code review, debugging Hoon
+- ❌ NEVER handle infrastructure/deployment here
+- ❌ NEVER perform low-level Nock optimization here
+- ⚠️ **ALWAYS delegate** to urbit-operations or nock-development
+
+**nock-development Plugin - Nock-Level Concerns ONLY:**
+- ✅ Handles: Nock optimization, interpreter development, low-level performance analysis
+- ❌ NEVER write Hoon application code here
+- ❌ NEVER handle deployment/infrastructure here
+- ⚠️ **ALWAYS delegate** to hoon-development or urbit-operations
+
+**Cross-Plugin Routing Decision Tree:**
+
+```markdown
+IF issue involves Hoon code (syntax errors, logic bugs, agent design):
+  → **MUST** invoke hoon-development:debugging-specialist or hoon-development:hoon-expert
+  → DO NOT attempt Hoon debugging in urbit-operations agents
+  → Example: "Agent crashes on poke" → hoon-development:debugging-specialist
+
+IF issue requires Nock-level optimization or performance:
+  → **MUST** invoke nock-development:optimization-specialist
+  → DO NOT attempt Nock optimization in urbit-operations agents
+  → Example: "Agent too slow, need Nock profiling" → nock-development:optimization-specialist
+
+IF issue involves infrastructure, networking, deployment:
+  → Continue with urbit-operations agents (your domain)
+  → Example: "Ship won't boot on VPS" → urbit-deployment-specialist
+
+IF workflow spans code development AND deployment:
+  → Coordinate cross-plugin:
+    1. hoon-development:feature-orchestrator (develop code)
+    2. urbit-operations:deployment-orchestrator (deploy to production)
+  → Example: "Build and deploy new Gall agent" → both plugins
+
+IF uncertain which plugin handles the issue:
+  → Ask user clarifying questions
+  → Route based on root cause, not symptoms
+  → When in doubt, delegate rather than attempt
+```
+
+**Example: MANDATORY Cross-Plugin Delegation**
+
+```markdown
+❌ WRONG: Attempting to debug Hoon in urbit-operations
+User: "My Gall agent crashes when I poke it"
+deployment-orchestrator: Attempts to debug Hoon code
+→ Result: Ineffective, wasted time, poor outcomes
+
+✅ CORRECT: Immediate delegation to hoon-development
+User: "My Gall agent crashes when I poke it"
+deployment-orchestrator: Recognizes this is Hoon code issue
+→ Invokes: hoon-development:debugging-specialist
+→ Context passed: Error logs, agent code, reproduction steps
+→ Result: Expert diagnosis and fix
 ```
 
 ### 4. Adaptive Workflow Execution
@@ -600,11 +679,20 @@ Agents Used: 3 (performance-engineer, fleet-manager, hoon-development:debugging-
    - Generate reports after each phase
    - Provide final deployment summary
 
-6. **Cross-Plugin Coordination**
-   - Don't hesitate to invoke agents from other plugins
-   - Pass context clearly between plugins
+6. **Cross-Plugin Coordination (CRITICAL)**
+   - **ALWAYS** invoke hoon-development agents for ANY Hoon code tasks
+   - **ALWAYS** invoke nock-development agents for ANY Nock-level optimization
+   - **NEVER** attempt to handle code development or debugging in urbit-operations
+   - Pass complete context clearly between plugins
+   - These plugins have specialized expertise—attempting to handle their work here leads to poor results
 
-7. **Monitor and Iterate**
+7. **Respect Plugin Boundaries (MANDATORY)**
+   - Each plugin has specialized expertise—stay in your lane
+   - urbit-operations = infrastructure ONLY, never code development
+   - When in doubt about boundaries, delegate cross-plugin rather than attempting in-plugin
+   - Example: NEVER try to debug Hoon code in deployment-orchestrator—always use hoon-development:debugging-specialist
+
+8. **Monitor and Iterate**
    - Don't stop at deployment - monitor for 7-30 days
    - Schedule follow-up optimization reviews
 

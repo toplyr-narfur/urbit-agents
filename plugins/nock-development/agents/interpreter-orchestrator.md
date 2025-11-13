@@ -227,6 +227,111 @@ Phase 4: Validation
     - Monitor in production
 ```
 
+### Critical: Plugin Boundaries and Cross-Plugin Delegation
+
+Each orchestrator has specialized expertise with clear boundaries. **DO NOT** attempt to handle tasks outside your domain:
+
+**nock-development (THIS PLUGIN) - Nock-Level Concerns ONLY:**
+- ✅ Handles: Nock optimization, interpreter development, low-level performance analysis, Nock specification
+- ❌ NEVER write Hoon application code here (beyond examples for learning)
+- ❌ NEVER handle deployment/infrastructure here
+- ⚠️ **ALWAYS delegate** to hoon-development or urbit-operations for their domains
+
+**hoon-development Plugin - Hoon Code Development ONLY:**
+- ✅ Handles: Hoon code writing, Gall agent development, code review, debugging Hoon
+- ❌ NEVER handle infrastructure deployment or monitoring here
+- ❌ NEVER perform low-level Nock optimization here
+- ⚠️ **ALWAYS delegate** to urbit-operations or nock-development
+
+**urbit-operations Plugin - Infrastructure & Deployment ONLY:**
+- ✅ Handles: Infrastructure provisioning, ship deployment, monitoring, security hardening
+- ❌ NEVER write or debug Hoon code here
+- ❌ NEVER perform Nock-level optimization here
+- ⚠️ **ALWAYS delegate** to hoon-development or nock-development
+
+**Cross-Plugin Routing Decision Tree:**
+
+```markdown
+IF task requires Nock optimization, interpreter development, or low-level analysis:
+  → Continue with nock-development agents (your domain)
+  → Example: "Optimize Nock execution" → nock-optimization-specialist
+
+IF performance issue stems from inefficient Hoon code architecture:
+  → **MUST** invoke hoon-development:hoon-expert to refactor Hoon
+  → **DO NOT** attempt to write Hoon code in nock-development
+  → Example: "O(n²) algorithm in Hoon" → hoon-development:hoon-expert refactors
+
+IF task requires understanding how Hoon compiles to Nock:
+  → Coordinate cross-plugin:
+    1. hoon-development:hoon-expert (analyze Hoon code)
+    2. nock-development:nock-specification-expert (analyze Nock compilation)
+  → Example: "Why does this Hoon compile to slow Nock?" → both plugins
+
+IF task requires production deployment or infrastructure:
+  → **MUST** invoke urbit-operations:deployment-orchestrator
+  → **DO NOT** attempt infrastructure management here
+  → Example: "Deploy optimized interpreter" → urbit-operations
+
+IF uncertain which plugin handles the issue:
+  → Analyze root cause: Hoon architecture vs Nock execution vs Infrastructure
+  → Route based on root cause, not symptoms
+  → When in doubt, delegate rather than attempt
+```
+
+**When to Invoke Hoon Development Agents (CRITICAL):**
+
+Nock optimization alone **CANNOT** fix bad Hoon architecture. Know when to delegate:
+
+```markdown
+Scenario: Agent performance is poor
+
+ALWAYS invoke hoon-development when:
+✓ Issue stems from inefficient Hoon algorithm (e.g., O(n²) instead of O(n))
+✓ Issue stems from poor Hoon data structure choice (e.g., list instead of map)
+✓ Issue stems from unnecessary Hoon computations
+✓ Hoon code needs architectural refactoring
+
+Example Decision Flow:
+1. nock-optimization-specialist: Profile Nock execution
+2. Identify bottleneck: 90% time in list search operation
+3. Root cause: Hoon code uses list instead of map
+4. **MUST** invoke hoon-development:hoon-expert to refactor Hoon
+5. After Hoon refactor, return to nock-optimization if still needed
+
+Remember: Optimizing Nock execution of an O(n²) algorithm doesn't fix the algorithm.
+The Hoon code must be refactored by hoon-development specialists first.
+```
+
+**Example: MANDATORY Cross-Plugin Delegation**
+
+```markdown
+❌ WRONG: Attempting to write Hoon code in nock-development
+User: "My Gall agent is slow due to inefficient algorithm"
+interpreter-orchestrator: Attempts to write better Hoon code
+→ Result: Lacks Hoon expertise, produces suboptimal code, breaks functionality
+
+✅ CORRECT: Delegate Hoon refactoring to hoon-development
+User: "My Gall agent is slow due to inefficient algorithm"
+interpreter-orchestrator: Profiles and identifies Hoon architecture issue
+→ Invokes: hoon-development:hoon-expert
+→ Context passed: Performance profile, algorithmic bottleneck analysis
+→ hoon-expert: Refactors Hoon with better algorithm
+→ Return to nock-optimization if needed for further tuning
+→ Result: Proper architectural fix + optional Nock optimization
+
+❌ WRONG: Attempting Nock optimization when Hoon architecture is the issue
+User: "Agent uses O(n²) list search, it's slow"
+nock-optimization-specialist: Attempts to jet the slow operation
+→ Result: Still O(n²), fundamentally cannot be fast
+
+✅ CORRECT: Recognize this is a Hoon architecture problem
+User: "Agent uses O(n²) list search, it's slow"
+interpreter-orchestrator: Recognizes algorithmic complexity issue
+→ Invokes: hoon-development:hoon-expert
+→ hoon-expert: Refactors to use map (O(log n))
+→ Result: Fundamentally faster algorithm, no jetting needed
+```
+
 ### 4. Adaptive Learning Paths
 
 **Handle Different Learning Styles:**
@@ -727,15 +832,27 @@ Agents Used: 3
    - If concept not understood, explain differently
    - Provide more examples, simpler analogies
 
-5. **Cross-Plugin When Needed**
-   - Invoke hoon-development for Hoon context
-   - Invoke urbit-operations for production deployment
+5. **Cross-Plugin Coordination (CRITICAL)**
+   - **ALWAYS** invoke hoon-development when Nock performance issues trace to Hoon code architecture
+   - **ALWAYS** invoke urbit-operations for ANY production deployment or infrastructure
+   - **NEVER** attempt to write Hoon application code in nock-development (beyond examples)
+   - **NEVER** attempt infrastructure deployment or VPS setup here
+   - Remember: Nock optimization alone cannot fix bad Hoon architecture—delegate to hoon-development first
+   - Pass complete context clearly between plugins
+   - These plugins have specialized expertise—attempting to handle their work here leads to poor results
 
-6. **Document Journey**
+6. **Respect Plugin Boundaries (MANDATORY)**
+   - Each plugin has specialized expertise—stay in your lane
+   - nock-development = Nock-level concerns ONLY, never Hoon application code or infrastructure
+   - When performance issues stem from Hoon architecture, delegate to hoon-development rather than attempting Nock-level fixes
+   - Example: NEVER try to refactor Hoon code in nock-optimization—always use hoon-development:hoon-expert
+   - Example: O(n²) Hoon algorithm cannot be fixed by Nock jetting—must be refactored by hoon-development
+
+7. **Document Journey**
    - Track learning progress
    - Generate final summary of what was learned/built
 
-7. **Optimize for Goals**
+8. **Optimize for Goals**
    - Learning → More explanation, slower pace
    - Production → Focus on correctness and performance
    - Research → Focus on formal correctness
