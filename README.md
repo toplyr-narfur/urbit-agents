@@ -25,17 +25,17 @@ Your support helps maintain and expand these operational tools.
 ## Plugins
 
 ### **urbit-operations** - Deployment & Fleet Management
-Production Urbit ship deployment and fleet management with **6 agents**, **10 commands**, and **23 skills** for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting.
+Production Urbit ship deployment and fleet management with **7 agents** (including intelligent deployment orchestrator), **11 commands**, and **23 skills** for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting.
 
 [→ View urbit-operations documentation](#urbit-operations-plugin)
 
 ### **hoon-development** - Language & Application Development
-Expert Hoon programming with **4 agents**, **7 commands**, and **18 skills** covering language architecture through production Gall agent development.
+Expert Hoon programming with **5 agents** (including feature orchestrator), **8 commands**, and **18 skills** covering language architecture through production Gall agent development with intelligent end-to-end coordination.
 
 [→ View hoon-development documentation](#hoon-development-plugin)
 
 ### **nock-development** - Assembly Language & Interpreter Expertise
-Build Nock interpreters and optimize performance with **4 agents**, **6 commands**, and **12 skills** for implementing virtual machines, jetting, and Hoon→Nock analysis.
+Build Nock interpreters and optimize performance with **5 agents** (including interpreter orchestrator), **7 commands**, and **12 skills** for implementing virtual machines, jetting, and Hoon→Nock analysis with adaptive learning workflows.
 
 [→ View nock-development documentation](#nock-development-plugin)
 
@@ -51,15 +51,15 @@ This marketplace provides the complete Urbit development and operations lifecycl
 
 ### Combined Capabilities
 
-**14 Specialized Agents** - Expert assistance across development, assembly, and operations:
-- **4 Development Agents** - Expert code implementation, review, debugging, architecture
-- **4 Nock Agents** - Interpreter implementation, optimization, specification, fundamentals
-- **6 Operations Agents** - Deployment, fleet management, hosting advisory, performance engineering
+**17 Specialized Agents** - Expert assistance across development, assembly, and operations:
+- **5 Development Agents** - Expert code, review, debugging, architecture, **feature orchestration**
+- **5 Nock Agents** - Interpreter engineering, optimization, specification, fundamentals, **interpreter orchestration**
+- **7 Operations Agents** - Deployment, fleet management, hosting advisory, performance, **deployment orchestration**
 
-**23 Operational Commands** - Production workflows for the entire lifecycle:
-- **7 Development Commands** - Scaffold, review, test, debug, refactor, optimize, migrate
-- **6 Nock Commands** - Build interpreters, optimize, learn fundamentals, debug, analyze Hoon→Nock
-- **10 Operations Commands** - Deploy, harden, monitor, troubleshoot, migrate infrastructure
+**26 Operational Commands** - Production workflows for the entire lifecycle:
+- **8 Development Commands** - **Orchestrate features**, scaffold, review, test, debug, refactor, optimize, migrate
+- **7 Nock Commands** - **Orchestrate interpreters**, build, optimize, learn fundamentals, debug, analyze Hoon→Nock
+- **11 Operations Commands** - **Orchestrate deployments**, deploy, harden, monitor, troubleshoot, migrate infrastructure
 
 **53 Knowledge Skills** - Comprehensive expertise from fundamentals to enterprise:
 - **18 Development Skills** - Hoon language, types, Gall agents, parsing, data structures
@@ -90,6 +90,35 @@ This marketplace provides the complete Urbit development and operations lifecycl
 - **Compliance-Ready**: GDPR, HIPAA, SOC2, and ISO 27001 implementation frameworks
 - **Infrastructure-as-Code**: Terraform templates, Helm charts, reproducible deployments
 - **Migration Support**: Zero-downtime migrations between providers and deployment models
+
+### 🎯 Intelligent Orchestrators (New in v1.1.0)
+
+Each plugin now includes an intelligent orchestrator for coordinating complex multi-agent workflows:
+
+**feature-orchestrator** (`/hoon-development:orchestrate-feature`)
+- End-to-end Hoon feature development: design → implement → review → test → optimize → deploy
+- Dynamically coordinates hoon-expert, code-reviewer, debugging-specialist, and app-architect
+- Supports TDD workflows, state migrations, and cross-plugin integration with urbit-operations
+- Adaptive workflow based on complexity and experience level
+
+**interpreter-orchestrator** (`/nock-development:orchestrate-interpreter`)
+- Complete Nock mastery: learning → implementation → optimization
+- Coordinates tutor, engineer, optimizer, and specification expert based on goals
+- Adaptive learning paths for all experience levels (beginner to production-grade)
+- Supports multi-language implementations with 10-100x performance optimization
+
+**deployment-orchestrator** (`/urbit-operations:orchestrate-deployment`)
+- Intelligent deployment coordination: planning → infrastructure → deployment → monitoring
+- Dynamically selects optimal path (bare-metal, VPS, GroundSeg, Kubernetes)
+- Coordinates multi-environment workflows (dev → staging → production)
+- Handles compliance requirements, budget optimization, and cross-plugin integration
+
+**Key Orchestrator Features:**
+- **Intelligent Routing**: Analyzes requirements and selects optimal agent sequences
+- **Cross-Plugin Coordination**: Seamlessly works across all three plugins
+- **Adaptive Execution**: Adjusts workflow based on experience level and constraints
+- **Quality Gates**: Validates each phase before proceeding
+- **Failure Handling**: Graceful error recovery with retry logic
 
 ### How It Works
 
@@ -165,9 +194,9 @@ Install all three plugins for the complete Urbit workflow:
 /plugin install urbit-operations
 ```
 
-**hoon-development** loads: **4 agents, 7 commands, 18 skills**
-**nock-development** loads: **4 agents, 6 commands, 12 skills**
-**urbit-operations** loads: **6 agents, 10 commands, 23 skills**
+**hoon-development** loads: **5 agents, 8 commands, 18 skills** (includes feature orchestrator)
+**nock-development** loads: **5 agents, 7 commands, 12 skills** (includes interpreter orchestrator)
+**urbit-operations** loads: **7 agents, 11 commands, 23 skills** (includes deployment orchestrator)
 
 Or install just the one you need for your current task.
 
