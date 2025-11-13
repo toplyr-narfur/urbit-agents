@@ -6,6 +6,12 @@
 
 A comprehensive production-ready system for [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) with **three specialized plugins** for the complete Urbit development, low-level Nock expertise, and operations lifecycle:
 
+## About
+
+This repository provides specialized Claude Code plugins exclusively for Urbit development and operations. It is maintained as an independent project focused on helping operators and developers deploy, manage, and optimize Urbit infrastructure at any scale.
+
+For questions, feedback, or support, reach out to **~toplyr-narfur** on Tlon (Urbit's social network).
+
 ## Support This Project
 
 If you find these tools valuable, consider supporting the development:
@@ -906,12 +912,6 @@ For contributions to this repository, see the [Contributing](#contributing) sect
 - [Operations Agents](plugins/urbit-operations/agents/)
 - [Operations Commands](plugins/urbit-operations/commands/)
 - [Operations Skills Library](plugins/urbit-operations/skills/)
-
-## About
-
-This repository provides specialized Claude Code plugins exclusively for Urbit development and operations. It is maintained as an independent project focused on helping operators and developers deploy, manage, and optimize Urbit infrastructure at any scale.
-
-For questions, feedback, or support, reach out to **~toplyr-narfur** on Tlon (Urbit's social network).
 
 ## License
 
