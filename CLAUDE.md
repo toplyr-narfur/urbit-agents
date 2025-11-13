@@ -262,12 +262,11 @@ After modifying the plugin structure:
 
 ## Contributing
 
-This is a focused fork maintained independently from the upstream claude-code-workflows repository:
+This repository is maintained independently and focuses exclusively on Urbit development and operations. 
 
-- **Upstream**: [wshobson/agents](https://github.com/wshobson/agents) - Full marketplace
-- **This fork**: [toplyr-narfur/urbit-agents](https://github.com/toplyr-narfur/urbit-agents) - Urbit-only
+Contributions should focus on Urbit-specific tools and workflows. Follow the naming conventions and architecture patterns established in this repository.
 
-Contributions should focus exclusively on Urbit operations. Follow the naming conventions and architecture patterns established in this repository.
+For support or questions, reach out to **~toplyr-narfur** on Tlon.
 
 ## Important Resources
 

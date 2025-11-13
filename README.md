@@ -859,7 +859,7 @@ This repository focuses exclusively on Urbit development and operations. To cont
 4. Add comprehensive documentation
 5. Maintain cross-plugin references where workflows intersect
 
-For upstream Claude Code workflows plugin contributions, see [wshobson/agents](https://github.com/wshobson/agents).
+For contributions to this repository, see the [Contributing](#contributing) section above and follow the established patterns in the three plugins.
 
 ## Resources
 
@@ -897,11 +897,22 @@ For upstream Claude Code workflows plugin contributions, see [wshobson/agents](h
 - [Operations Commands](plugins/urbit-operations/commands/)
 - [Operations Skills Library](plugins/urbit-operations/skills/)
 
+## About
+
+This repository provides specialized Claude Code plugins exclusively for Urbit development and operations. It is maintained as an independent project focused on helping operators and developers deploy, manage, and optimize Urbit infrastructure at any scale.
+
+For questions, feedback, or support, reach out to **~toplyr-narfur** on Tlon (Urbit's social network).
+
+## Support This Project
+
+If you find these tools valuable, consider supporting the development:
+
+[![Bitcoin Donation](https://img.shields.io/badge/Bitcoin-Donate-F7931A?style=flat-square&logo=bitcoin)](bitcoin:bc1qwkkkg6q9lpe464nzuq054xsawj7t5ykpvd7arn)
+
+**Bitcoin Wallet**: `bc1qwkkkg6q9lpe464nzuq054xsawj7t5ykpvd7arn`
+
+Your support helps maintain and expand these operational tools.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-**Forked from**: [wshobson/agents](https://github.com/wshobson/agents) - Comprehensive Claude Code workflow plugins
-**Maintained by**: [toplyr-narfur](https://github.com/toplyr-narfur)
