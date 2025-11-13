@@ -6,15 +6,15 @@
     "url": "https://github.com/toplyr-narfur"
   },
   "metadata": {
-    "description": "Production-ready Urbit ship deployment and fleet management with specialized agents for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting",
-    "version": "1.0.0"
+    "description": "Production-ready Urbit ship deployment and fleet management with intelligent orchestrators for coordinating complex multi-agent workflows across Hoon development, Nock optimization, and production operations",
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "urbit-operations",
       "source": "./plugins/urbit-operations",
-      "description": "Production-ready Urbit ship deployment and fleet management with 6 agents, 10 commands, and 23 skills for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting",
-      "version": "1.0.0",
+      "description": "Production-ready Urbit ship deployment and fleet management with 7 agents (including intelligent deployment orchestrator), 11 commands, and 23 skills for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting",
+      "version": "1.1.0",
       "author": {
         "name": "toplyr-narfur",
         "url": "https://github.com/toplyr-narfur"
@@ -34,6 +34,7 @@
       "category": "infrastructure",
       "strict": false,
       "commands": [
+        "./commands/orchestrate-deployment.md",
         "./commands/deploy-planet.md",
         "./commands/deploy-vps-planet.md",
         "./commands/deploy-groundseg.md",
@@ -46,6 +47,7 @@
         "./commands/optimize-performance.md"
       ],
       "agents": [
+        "./agents/deployment-orchestrator.md",
         "./agents/urbit-deployment-specialist.md",
         "./agents/vps-deployment-specialist.md",
         "./agents/groundseg-operator.md",
@@ -82,8 +84,8 @@
     {
       "name": "hoon-development",
       "source": "./plugins/hoon-development",
-      "description": "Hoon programming language mastery for Urbit development covering functional programming, type systems, Gall agents, and production application development",
-      "version": "1.0.0",
+      "description": "Hoon programming language mastery for Urbit development with intelligent feature orchestrator for coordinating end-to-end development lifecycles from design through production deployment",
+      "version": "1.1.0",
       "author": {
         "name": "toplyr-narfur",
         "url": "https://github.com/toplyr-narfur"
@@ -103,6 +105,7 @@
       "category": "languages",
       "strict": false,
       "commands": [
+        "./commands/orchestrate-feature.md",
         "./commands/hoon-review.md",
         "./commands/hoon-optimize.md",
         "./commands/hoon-debug.md",
@@ -112,6 +115,7 @@
         "./commands/hoon-scaffold.md"
       ],
       "agents": [
+        "./agents/feature-orchestrator.md",
         "./agents/hoon-expert.md",
         "./agents/code-reviewer.md",
         "./agents/debugging-specialist.md",
@@ -141,8 +145,8 @@
     {
       "name": "nock-development",
       "source": "./plugins/nock-development",
-      "description": "Nock assembly language expertise for building interpreters, optimizing performance, and understanding Urbit's computational substrate with implementation focus",
-      "version": "1.0.0",
+      "description": "Nock assembly language expertise with intelligent interpreter orchestrator for coordinating learning, implementation, and optimization workflows across all experience levels",
+      "version": "1.1.0",
       "author": {
         "name": "toplyr-narfur",
         "url": "https://github.com/toplyr-narfur"
@@ -164,6 +168,7 @@
       "category": "languages",
       "strict": false,
       "commands": [
+        "./commands/orchestrate-interpreter.md",
         "./commands/build-nock-interpreter.md",
         "./commands/optimize-nock-performance.md",
         "./commands/learn-nock-fundamentals.md",
@@ -172,6 +177,7 @@
         "./commands/nock-implement-exercise.md"
       ],
       "agents": [
+        "./agents/interpreter-orchestrator.md",
         "./agents/nock-interpreter-engineer.md",
         "./agents/nock-optimization-specialist.md",
         "./agents/nock-specification-expert.md",
