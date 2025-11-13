@@ -1,336 +1,74 @@
-# Complete Plugin Reference
+# Plugin Reference
 
-Browse all **63 focused, single-purpose plugins** organized by category.
+This repository contains **3 specialized plugins** exclusively focused on Urbit development and operations.
 
-## Quick Start - Essential Plugins
+## The 3 Plugins
 
-> 💡 **Getting Started?** Install these popular plugins for immediate productivity gains.
+### urbit-operations - Deployment & Fleet Management
 
-### Development Essentials
+Production Urbit ship deployment and fleet management with **6 agents**, **10 commands**, and **23 skills** for bare-metal, VPS, GroundSeg, Kubernetes, and managed hosting.
 
-**code-documentation** - Documentation and technical writing
-
+**Install:**
 ```bash
-/plugin install code-documentation
+/plugin install urbit-operations
 ```
 
-Automated doc generation, code explanation, and tutorial creation for comprehensive technical documentation.
+**Key Features:**
+- Multiple deployment models (bare-metal, VPS, GroundSeg, Kubernetes)
+- 20-phase production hardening
+- Enterprise monitoring with Prometheus, Grafana, Loki
+- Fleet operations for 100-1,000+ ships
+- GDPR, HIPAA, SOC2, ISO 27001 compliance frameworks
 
-**debugging-toolkit** - Smart debugging and developer experience
+[→ View urbit-operations documentation](../plugins/urbit-operations/README.md)
 
+### hoon-development - Language & Application Development
+
+Expert Hoon programming with **4 agents**, **7 commands**, and **18 skills** covering language architecture through production Gall agent development.
+
+**Install:**
 ```bash
-/plugin install debugging-toolkit
+/plugin install hoon-development
 ```
 
-Interactive debugging, error analysis, and DX optimization for faster problem resolution.
+**Key Features:**
+- Production Hoon implementation and architecture
+- P0-P3 prioritized code reviews
+- Comprehensive testing and debugging workflows
+- Gall agent development lifecycle
+- Performance optimization workflows
 
-**git-pr-workflows** - Git automation and PR enhancement
+[→ View hoon-development documentation](../plugins/hoon-development/README.md)
 
+### nock-development - Assembly Language & Interpreter Expertise
+
+Build Nock interpreters and optimize performance with **4 agents**, **6 commands**, and **12 skills** for implementing virtual machines, jetting, and Hoon→Nock analysis.
+
+**Install:**
 ```bash
-/plugin install git-pr-workflows
+/plugin install nock-development
 ```
 
-Git workflow automation, pull request enhancement, and team onboarding processes.
-
-### Full-Stack Development
-
-**backend-development** - Backend API design and architecture
-
-```bash
-/plugin install backend-development
-```
-
-RESTful and GraphQL API design with test-driven development and modern backend architecture patterns.
-
-**frontend-mobile-development** - UI and mobile development
-
-```bash
-/plugin install frontend-mobile-development
-```
-
-React/React Native component development with automated scaffolding and cross-platform implementation.
-
-**full-stack-orchestration** - End-to-end feature development
-
-```bash
-/plugin install full-stack-orchestration
-```
-
-Multi-agent coordination from backend → frontend → testing → security → deployment.
-
-### Testing & Quality
-
-**unit-testing** - Automated test generation
-
-```bash
-/plugin install unit-testing
-```
-
-Generate pytest (Python) and Jest (JavaScript) unit tests automatically with comprehensive edge case coverage.
-
-**code-review-ai** - AI-powered code review
-
-```bash
-/plugin install code-review-ai
-```
-
-Architectural analysis, security assessment, and code quality review with actionable feedback.
-
-### Infrastructure & Operations
-
-**cloud-infrastructure** - Cloud architecture design
-
-```bash
-/plugin install cloud-infrastructure
-```
-
-AWS/Azure/GCP architecture, Kubernetes setup, Terraform IaC, and multi-cloud cost optimization.
-
-**incident-response** - Production incident management
-
-```bash
-/plugin install incident-response
-```
-
-Rapid incident triage, root cause analysis, and automated resolution workflows for production systems.
-
-### Language Support
-
-**python-development** - Python project scaffolding
-
-```bash
-/plugin install python-development
-```
-
-FastAPI/Django project initialization with modern tooling (uv, ruff) and production-ready architecture.
-
-**javascript-typescript** - JavaScript/TypeScript scaffolding
-
-```bash
-/plugin install javascript-typescript
-```
-
-Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best practices.
-
----
-
-## Complete Plugin Catalog
-
-### 🎨 Development (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **debugging-toolkit** | Interactive debugging and DX optimization | `/plugin install debugging-toolkit` |
-| **backend-development** | Backend API design with GraphQL and TDD | `/plugin install backend-development` |
-| **frontend-mobile-development** | Frontend UI and mobile development | `/plugin install frontend-mobile-development` |
-| **multi-platform-apps** | Cross-platform app coordination (web/iOS/Android) | `/plugin install multi-platform-apps` |
-
-### 📚 Documentation (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **code-documentation** | Documentation generation and code explanation | `/plugin install code-documentation` |
-| **documentation-generation** | OpenAPI specs, Mermaid diagrams, tutorials | `/plugin install documentation-generation` |
-
-### 🔄 Workflows (3 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **git-pr-workflows** | Git automation and PR enhancement | `/plugin install git-pr-workflows` |
-| **full-stack-orchestration** | End-to-end feature orchestration | `/plugin install full-stack-orchestration` |
-| **tdd-workflows** | Test-driven development methodology | `/plugin install tdd-workflows` |
-
-### ✅ Testing (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **unit-testing** | Automated unit test generation (Python/JavaScript) | `/plugin install unit-testing` |
-| **tdd-workflows** | Test-driven development methodology | `/plugin install tdd-workflows` |
-
-### 🔍 Quality (3 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **code-review-ai** | AI-powered architectural review | `/plugin install code-review-ai` |
-| **comprehensive-review** | Multi-perspective code analysis | `/plugin install comprehensive-review` |
-| **performance-testing-review** | Performance analysis and test coverage review | `/plugin install performance-testing-review` |
-
-### 🛠️ Utilities (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **code-refactoring** | Code cleanup and technical debt management | `/plugin install code-refactoring` |
-| **dependency-management** | Dependency auditing and version management | `/plugin install dependency-management` |
-| **error-debugging** | Error analysis and trace debugging | `/plugin install error-debugging` |
-| **team-collaboration** | Team workflows and standup automation | `/plugin install team-collaboration` |
-
-### 🤖 AI & ML (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **llm-application-dev** | LLM apps and prompt engineering | `/plugin install llm-application-dev` |
-| **agent-orchestration** | Multi-agent system optimization | `/plugin install agent-orchestration` |
-| **context-management** | Context persistence and restoration | `/plugin install context-management` |
-| **machine-learning-ops** | ML training pipelines and MLOps | `/plugin install machine-learning-ops` |
-
-### 📊 Data (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **data-engineering** | ETL pipelines and data warehouses | `/plugin install data-engineering` |
-| **data-validation-suite** | Schema validation and data quality | `/plugin install data-validation-suite` |
-
-### 🗄️ Database (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **database-design** | Database architecture and schema design | `/plugin install database-design` |
-| **database-migrations** | Database migration automation | `/plugin install database-migrations` |
-
-### 🚨 Operations (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **incident-response** | Production incident management | `/plugin install incident-response` |
-| **error-diagnostics** | Error tracing and root cause analysis | `/plugin install error-diagnostics` |
-| **distributed-debugging** | Distributed system tracing | `/plugin install distributed-debugging` |
-| **observability-monitoring** | Metrics, logging, tracing, and SLO | `/plugin install observability-monitoring` |
-
-### ⚡ Performance (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **application-performance** | Application profiling and optimization | `/plugin install application-performance` |
-| **database-cloud-optimization** | Database query and cloud cost optimization | `/plugin install database-cloud-optimization` |
-
-### ☁️ Infrastructure (5 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **deployment-strategies** | Deployment patterns and rollback automation | `/plugin install deployment-strategies` |
-| **deployment-validation** | Pre-deployment checks and validation | `/plugin install deployment-validation` |
-| **kubernetes-operations** | K8s manifests and GitOps workflows | `/plugin install kubernetes-operations` |
-| **cloud-infrastructure** | AWS/Azure/GCP cloud architecture | `/plugin install cloud-infrastructure` |
-| **cicd-automation** | CI/CD pipeline configuration | `/plugin install cicd-automation` |
-
-### 🔒 Security (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **security-scanning** | SAST analysis and vulnerability scanning | `/plugin install security-scanning` |
-| **security-compliance** | SOC2/HIPAA/GDPR compliance | `/plugin install security-compliance` |
-| **backend-api-security** | API security and authentication | `/plugin install backend-api-security` |
-| **frontend-mobile-security** | XSS/CSRF prevention and mobile security | `/plugin install frontend-mobile-security` |
-
-### 🔄 Modernization (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **framework-migration** | Framework upgrades and migration planning | `/plugin install framework-migration` |
-| **codebase-cleanup** | Technical debt reduction and cleanup | `/plugin install codebase-cleanup` |
-
-### 🌐 API (2 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **api-scaffolding** | REST/GraphQL API generation | `/plugin install api-scaffolding` |
-| **api-testing-observability** | API testing and monitoring | `/plugin install api-testing-observability` |
-
-### 📢 Marketing (4 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **seo-content-creation** | SEO content writing and planning | `/plugin install seo-content-creation` |
-| **seo-technical-optimization** | Meta tags, keywords, and schema markup | `/plugin install seo-technical-optimization` |
-| **seo-analysis-monitoring** | Content analysis and authority building | `/plugin install seo-analysis-monitoring` |
-| **content-marketing** | Content strategy and web research | `/plugin install content-marketing` |
-
-### 💼 Business (3 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **business-analytics** | KPI tracking and financial reporting | `/plugin install business-analytics` |
-| **hr-legal-compliance** | HR policies and legal templates | `/plugin install hr-legal-compliance` |
-| **customer-sales-automation** | Support and sales automation | `/plugin install customer-sales-automation` |
-
-### 💻 Languages (7 plugins)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **python-development** | Python 3.12+ with Django/FastAPI | `/plugin install python-development` |
-| **javascript-typescript** | JavaScript/TypeScript with Node.js | `/plugin install javascript-typescript` |
-| **systems-programming** | Rust, Go, C, C++ for systems development | `/plugin install systems-programming` |
-| **jvm-languages** | Java, Scala, C# with enterprise patterns | `/plugin install jvm-languages` |
-| **web-scripting** | PHP and Ruby for web applications | `/plugin install web-scripting` |
-| **functional-programming** | Elixir with OTP and Phoenix | `/plugin install functional-programming` |
-| **arm-cortex-microcontrollers** | ARM Cortex-M firmware and drivers | `/plugin install arm-cortex-microcontrollers` |
-
-### 🔗 Blockchain (1 plugin)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **blockchain-web3** | Smart contracts and DeFi protocols | `/plugin install blockchain-web3` |
-
-### 💰 Finance (1 plugin)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **quantitative-trading** | Algorithmic trading and risk management | `/plugin install quantitative-trading` |
-
-### 💳 Payments (1 plugin)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **payment-processing** | Stripe/PayPal integration and billing | `/plugin install payment-processing` |
-
-### 🎮 Gaming (1 plugin)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **game-development** | Unity and Minecraft plugin development | `/plugin install game-development` |
-
-### ♿ Accessibility (1 plugin)
-
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| **accessibility-compliance** | WCAG auditing and inclusive design | `/plugin install accessibility-compliance` |
-
-## Plugin Structure
-
-Each plugin contains:
-
-- **agents/** - Specialized agents for that domain
-- **commands/** - Tools and workflows specific to that plugin
-- **skills/** - Optional modular knowledge packages (progressive disclosure)
-
-Example:
-```
-plugins/python-development/
-├── agents/
-│   ├── python-pro.md
-│   ├── django-pro.md
-│   └── fastapi-pro.md
-├── commands/
-│   └── python-scaffold.md
-└── skills/
-    ├── async-python-patterns/
-    ├── python-testing-patterns/
-    ├── python-packaging/
-    ├── python-performance-optimization/
-    └── uv-package-manager/
-```
+**Key Features:**
+- Nock interpreter implementation in C, Python, Rust, Haskell, JavaScript
+- Performance optimization (10x-1000x improvements)
+- Jetting and native code acceleration
+- Hoon→Nock compilation analysis
+- Hands-on learning and implementation exercises
+
+[→ View nock-development documentation](../plugins/nock-development/README.md)
 
 ## Installation
 
 ### Step 1: Add the Marketplace
 
 ```bash
-/plugin marketplace add wshobson/agents
+/plugin marketplace add toplyr-narfur/urbit-agents
 ```
 
-This makes all 63 plugins available for installation, but **does not load any agents or tools** into your context.
+This makes the Urbit-focused plugins available for installation, but **does not load any agents or tools** into your context.
 
-### Step 2: Install Specific Plugins
+### Step 2: Install Plugins
 
 Browse available plugins:
 
@@ -338,37 +76,56 @@ Browse available plugins:
 /plugin
 ```
 
-Install only the plugins you need:
+Install all three for the complete Urbit workflow:
 
 ```bash
-/plugin install python-development
-/plugin install backend-development
+/plugin install urbit-operations
+/plugin install hoon-development
+/plugin install nock-development
 ```
 
-Each installed plugin loads **only its specific agents and commands** into Claude's context.
+Or install just the one you need for your current task.
 
-## Plugin Design Principles
+## Complete Plugin Structure
 
-### Single Responsibility
-- Each plugin does **one thing well** (Unix philosophy)
-- Clear, focused purposes (describable in 5-10 words)
-- Average plugin size: **3.4 components** (follows Anthropic's 2-8 pattern)
+```
+urbit-agents/
+├── .claude-plugin/
+│   └── marketplace.json                    # Marketplace definition (all three plugins)
+├── plugins/
+│   ├── hoon-development/                   # Hoon programming plugin
+│   │   ├── agents/                         # 4 development agents
+│   │   ├── commands/                       # 7 development workflows
+│   │   └── skills/                         # 18 Hoon skills
+│   ├── nock-development/                   # Nock assembly language plugin
+│   │   ├── agents/                         # 4 Nock agents
+│   │   ├── commands/                       # 6 Nock workflows
+│   │   └── skills/                         # 12 Nock skills
+│   └── urbit-operations/                   # Infrastructure operations plugin
+│       ├── agents/                         # 6 operations agents
+│       ├── commands/                       # 10 operational workflows
+│       └── skills/                         # 23 operations skills
+├── docs/                                   # Documentation
+└── README.md                               # Main documentation
+```
 
-### Minimal Token Usage
-- Install only what you need
-- Each plugin loads only its specific agents and tools
-- No unnecessary resources loaded into context
-- Better context efficiency with granular plugins
+## Workflow Integration
 
-### Composability
-- Mix and match plugins for complex workflows
-- Workflow orchestrators compose focused plugins
-- Clear boundaries between plugins
-- No forced feature bundling
+The three plugins work together seamlessly for end-to-end Urbit application development, low-level optimization, and deployment:
+
+**Development → Assembly → Deployment**
+
+1. Build application with Hoon (`hoon-development`)
+2. Analyze Nock compilation output (`nock-development`)
+3. Implement jets for performance (`nock-development`)
+4. Deploy to production (`urbit-operations`)
+5. Monitor and optimize (`urbit-operations`)
 
 ## See Also
 
-- [Agent Skills](./agent-skills.md) - 47 specialized skills across plugins
-- [Agent Reference](./agents.md) - Complete agent catalog
-- [Usage Guide](./usage.md) - Commands and workflows
+- [README](../README.md) - Main documentation
 - [Architecture](./architecture.md) - Design principles
+- [Agent Reference](./agents.md) - Complete agent catalog
+- [Agent Skills](./agent-skills.md) - Specialized skills documentation
+- [Usage Guide](./usage.md) - Commands and workflows
+
